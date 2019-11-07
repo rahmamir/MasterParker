@@ -14,6 +14,8 @@
 		E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDCA8236E356C009FAD77 /* MasterParkerV1.xcdatamodeld */; };
 		E7BFDCAC236E356D009FAD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCAB236E356D009FAD77 /* Assets.xcassets */; };
 		E7BFDCAF236E356D009FAD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCAD236E356D009FAD77 /* LaunchScreen.storyboard */; };
+		E7F7E03A2374CFE400622CB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7E0392374CFE400622CB4 /* User.swift */; };
+		E7F7E03D2374D0CA00622CB4 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7E03C2374D0CA00622CB4 /* Payment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E7BFDCAB236E356D009FAD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7BFDCAE236E356D009FAD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7BFDCB0236E356D009FAD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7F7E0392374CFE400622CB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E7F7E03C2374D0CA00622CB4 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,11 @@
 		E7BFDC9E236E356C009FAD77 /* MasterParkerV1 */ = {
 			isa = PBXGroup;
 			children = (
+				E7F7E0382374CFAF00622CB4 /* view */,
+				E7F7E0372374CFA100622CB4 /* model */,
+				E7F7E0362374CF8300622CB4 /* controller */,
 				E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */,
 				E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */,
-				E7BFDCA3236E356C009FAD77 /* ViewController.swift */,
 				E7BFDCA5236E356C009FAD77 /* Main.storyboard */,
 				E7BFDCAB236E356D009FAD77 /* Assets.xcassets */,
 				E7BFDCAD236E356D009FAD77 /* LaunchScreen.storyboard */,
@@ -68,6 +74,30 @@
 				E7BFDCA8236E356C009FAD77 /* MasterParkerV1.xcdatamodeld */,
 			);
 			path = MasterParkerV1;
+			sourceTree = "<group>";
+		};
+		E7F7E0362374CF8300622CB4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		E7F7E0372374CFA100622CB4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E7F7E0392374CFE400622CB4 /* User.swift */,
+				E7F7E03C2374D0CA00622CB4 /* Payment.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E7F7E0382374CFAF00622CB4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E7BFDCA3236E356C009FAD77 /* ViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +174,8 @@
 				E7BFDCA4236E356C009FAD77 /* ViewController.swift in Sources */,
 				E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */,
 				E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */,
+				E7F7E03A2374CFE400622CB4 /* User.swift in Sources */,
+				E7F7E03D2374D0CA00622CB4 /* Payment.swift in Sources */,
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
