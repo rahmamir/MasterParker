@@ -69,7 +69,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpW-2H-VSO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpW-2H-VSO">
                                 <rect key="frame" x="20" y="159" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -131,10 +131,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFI-Yy-S5Y">
-                                <rect key="frame" x="20" y="565" width="374" height="30"/>
+                                <rect key="frame" x="340" y="565" width="54" height="30"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.10376029461622238" green="0.03466980904340744" blue="0.93983423709869385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUpClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="UX6-HC-F3v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjo-O8-c8t">
                                 <rect key="frame" x="225" y="615" width="169" height="30"/>
@@ -142,12 +145,25 @@
                                 <state key="normal" title="Remeber My Credentials">
                                     <color key="titleColor" red="0.10376029461622238" green="0.03466980904340744" blue="0.93983423709869385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onRememberCredentialsClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="m6a-f3-low"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-vH-cao">
                                 <rect key="frame" x="270" y="665" width="124" height="30"/>
                                 <state key="normal" title="Forget Passoword">
                                     <color key="titleColor" red="0.99524837732315063" green="0.0" blue="0.12930876016616821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onForgetPasswordClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="ptI-tc-O2Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoV-yl-4b2">
+                                <rect key="frame" x="20" y="515" width="374" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onLoginClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="yd4-Bm-bz4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -157,6 +173,7 @@
                             <constraint firstItem="FSc-wb-A57" firstAttribute="trailing" secondItem="3xV-Bp-tDa" secondAttribute="trailing" id="4v3-Gf-jzE"/>
                             <constraint firstItem="lwL-lQ-TlO" firstAttribute="top" secondItem="MGB-rR-khk" secondAttribute="bottom" constant="20" id="4xN-pH-UCJ"/>
                             <constraint firstItem="7CA-eX-nPZ" firstAttribute="top" secondItem="Eef-TK-Xox" secondAttribute="bottom" constant="40" id="6NF-Sv-3mE"/>
+                            <constraint firstItem="mFI-Yy-S5Y" firstAttribute="top" secondItem="WoV-yl-4b2" secondAttribute="bottom" constant="20" id="7a7-8E-oZl"/>
                             <constraint firstItem="AxK-Xo-2mp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7CA-eX-nPZ" secondAttribute="trailing" constant="8" symbolic="YES" id="7hp-H0-hsU"/>
                             <constraint firstItem="MGB-rR-khk" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="9fh-tC-E9l"/>
                             <constraint firstItem="Eef-TK-Xox" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="9r7-aK-PXP"/>
@@ -180,7 +197,6 @@
                             <constraint firstItem="M8n-NU-tym" firstAttribute="leading" secondItem="AxK-Xo-2mp" secondAttribute="leading" id="TS5-FB-Nwd"/>
                             <constraint firstItem="FSc-wb-A57" firstAttribute="leading" secondItem="3xV-Bp-tDa" secondAttribute="leading" id="Z2Q-p9-5hW"/>
                             <constraint firstItem="FSc-wb-A57" firstAttribute="leading" secondItem="Eef-TK-Xox" secondAttribute="trailing" constant="67" id="Z3H-Xw-lF5"/>
-                            <constraint firstItem="mFI-Yy-S5Y" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="ZeD-ch-MWf"/>
                             <constraint firstItem="MGB-rR-khk" firstAttribute="top" secondItem="Mxs-jR-LF0" secondAttribute="top" constant="20" id="bBb-de-SFg"/>
                             <constraint firstItem="vm5-dV-kFM" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="cSH-sn-dhh"/>
                             <constraint firstItem="Eef-TK-Xox" firstAttribute="top" secondItem="vm5-dV-kFM" secondAttribute="bottom" constant="40" id="cXZ-Rv-0f1"/>
@@ -188,10 +204,12 @@
                             <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="mFI-Yy-S5Y" secondAttribute="trailing" constant="20" id="drU-Gf-BVx"/>
                             <constraint firstItem="M8n-NU-tym" firstAttribute="trailing" secondItem="AxK-Xo-2mp" secondAttribute="trailing" id="eVj-c2-cVH"/>
                             <constraint firstItem="qes-X0-z7P" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="ear-0b-v4o"/>
+                            <constraint firstItem="WoV-yl-4b2" firstAttribute="top" secondItem="M8n-NU-tym" secondAttribute="bottom" constant="50" id="eih-fb-PvH"/>
+                            <constraint firstItem="WoV-yl-4b2" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="jUx-rT-y2M"/>
                             <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="AxK-Xo-2mp" secondAttribute="trailing" constant="20" id="jZa-Mt-pfn"/>
                             <constraint firstItem="qpW-2H-VSO" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="jj5-cG-pmZ"/>
+                            <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="WoV-yl-4b2" secondAttribute="trailing" constant="20" id="kM2-WJ-uDY"/>
                             <constraint firstItem="AxK-Xo-2mp" firstAttribute="top" secondItem="FSc-wb-A57" secondAttribute="bottom" constant="27" id="n1M-bZ-H0H"/>
-                            <constraint firstItem="mFI-Yy-S5Y" firstAttribute="top" secondItem="M8n-NU-tym" secondAttribute="bottom" constant="100" id="oF3-jl-3BN"/>
                             <constraint firstItem="vm5-dV-kFM" firstAttribute="top" secondItem="lM0-2y-Bug" secondAttribute="bottom" constant="20" id="s4V-5g-HGV"/>
                             <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="qpW-2H-VSO" secondAttribute="trailing" constant="20" id="sl8-Zz-ibR"/>
                             <constraint firstItem="lM0-2y-Bug" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="uAw-Q3-DWq"/>
@@ -200,6 +218,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxs-jR-LF0"/>
                     </view>
+                    <connections>
+                        <outlet property="txtCarPlateNumber" destination="AxK-Xo-2mp" id="PMh-uV-MtY"/>
+                        <outlet property="txtContactNumber" destination="FSc-wb-A57" id="3pj-9S-6GJ"/>
+                        <outlet property="txtName" destination="3xV-Bp-tDa" id="hza-FL-cgX"/>
+                        <outlet property="txtPassword" destination="lM0-2y-Bug" id="Z99-au-iSl"/>
+                        <outlet property="txtPaymentInfo" destination="M8n-NU-tym" id="bug-aZ-j3R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEu-1v-IIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
