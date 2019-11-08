@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		555281972375336A006DA807 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555281962375336A006DA807 /* SignUpVC.swift */; };
+		E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344C22375FCDF0073FB49 /* UserModel.swift */; };
 		E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */; };
 		E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */; };
 		E7BFDCA7236E356C009FAD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCA5236E356C009FAD77 /* Main.storyboard */; };
 		E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDCA8236E356C009FAD77 /* MasterParkerV1.xcdatamodeld */; };
 		E7BFDCAC236E356D009FAD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCAB236E356D009FAD77 /* Assets.xcassets */; };
 		E7BFDCAF236E356D009FAD77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCAD236E356D009FAD77 /* LaunchScreen.storyboard */; };
-		E7F7E03A2374CFE400622CB4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7E0392374CFE400622CB4 /* User.swift */; };
-		E7F7E03D2374D0CA00622CB4 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7E03C2374D0CA00622CB4 /* Payment.swift */; };
 		E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F7E0482374E27700622CB4 /* AddParkingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		555281962375336A006DA807 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		E73344C22375FCDF0073FB49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E7BFDC9C236E356C009FAD77 /* MasterParkerV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterParkerV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +29,6 @@
 		E7BFDCAB236E356D009FAD77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7BFDCAE236E356D009FAD77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7BFDCB0236E356D009FAD77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F7E0392374CFE400622CB4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E7F7E03C2374D0CA00622CB4 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		E7F7E0482374E27700622CB4 /* AddParkingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParkingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +86,7 @@
 		E7F7E0372374CFA100622CB4 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E7F7E0392374CFE400622CB4 /* User.swift */,
-				E7F7E03C2374D0CA00622CB4 /* Payment.swift */,
+				E73344C22375FCDF0073FB49 /* UserModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -178,8 +175,7 @@
 				E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */,
 				E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */,
 				E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */,
-				E7F7E03A2374CFE400622CB4 /* User.swift in Sources */,
-				E7F7E03D2374D0CA00622CB4 /* Payment.swift in Sources */,
+				E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */,
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
