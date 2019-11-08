@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		555281972375336A006DA807 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555281962375336A006DA807 /* SignUpVC.swift */; };
 		E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344C22375FCDF0073FB49 /* UserModel.swift */; };
+		E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344E92376014F0073FB49 /* PaymentModel.swift */; };
 		E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */; };
 		E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */; };
 		E7BFDCA7236E356C009FAD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCA5236E356C009FAD77 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		555281962375336A006DA807 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E73344C22375FCDF0073FB49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E73344E92376014F0073FB49 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		E7BFDC9C236E356C009FAD77 /* MasterParkerV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterParkerV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E73344C22375FCDF0073FB49 /* UserModel.swift */,
+				E73344E92376014F0073FB49 /* PaymentModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */,
 				E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */,
 				E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */,
+				E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */,
 				E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */,
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
 			);
