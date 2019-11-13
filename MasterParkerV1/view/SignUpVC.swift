@@ -34,8 +34,22 @@ class SignUpVC: UIViewController {
         let phone = txtContactNumber.text!
         let street = txtCarPlateNumber.text!
         let city = txtPaymentInfo.text!
-    }
         
+        
+        userController.insertUser(newUser: newUser!)
+            
+        var allUsers = (self.userController.getAllUsers() ?? nil)!
+            
+        if (allUsers != nil){
+            for user in allUsers{
+                print(user.value(forKey: "name") as! String, " ",
+                      user.value(forKey: "email") as! String, " ",
+                      user.value(forKey: "password") as! String)
+                
+            }
+        
+        }
+    }
         
     
     
@@ -58,4 +72,5 @@ class SignUpVC: UIViewController {
     }
     */
 
+    }
 }
