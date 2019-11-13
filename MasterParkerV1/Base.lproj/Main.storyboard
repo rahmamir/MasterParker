@@ -130,37 +130,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFI-Yy-S5Y">
-                                <rect key="frame" x="340" y="565" width="54" height="30"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.10376029461622238" green="0.03466980904340744" blue="0.93983423709869385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSignUpClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="UX6-HC-F3v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjo-O8-c8t">
-                                <rect key="frame" x="225" y="615" width="169" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Remeber My Credentials">
-                                    <color key="titleColor" red="0.10376029461622238" green="0.03466980904340744" blue="0.93983423709869385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onRememberCredentialsClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="m6a-f3-low"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-vH-cao">
-                                <rect key="frame" x="270" y="665" width="124" height="30"/>
-                                <state key="normal" title="Forget Passoword">
-                                    <color key="titleColor" red="0.99524837732315063" green="0.0" blue="0.12930876016616821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onForgetPasswordClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="ptI-tc-O2Y"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoV-yl-4b2">
                                 <rect key="frame" x="20" y="515" width="374" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="SignUp"/>
                                 <connections>
                                     <action selector="onLoginClick" destination="cWV-fF-yn7" eventType="touchUpInside" id="yd4-Bm-bz4"/>
                                 </connections>
@@ -173,26 +145,21 @@
                             <constraint firstItem="FSc-wb-A57" firstAttribute="trailing" secondItem="3xV-Bp-tDa" secondAttribute="trailing" id="4v3-Gf-jzE"/>
                             <constraint firstItem="lwL-lQ-TlO" firstAttribute="top" secondItem="MGB-rR-khk" secondAttribute="bottom" constant="20" id="4xN-pH-UCJ"/>
                             <constraint firstItem="7CA-eX-nPZ" firstAttribute="top" secondItem="Eef-TK-Xox" secondAttribute="bottom" constant="40" id="6NF-Sv-3mE"/>
-                            <constraint firstItem="mFI-Yy-S5Y" firstAttribute="top" secondItem="WoV-yl-4b2" secondAttribute="bottom" constant="20" id="7a7-8E-oZl"/>
                             <constraint firstItem="AxK-Xo-2mp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7CA-eX-nPZ" secondAttribute="trailing" constant="8" symbolic="YES" id="7hp-H0-hsU"/>
                             <constraint firstItem="MGB-rR-khk" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="9fh-tC-E9l"/>
                             <constraint firstItem="Eef-TK-Xox" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="9r7-aK-PXP"/>
                             <constraint firstItem="bm1-5u-Kfy" firstAttribute="top" secondItem="6MS-H9-PkD" secondAttribute="top" constant="366" id="A0N-26-Whv"/>
                             <constraint firstItem="M8n-NU-tym" firstAttribute="top" secondItem="AxK-Xo-2mp" secondAttribute="bottom" constant="28" id="Awv-Wy-XTv"/>
                             <constraint firstItem="lM0-2y-Bug" firstAttribute="top" secondItem="qpW-2H-VSO" secondAttribute="bottom" constant="20" id="C9m-QD-Gly"/>
-                            <constraint firstItem="WcN-vH-cao" firstAttribute="top" secondItem="Kjo-O8-c8t" secondAttribute="bottom" constant="20" id="ENb-zz-yUe"/>
                             <constraint firstItem="3xV-Bp-tDa" firstAttribute="top" secondItem="lM0-2y-Bug" secondAttribute="bottom" constant="15" id="EcN-Lk-Gao"/>
-                            <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="WcN-vH-cao" secondAttribute="trailing" constant="20" id="FRh-na-PcA"/>
                             <constraint firstItem="7CA-eX-nPZ" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="FUZ-tZ-6z5"/>
                             <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="lwL-lQ-TlO" secondAttribute="trailing" constant="20" id="Jlg-d5-nlJ"/>
                             <constraint firstItem="qpW-2H-VSO" firstAttribute="top" secondItem="lwL-lQ-TlO" secondAttribute="bottom" constant="20" id="NgX-FB-L71"/>
                             <constraint firstItem="M8n-NU-tym" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qes-X0-z7P" secondAttribute="trailing" constant="8" symbolic="YES" id="Opp-Fk-gSg"/>
                             <constraint firstItem="qes-X0-z7P" firstAttribute="top" secondItem="7CA-eX-nPZ" secondAttribute="bottom" constant="40" id="Oyb-Y1-rxp"/>
-                            <constraint firstItem="Kjo-O8-c8t" firstAttribute="top" secondItem="mFI-Yy-S5Y" secondAttribute="bottom" constant="20" id="PoP-pg-zQQ"/>
                             <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="3xV-Bp-tDa" secondAttribute="trailing" constant="20" id="Q4y-hk-yyF"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bm1-5u-Kfy" secondAttribute="trailing" constant="20" symbolic="YES" id="QDj-y5-cxg"/>
                             <constraint firstItem="FSc-wb-A57" firstAttribute="top" secondItem="3xV-Bp-tDa" secondAttribute="bottom" constant="25" id="RaL-Gt-MqD"/>
-                            <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="Kjo-O8-c8t" secondAttribute="trailing" constant="20" id="Sld-Ai-G9E"/>
                             <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="lM0-2y-Bug" secondAttribute="trailing" constant="20" id="T4A-ZS-e7r"/>
                             <constraint firstItem="M8n-NU-tym" firstAttribute="leading" secondItem="AxK-Xo-2mp" secondAttribute="leading" id="TS5-FB-Nwd"/>
                             <constraint firstItem="FSc-wb-A57" firstAttribute="leading" secondItem="3xV-Bp-tDa" secondAttribute="leading" id="Z2Q-p9-5hW"/>
@@ -201,7 +168,6 @@
                             <constraint firstItem="vm5-dV-kFM" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="cSH-sn-dhh"/>
                             <constraint firstItem="Eef-TK-Xox" firstAttribute="top" secondItem="vm5-dV-kFM" secondAttribute="bottom" constant="40" id="cXZ-Rv-0f1"/>
                             <constraint firstItem="bm1-5u-Kfy" firstAttribute="leading" secondItem="7CA-eX-nPZ" secondAttribute="leading" id="dFJ-mI-KMm"/>
-                            <constraint firstItem="Mxs-jR-LF0" firstAttribute="trailing" secondItem="mFI-Yy-S5Y" secondAttribute="trailing" constant="20" id="drU-Gf-BVx"/>
                             <constraint firstItem="M8n-NU-tym" firstAttribute="trailing" secondItem="AxK-Xo-2mp" secondAttribute="trailing" id="eVj-c2-cVH"/>
                             <constraint firstItem="qes-X0-z7P" firstAttribute="leading" secondItem="Mxs-jR-LF0" secondAttribute="leading" constant="20" id="ear-0b-v4o"/>
                             <constraint firstItem="WoV-yl-4b2" firstAttribute="top" secondItem="M8n-NU-tym" secondAttribute="bottom" constant="50" id="eih-fb-PvH"/>
