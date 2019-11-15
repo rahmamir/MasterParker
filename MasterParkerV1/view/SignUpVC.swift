@@ -5,13 +5,9 @@
 //  Created by Syed Rehan on 2019-11-08.
 //  Copyright © 2019 MR. All rights reserved.
 //
-
 import UIKit
 
 class SignUpVC: UIViewController {
-    
-    
-    
     @IBOutlet weak var txtEmailAddress: UITextField!
 
     @IBOutlet weak var txtPassword: UITextField!
@@ -36,7 +32,7 @@ class SignUpVC: UIViewController {
         let city = txtPaymentInfo.text!
         
         
-        userController.insertUser(newUser: newUser!)
+        //userController.insertUser(newUser: newUser!)
             
         var allUsers = (self.userController.getAllUsers() ?? nil)!
             
@@ -45,23 +41,14 @@ class SignUpVC: UIViewController {
                 print(user.value(forKey: "name") as! String, " ",
                       user.value(forKey: "email") as! String, " ",
                       user.value(forKey: "password") as! String)
-                
             }
-        
         }
     }
-        
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
     /*
     // MARK: - Navigation
 
@@ -71,6 +58,4 @@ class SignUpVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    }
 }

@@ -15,12 +15,16 @@ class UserModel{
     var password : String
     var contactNumber : String
     var carPlateNumber : String
+    var numOfParkingsMade : Int
+    var currentMonth : Date
     
-    init(name: String, email: String, password: String, contactNumber: String, carPlateNumber: String) {
-        self.name = name
-        self.email = email
-        self.password = password
-        self.contactNumber = contactNumber
-        self.carPlateNumber = carPlateNumber
+    init(Name: String, Email: String, Password: String, ContactNumber: String, CarPlateNumber: String) {
+        self.name = Name
+        self.email = Email
+        self.password = Password
+        self.contactNumber = ContactNumber
+        self.carPlateNumber = CarPlateNumber
+        self.numOfParkingsMade = 0
+        self.currentMonth = Date()
     }
 }

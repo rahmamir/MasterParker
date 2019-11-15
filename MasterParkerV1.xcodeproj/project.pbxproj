@@ -12,6 +12,7 @@
 		E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344C22375FCDF0073FB49 /* UserModel.swift */; };
 		E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344E92376014F0073FB49 /* PaymentModel.swift */; };
 		E7A8DAC4237E7F580070A30B /* ParkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8DAC3237E7F580070A30B /* ParkingModel.swift */; };
+		E7A8DAC6237E87AD0070A30B /* ParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8DAC5237E87AD0070A30B /* ParkingController.swift */; };
 		E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */; };
 		E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */; };
 		E7BFDCA7236E356C009FAD77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7BFDCA5236E356C009FAD77 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		E73344C22375FCDF0073FB49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E73344E92376014F0073FB49 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		E7A8DAC3237E7F580070A30B /* ParkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingModel.swift; sourceTree = "<group>"; };
+		E7A8DAC5237E87AD0070A30B /* ParkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingController.swift; sourceTree = "<group>"; };
 		E7BFDC9C236E356C009FAD77 /* MasterParkerV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterParkerV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7BFDCA1236E356C009FAD77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,12 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55477DEE237BBC49006E7808 /* userController_2 */ = {
+		55477DEE237BBC49006E7808 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				55477DEC237BBB7B006E7808 /* UserController.swift */,
+				E7A8DAC5237E87AD0070A30B /* ParkingController.swift */,
 			);
-			path = userController_2;
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		E7BFDC93236E356C009FAD77 = {
@@ -76,7 +79,7 @@
 		E7BFDC9E236E356C009FAD77 /* MasterParkerV1 */ = {
 			isa = PBXGroup;
 			children = (
-				55477DEE237BBC49006E7808 /* userController_2 */,
+				55477DEE237BBC49006E7808 /* controllers */,
 				E7F7E0382374CFAF00622CB4 /* view */,
 				E7F7E0372374CFA100622CB4 /* model */,
 				E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */,
@@ -188,6 +191,7 @@
 				E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */,
 				E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */,
 				E7A8DAC4237E7F580070A30B /* ParkingModel.swift in Sources */,
+				E7A8DAC6237E87AD0070A30B /* ParkingController.swift in Sources */,
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

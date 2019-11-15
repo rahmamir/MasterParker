@@ -12,7 +12,7 @@ import CoreData
 
 public class UserController
 {
-    func insertUser(newUser: User)
+    func insertUser(newUser: UserModel)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
         {
@@ -52,6 +52,24 @@ public class UserController
             print("Data fetching Unsuccessful")
         }
         return nil
+    }
+    
+    func verifySameCarPlateNum(name: String, carPlateNumber: String) -> Bool{//returns true if given carplate number is the same as the carplatenumber of the user
+        let allUsers = (self.getAllUsers() ?? nil)!
+        
+        if (allUsers != nil){
+            for user in allUsers{
+                let dbName = user.value(forKey: "name") as! String
+                let dbCarPlateNumber = user.value(forKey: "carPlateNumber") as! String
+                if (dbName == name){
+                    if(dbCarPlateNumber == carPlateNumber){
+                        return true//if corresponding carplate# is same, return true
+                    }
+                    return false
+                }
+            }
+        }
+        return false
     }
 }
 

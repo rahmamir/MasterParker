@@ -14,12 +14,15 @@ class ParkingModel {
     var numOfHours : Int
     var carPlateNum : String
     var suiteNumOfHost : Int
+    var dateOfParking : Date
+    var parkingCharge : Int
     
-    init(buildingCode: Int, numOfHours: Int, carPlateNum: String, suiteNumOfHost: Int) {
-        self.buildingCode = buildingCode
-        self.numOfHours = numOfHours
-        self.carPlateNum = carPlateNum
-        self.suiteNumOfHost = suiteNumOfHost
+    init(BuildingCode: Int, NumOfHours: Int, CarPlateNum: String, SuiteNumOfHost: Int, DateOfParking: Date, parkingCharge : Int) {
+        self.buildingCode = BuildingCode
+        self.numOfHours = NumOfHours
+        self.carPlateNum = CarPlateNum
+        self.suiteNumOfHost = SuiteNumOfHost
+        self.dateOfParking = DateOfParking
+        self.parkingCharge = parkingCharge
     }
-    
 }
