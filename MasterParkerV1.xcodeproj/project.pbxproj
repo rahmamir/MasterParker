@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		553F732E237DD61600D7852C /* User2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F732D237DD61600D7852C /* User2.swift */; };
+		553F7330237DD7A800D7852C /* Payment2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F732F237DD7A800D7852C /* Payment2.swift */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		555281972375336A006DA807 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555281962375336A006DA807 /* SignUpVC.swift */; };
 		E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		553F732D237DD61600D7852C /* User2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User2.swift; sourceTree = "<group>"; };
+		553F732F237DD7A800D7852C /* Payment2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment2.swift; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		555281962375336A006DA807 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E7BFDC9C236E356C009FAD77 /* MasterParkerV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterParkerV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,7 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				E7F7E0392374CFE400622CB4 /* User.swift */,
+				553F732D237DD61600D7852C /* User2.swift */,
 				E7F7E03C2374D0CA00622CB4 /* Payment.swift */,
+				553F732F237DD7A800D7852C /* Payment2.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -178,8 +184,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				555281972375336A006DA807 /* SignUpVC.swift in Sources */,
+				553F7330237DD7A800D7852C /* Payment2.swift in Sources */,
 				E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */,
 				55477DED237BBB7B006E7808 /* UserController.swift in Sources */,
+				553F732E237DD61600D7852C /* User2.swift in Sources */,
 				E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */,
 				E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */,
 				E7F7E03A2374CFE400622CB4 /* User.swift in Sources */,

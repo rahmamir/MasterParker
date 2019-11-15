@@ -25,18 +25,23 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var txtPaymentInfo: UITextField!
     
     let userController = UserController()
+  
     
     @IBAction func onLoginClick()
     {
         let name = txtName.text!
-        let lname = txtEmailAddress.text!
-        let email = txtPassword.text!
-        let phone = txtContactNumber.text!
-        let street = txtCarPlateNumber.text!
-        let city = txtPaymentInfo.text!
+        let email = txtEmailAddress.text!
+        let password = txtPassword.text!
+        let contactNumber = txtContactNumber.text!
+        let carPlateNumber = txtCarPlateNumber.text!
+       // let paymentInfo = txtPaymentInfo.text!
         
-        
-        userController.insertUser(newUser: newUser!)
+        let newUser = User2(Name: name, Email: email, Password: password, ContactNumber: contactNumber, CarPlateNumber: carPlateNumber)
+          
+        if newUser != nil{
+        userController.insertUser(newUser: newUser)
+          
+       
             
         var allUsers = (self.userController.getAllUsers() ?? nil)!
             
@@ -49,6 +54,15 @@ class SignUpVC: UIViewController {
             }
         
         }
+            
+        _ = navigationController?.popViewController(animated: true)
+            
+        }
+        else
+        {
+            print("User creation unsuccessful");
+        }
+        
     }
         
     
@@ -73,4 +87,4 @@ class SignUpVC: UIViewController {
     */
 
     }
-}
+

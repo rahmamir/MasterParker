@@ -1,16 +1,15 @@
 //
-//  Payment.swift
+//  Payment2.swift
 //  MasterParkerV1
 //
-//  Created by Mirza Rahman on 2019-11-07.
+//  Created by Syed Rehan on 2019-11-14.
 //  Copyright © 2019 MR. All rights reserved.
 //
 
 import Foundation
 
-/*
-class Payment{
-    
+class Payment2
+{
     enum CardType : String{
         case Debit
         case Credit
@@ -32,4 +31,3 @@ class Payment{
         self.expiryDate = expiryDate
     }
 }
- */

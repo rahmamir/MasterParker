@@ -12,7 +12,7 @@ import CoreData
 
 public class UserController
 {
-    func insertUser(newUser: User)
+    func insertUser(newUser: User2)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
         {
