@@ -10,6 +10,8 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
+    
+    
     @IBOutlet weak var txtEmailAddress: UITextField!
 
     @IBOutlet weak var txtPassword: UITextField!
@@ -22,19 +24,36 @@ class SignUpVC: UIViewController {
     
     @IBOutlet weak var txtPaymentInfo: UITextField!
     
-    @IBAction func onLoginClick() {
+    let userController = UserController()
+    
+    @IBAction func onLoginClick()
+    {
+        let name = txtName.text!
+        let lname = txtEmailAddress.text!
+        let email = txtPassword.text!
+        let phone = txtContactNumber.text!
+        let street = txtCarPlateNumber.text!
+        let city = txtPaymentInfo.text!
+        
+        
+        userController.insertUser(newUser: newUser!)
+            
+        var allUsers = (self.userController.getAllUsers() ?? nil)!
+            
+        if (allUsers != nil){
+            for user in allUsers{
+                print(user.value(forKey: "name") as! String, " ",
+                      user.value(forKey: "email") as! String, " ",
+                      user.value(forKey: "password") as! String)
+                
+            }
+        
+        }
     }
+        
     
     
-    @IBAction func onSignUpClick() {
-    }
     
-    
-    @IBAction func onRememberCredentialsClick() {
-    }
-    
-    @IBAction func onForgetPasswordClick() {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,4 +72,5 @@ class SignUpVC: UIViewController {
     }
     */
 
+    }
 }

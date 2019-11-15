@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		555281972375336A006DA807 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555281962375336A006DA807 /* SignUpVC.swift */; };
 		E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344C22375FCDF0073FB49 /* UserModel.swift */; };
 		E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344E92376014F0073FB49 /* PaymentModel.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		555281962375336A006DA807 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E73344C22375FCDF0073FB49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E73344E92376014F0073FB49 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55477DEE237BBC49006E7808 /* userController_2 */ = {
+			isa = PBXGroup;
+			children = (
+				55477DEC237BBB7B006E7808 /* UserController.swift */,
+			);
+			path = userController_2;
+			sourceTree = "<group>";
+		};
 		E7BFDC93236E356C009FAD77 = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +74,7 @@
 		E7BFDC9E236E356C009FAD77 /* MasterParkerV1 */ = {
 			isa = PBXGroup;
 			children = (
-				E7F7E0362374CF8300622CB4 /* controller */,
+				55477DEE237BBC49006E7808 /* userController_2 */,
 				E7F7E0382374CFAF00622CB4 /* view */,
 				E7F7E0372374CFA100622CB4 /* model */,
 				E7BFDC9F236E356C009FAD77 /* AppDelegate.swift */,
@@ -76,13 +86,6 @@
 				E7BFDCA8236E356C009FAD77 /* MasterParkerV1.xcdatamodeld */,
 			);
 			path = MasterParkerV1;
-			sourceTree = "<group>";
-		};
-		E7F7E0362374CF8300622CB4 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = controller;
 			sourceTree = "<group>";
 		};
 		E7F7E0372374CFA100622CB4 /* model */ = {
@@ -176,6 +179,7 @@
 			files = (
 				555281972375336A006DA807 /* SignUpVC.swift in Sources */,
 				E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */,
+				55477DED237BBB7B006E7808 /* UserController.swift in Sources */,
 				E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */,
 				E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */,
 				E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */,
