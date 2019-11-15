@@ -26,30 +26,29 @@ class AddParkingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.createParking()
         // Do any additional setup after loading the view.
     }
     
     func createParking(){
-        
-       
-        //let a:Int? = Int(firstText.text)
         
         let buildingCode:Int? = Int(buildingCodeTxt.text!)
         let numOfHours:Int? = Int(numOfHoursTxt.text!)
         let carPlateNum = carPlateNumberTxt.text!
         let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!)
         
+        //TODO = basic errorchecking with popup error messages, such as empty fields, or incorrect data type
+        
         if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#
             
             let date = Date()
             let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!, parkingCount: loggedInUser.numOfParkingsMade)
             
-            let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: 0)
+            let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
          
-            
-            //MAKE SURE TO UPDATE THE DATABASE WITH THE NEW USER AND THE NEW PARKING, ASSUMING THE INPUT IS CORRECT. AND TO ALSO UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+            parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
+            userController.updateUser(user: loggedInUser)//updated UserDatabase
+            //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
         }
     }
     
@@ -72,7 +71,7 @@ class AddParkingVC: UIViewController {
             loggedInUser.currentMonth = Date()//update the current month of the user
             return 0//0 if first parking made
         }
-        //MAKE SURE TO UPDATE THE DATABASE WITH THE NEW USER AND THE NEW PARKING, ASSUMING THE INPUT IS CORRECT. AND TO ALSO UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+        //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
     }
     
     private func regularCharges(numOfHours: Int) -> Int{

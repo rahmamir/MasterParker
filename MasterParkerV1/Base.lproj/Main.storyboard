@@ -312,6 +312,136 @@
             </objects>
             <point key="canvasLocation" x="949" y="36"/>
         </scene>
+        <!--Parking ReceiptVC-->
+        <scene sceneID="tHB-PR-eqL">
+            <objects>
+                <viewController id="WXI-E5-0C2" customClass="ParkingReceiptVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Oc-W0-Mbf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Receipt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gau-83-2xe">
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Plate Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-zb-rR9">
+                                <rect key="frame" x="20" y="132" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1g-vc-VGc">
+                                <rect key="frame" x="352" y="132" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Of Parking: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-bs-Awe">
+                                <rect key="frame" x="20" y="173" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsY-FT-Z5b">
+                                <rect key="frame" x="352" y="173" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration of Parking:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPW-9L-5yA">
+                                <rect key="frame" x="20" y="214" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkX-A8-1o2">
+                                <rect key="frame" x="352" y="214" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Code: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-bO-5nv">
+                                <rect key="frame" x="20" y="255" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTh-3T-mpa">
+                                <rect key="frame" x="352" y="255" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suite # Of Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlU-jc-v6d">
+                                <rect key="frame" x="20" y="296" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hth-Tn-eTu">
+                                <rect key="frame" x="352" y="296" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e89-0l-VWA">
+                                <rect key="frame" x="20" y="337" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-0h-a95">
+                                <rect key="frame" x="355" y="337" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FTh-3T-mpa" firstAttribute="centerY" secondItem="1T5-bO-5nv" secondAttribute="centerY" id="0nk-RF-SM6"/>
+                            <constraint firstItem="RkX-A8-1o2" firstAttribute="centerY" secondItem="nPW-9L-5yA" secondAttribute="centerY" id="0qm-SS-2NO"/>
+                            <constraint firstItem="GlU-jc-v6d" firstAttribute="top" secondItem="1T5-bO-5nv" secondAttribute="bottom" constant="20" id="3Sh-3l-hPj"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="BsY-FT-Z5b" secondAttribute="trailing" constant="20" id="43K-Gr-o2k"/>
+                            <constraint firstItem="Gau-83-2xe" firstAttribute="top" secondItem="Wau-Ij-isE" secondAttribute="top" constant="20" id="6OV-ei-qVO"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="Gau-83-2xe" secondAttribute="trailing" constant="20" id="9ve-ab-4ld"/>
+                            <constraint firstItem="dsh-0h-a95" firstAttribute="top" secondItem="hth-Tn-eTu" secondAttribute="bottom" constant="20" id="B76-zP-A6d"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="RkX-A8-1o2" secondAttribute="trailing" constant="20" id="D6w-hA-xyc"/>
+                            <constraint firstItem="RkX-A8-1o2" firstAttribute="top" secondItem="BsY-FT-Z5b" secondAttribute="bottom" constant="20" id="EA8-4a-siu"/>
+                            <constraint firstItem="hyk-bs-Awe" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="Ewj-PL-jmx"/>
+                            <constraint firstItem="Gau-83-2xe" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="GiS-7e-8UO"/>
+                            <constraint firstItem="1T5-bO-5nv" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="KTH-46-65S"/>
+                            <constraint firstItem="BAz-zb-rR9" firstAttribute="top" secondItem="Gau-83-2xe" secondAttribute="bottom" constant="20" id="LYs-d6-n0w"/>
+                            <constraint firstItem="C1g-vc-VGc" firstAttribute="centerY" secondItem="BAz-zb-rR9" secondAttribute="centerY" id="MP6-PC-LBm"/>
+                            <constraint firstItem="e89-0l-VWA" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="N07-Vd-7hR"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="dsh-0h-a95" secondAttribute="trailing" constant="20" id="NAE-iZ-NV0"/>
+                            <constraint firstItem="e89-0l-VWA" firstAttribute="top" secondItem="GlU-jc-v6d" secondAttribute="bottom" constant="20" id="NuX-38-vJt"/>
+                            <constraint firstItem="nPW-9L-5yA" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="SJv-C3-b3q"/>
+                            <constraint firstItem="hth-Tn-eTu" firstAttribute="top" secondItem="FTh-3T-mpa" secondAttribute="bottom" constant="20" id="W2e-CS-HSN"/>
+                            <constraint firstItem="hth-Tn-eTu" firstAttribute="centerY" secondItem="GlU-jc-v6d" secondAttribute="centerY" id="X96-rE-Xx5"/>
+                            <constraint firstItem="dsh-0h-a95" firstAttribute="centerY" secondItem="e89-0l-VWA" secondAttribute="centerY" id="Xzx-1c-0pb"/>
+                            <constraint firstItem="BsY-FT-Z5b" firstAttribute="top" secondItem="C1g-vc-VGc" secondAttribute="bottom" constant="20" id="YWU-zW-cMG"/>
+                            <constraint firstItem="hyk-bs-Awe" firstAttribute="top" secondItem="BAz-zb-rR9" secondAttribute="bottom" constant="20" id="YlR-IM-zFY"/>
+                            <constraint firstItem="C1g-vc-VGc" firstAttribute="top" secondItem="Gau-83-2xe" secondAttribute="bottom" constant="20" id="bAc-T8-soD"/>
+                            <constraint firstItem="FTh-3T-mpa" firstAttribute="top" secondItem="RkX-A8-1o2" secondAttribute="bottom" constant="20" id="bd5-CI-6JF"/>
+                            <constraint firstItem="BsY-FT-Z5b" firstAttribute="centerY" secondItem="hyk-bs-Awe" secondAttribute="centerY" id="c2y-rN-eiR"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="hth-Tn-eTu" secondAttribute="trailing" constant="20" id="cRs-6L-SlF"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="FTh-3T-mpa" secondAttribute="trailing" constant="20" id="htU-Im-lqT"/>
+                            <constraint firstItem="nPW-9L-5yA" firstAttribute="top" secondItem="hyk-bs-Awe" secondAttribute="bottom" constant="20" id="isP-Yk-TbS"/>
+                            <constraint firstItem="GlU-jc-v6d" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="jLG-To-D0U"/>
+                            <constraint firstItem="BAz-zb-rR9" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="qfo-ut-Vjc"/>
+                            <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="C1g-vc-VGc" secondAttribute="trailing" constant="20" id="zge-Px-AXd"/>
+                            <constraint firstItem="1T5-bO-5nv" firstAttribute="top" secondItem="nPW-9L-5yA" secondAttribute="bottom" constant="20" id="zgg-U5-Vzg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wau-Ij-isE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8os-My-XVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="35"/>
+        </scene>
     </scenes>
     <resources>
         <image name="car.fill" catalog="system" width="64" height="46"/>

@@ -54,6 +54,41 @@ public class UserController
         return nil
     }
     
+    func updateUser(user : UserModel){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntity")
+        
+        fetchRequest.predicate = NSPredicate(format: "email = %@", user.email)
+        
+        do{
+            let result = try managedContext.fetch(fetchRequest)
+            
+            let existingUser = result[0] as! NSManagedObject
+            
+            existingUser.setValue(user.name, forKey: "firstname")
+            existingUser.setValue(user.carPlateNumber, forKey: "carPlateNumber")
+            existingUser.setValue(user.contactNumber, forKey: "contactNumber")
+            existingUser.setValue(user.currentMonth, forKey: "currentMonth")
+            existingUser.setValue(user.email, forKey: "email")
+            existingUser.setValue(user.numOfParkingsMade, forKey: "numOfParkingsMade")
+            existingUser.setValue(user.password, forKey: "password")
+            
+            do{
+                try managedContext.save()
+                print("User update Successful")
+            }catch{
+                print("User update unsuccessful")
+            }
+        }catch{
+            print("User update unsuccessful")
+        }
+    }
+    
     func verifySameCarPlateNum(name: String, carPlateNumber: String) -> Bool{//returns true if given carplate number is the same as the carplatenumber of the user
         let allUsers = (self.getAllUsers() ?? nil)!
         
