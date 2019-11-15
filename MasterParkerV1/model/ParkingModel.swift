@@ -11,11 +11,15 @@ import Foundation
 class ParkingModel {
     
     var buildingCode : Int
+    var numOfHours : Int
+    var carPlateNum : String
+    var suiteNumOfHost : Int
     
-
-    
-    init(buildingCode: Int) {
+    init(buildingCode: Int, numOfHours: Int, carPlateNum: String, suiteNumOfHost: Int) {
         self.buildingCode = buildingCode
+        self.numOfHours = numOfHours
+        self.carPlateNum = carPlateNum
+        self.suiteNumOfHost = suiteNumOfHost
     }
     
 }

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Parking" representedClassName="Parking" syncable="YES" codeGenerationType="class">
+        <attribute name="buildingCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="carPlateNum" optional="YES" attributeType="String"/>
+        <attribute name="numOfHours" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="suiteNumOfHost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="Payment" representedClassName="Payment" syncable="YES" codeGenerationType="class">
         <attribute name="cardName" optional="YES" attributeType="String"/>
         <attribute name="cardNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -14,7 +20,8 @@
         <attribute name="password" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="Payment" positionX="-54" positionY="27" width="128" height="103"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Parking" positionX="-54" positionY="36" width="128" height="103"/>
     </elements>
 </model>

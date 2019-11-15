@@ -29,12 +29,16 @@ class AddParkingVC: UIViewController {
     
     func createParking(){
         
-        let buildingCode = buildingCodeTxt.text as! Int
-        let numOfHours = numOfHoursTxt.text
-        let carPlateNum = carPlateNumberTxt.text
-        let suiteNumOfHost = suiteNumOfHostTxt.text
+        //let a:Int? = Int(firstText.text)
         
-        let newParking = ParkingModel(buildingCode: buildingCode)
+        let buildingCode:Int? = Int(buildingCodeTxt.text!)
+        let numOfHours:Int? = Int(numOfHoursTxt.text!)
+        let carPlateNum = carPlateNumberTxt.text!
+        let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!)
+        
+        let newParking = ParkingModel(buildingCode: buildingCode!, numOfHours: numOfHours!, carPlateNum: carPlateNum, suiteNumOfHost: suiteNumOfHost!)
+        
+        
     }
 
 }
