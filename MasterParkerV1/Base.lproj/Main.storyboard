@@ -196,6 +196,122 @@
             </objects>
             <point key="canvasLocation" x="250.72463768115944" y="32.8125"/>
         </scene>
+        <!--Add ParkingVC-->
+        <scene sceneID="WJu-D8-xdg">
+            <objects>
+                <viewController id="Stq-5I-4ub" customClass="AddParkingVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xyG-Yx-E8m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-aQ-lgW">
+                                <rect key="frame" x="152" y="800" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirm Parking"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMK-bd-AZl">
+                                <rect key="frame" x="20" y="64" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Code : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-gi-tzf">
+                                <rect key="frame" x="20" y="132" width="121" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-gh-Fim">
+                                <rect key="frame" x="194" y="132" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lul-7R-w6L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Hours: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-NJ-L30">
+                                <rect key="frame" x="20" y="186" width="144" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tx9-uU-u7b">
+                                <rect key="frame" x="194" y="186" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="pdM-To-nvY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Plate Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-eW-lto">
+                                <rect key="frame" x="20" y="240" width="145" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Twu-aQ-vIy">
+                                <rect key="frame" x="194" y="240" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fzB-7g-LEh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suite No Of Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-RY-PrP">
+                                <rect key="frame" x="20" y="294" width="133.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5XZ-XV-Ess">
+                                <rect key="frame" x="194" y="294" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="wwM-QS-zGl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="fZL-gh-Fim" secondAttribute="trailing" constant="20" id="3fJ-k5-S1c"/>
+                            <constraint firstItem="VTY-eW-lto" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="7Ca-dI-SmM"/>
+                            <constraint firstItem="Kwu-gi-tzf" firstAttribute="top" secondItem="nMK-bd-AZl" secondAttribute="bottom" constant="20" id="9Q3-0p-C8O"/>
+                            <constraint firstItem="Twu-aQ-vIy" firstAttribute="centerY" secondItem="VTY-eW-lto" secondAttribute="centerY" id="Fpf-98-Vz9"/>
+                            <constraint firstItem="tx9-uU-u7b" firstAttribute="top" secondItem="fZL-gh-Fim" secondAttribute="bottom" constant="20" id="HGH-hW-G6O"/>
+                            <constraint firstItem="VTY-eW-lto" firstAttribute="top" secondItem="rj1-NJ-L30" secondAttribute="bottom" constant="20" id="HzL-Y8-0b0"/>
+                            <constraint firstItem="JvK-RY-PrP" firstAttribute="top" secondItem="VTY-eW-lto" secondAttribute="bottom" constant="20" id="NAc-0N-7qi"/>
+                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="nMK-bd-AZl" secondAttribute="trailing" constant="20" id="NwQ-5p-50W"/>
+                            <constraint firstItem="nMK-bd-AZl" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="Tel-Pl-TAK"/>
+                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="5XZ-XV-Ess" secondAttribute="trailing" constant="20" id="Usr-vA-7rz"/>
+                            <constraint firstItem="rj1-NJ-L30" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="VOC-LL-6yK"/>
+                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="tx9-uU-u7b" secondAttribute="trailing" constant="20" id="WXS-uf-nTy"/>
+                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="Twu-aQ-vIy" secondAttribute="trailing" constant="20" id="YSP-wZ-Fy1"/>
+                            <constraint firstItem="rj1-NJ-L30" firstAttribute="top" secondItem="Kwu-gi-tzf" secondAttribute="bottom" constant="20" id="ZnR-6w-XW4"/>
+                            <constraint firstItem="nMK-bd-AZl" firstAttribute="top" secondItem="Qxh-wM-o88" secondAttribute="top" constant="20" id="ezE-Ed-BRL"/>
+                            <constraint firstItem="5XZ-XV-Ess" firstAttribute="top" secondItem="Twu-aQ-vIy" secondAttribute="bottom" constant="20" id="fP4-Qf-cly"/>
+                            <constraint firstItem="fZL-gh-Fim" firstAttribute="top" secondItem="nMK-bd-AZl" secondAttribute="bottom" constant="20" id="lRa-og-WqR"/>
+                            <constraint firstItem="fZL-gh-Fim" firstAttribute="centerY" secondItem="Kwu-gi-tzf" secondAttribute="centerY" id="npd-Hx-9hs"/>
+                            <constraint firstItem="JvK-RY-PrP" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="rzn-mp-Xr1"/>
+                            <constraint firstItem="5XZ-XV-Ess" firstAttribute="centerY" secondItem="JvK-RY-PrP" secondAttribute="centerY" id="tyH-6B-TXT"/>
+                            <constraint firstItem="Twu-aQ-vIy" firstAttribute="top" secondItem="tx9-uU-u7b" secondAttribute="bottom" constant="20" id="xaX-iz-G3n"/>
+                            <constraint firstItem="tx9-uU-u7b" firstAttribute="centerY" secondItem="rj1-NJ-L30" secondAttribute="centerY" id="xc1-7j-Gji"/>
+                            <constraint firstItem="Kwu-gi-tzf" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="zmG-WL-VYq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qxh-wM-o88"/>
+                    </view>
+                    <connections>
+                        <outlet property="buildingCodeTxt" destination="fZL-gh-Fim" id="buJ-hg-kBL"/>
+                        <outlet property="carPlateNumberTxt" destination="Twu-aQ-vIy" id="qDm-wZ-9N0"/>
+                        <outlet property="confirmParkingBtn" destination="Ol9-aQ-lgW" id="fDt-5x-p3a"/>
+                        <outlet property="numOfHoursTxt" destination="tx9-uU-u7b" id="ORW-L5-f1a"/>
+                        <outlet property="suiteNumOfHostTxt" destination="5XZ-XV-Ess" id="O6g-lO-mri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3j-2s-fHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="36"/>
+        </scene>
     </scenes>
     <resources>
         <image name="car.fill" catalog="system" width="64" height="46"/>

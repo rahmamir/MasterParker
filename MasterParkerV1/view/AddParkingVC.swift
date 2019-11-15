@@ -8,17 +8,34 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddParkingVC: UIViewController {
 
-    @IBOutlet var testButton : UIButton!
+    @IBOutlet var confirmParkingBtn : UIButton!
+    
+    @IBOutlet var buildingCodeTxt : UITextField!
+    
+    @IBOutlet var numOfHoursTxt : UITextField!
+    
+    @IBOutlet var carPlateNumberTxt : UITextField!
+    
+    @IBOutlet var suiteNumOfHostTxt : UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
     }
     
-    
+    func createParking(){
+        
+        let buildingCode = buildingCodeTxt.text as! Int
+        let numOfHours = numOfHoursTxt.text
+        let carPlateNum = carPlateNumberTxt.text
+        let suiteNumOfHost = suiteNumOfHostTxt.text
+        
+        let newParking = ParkingModel(buildingCode: buildingCode)
+    }
 
 }
 
