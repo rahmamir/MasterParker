@@ -19,7 +19,7 @@ public class UserController
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let userEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "UserEntity", in: managedContext)
+        let userEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "User", in: managedContext)
         //if we have access to user table
         if (userEntity != nil){
             let user = NSManagedObject(entity: userEntity!, insertInto: managedContext)
@@ -43,7 +43,7 @@ public class UserController
             return nil
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntity")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
         do{
             let result = try managedContext.fetch(fetchRequest)
@@ -61,7 +61,7 @@ public class UserController
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntity")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
         fetchRequest.predicate = NSPredicate(format: "email = %@", user.email)
         

@@ -14,7 +14,7 @@ class AddParkingVC: UIViewController {
     let parkingController = ParkingController()
     let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: "23", CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     
-    @IBOutlet var confirmParkingBtn : UIButton!
+
     
     @IBOutlet var buildingCodeTxt : UITextField!
     
@@ -26,11 +26,14 @@ class AddParkingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createParking()
         // Do any additional setup after loading the view.
     }
     
-    func createParking(){
+    @IBAction func onConfirmParking(_ sender: UIButton) {
+        self.createParking()
+    }
+    
+    private func createParking(){
         
         let buildingCode:Int? = Int(buildingCodeTxt.text!)
         let numOfHours:Int? = Int(numOfHoursTxt.text!)
@@ -49,7 +52,9 @@ class AddParkingVC: UIViewController {
             parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
             userController.updateUser(user: loggedInUser)//updated UserDatabase
             //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+            navigateToReceipt()//go to receipt page
         }
+        navigateToReceipt()//DELETE THIS LINE LATER, ONLY FOR TESTING PURPOSES
     }
     
     private func calculateParkingCharges(numOfHours: Int, parkingCount: Int) -> Int{
@@ -87,6 +92,14 @@ class AddParkingVC: UIViewController {
         default:
             return -1
         }
+    }
+    
+    private func navigateToReceipt(){
+        
+        let ParkingReceiptVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ParkingReceiptScene") as! ParkingReceiptVC
+               
+        navigationController?.pushViewController(ParkingReceiptVC, animated: true)
+        
     }
 
 }

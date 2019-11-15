@@ -19,7 +19,7 @@ public class ParkingController
             return
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let parkingEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "ParkingEntity", in: managedContext)
+        let parkingEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "Parking", in: managedContext)
         //if we have access to user table
         if (parkingEntity != nil){
             let user = NSManagedObject(entity: parkingEntity!, insertInto: managedContext)
@@ -42,7 +42,7 @@ public class ParkingController
             return nil
         }
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ParkingEntity")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Parking")
         
         do{
             let result = try managedContext.fetch(fetchRequest)

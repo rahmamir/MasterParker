@@ -20,17 +20,9 @@ class HomeScreenVC : UIViewController {
     
     @IBAction func onAddParkingClick(_ sender: UIButton){
         
-        self.navigateTo()
+        let addParkingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddParkingScene") as! AddParkingVC
         
-    }
-    
-    private func navigateTo(){//TODO = dynamically navigate to appropriate page given appropriate parameters
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let addParkingVC = storyBoard.instantiateViewController(withIdentifier: "AddParkingScene") as! AddParkingVC
         navigationController?.pushViewController(addParkingVC, animated: true)
-        
     }
     
 }

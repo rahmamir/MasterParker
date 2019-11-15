@@ -10,7 +10,7 @@ import UIKit
 
 class SignInVC : UIViewController{
     
-    @IBOutlet var loginBtn : UIButton!
+
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -18,12 +18,11 @@ class SignInVC : UIViewController{
            
        }
     
-    @IBAction func loginBtnClick(_ sender: UIButton){
+    @IBAction func onloginClick(_ sender: UIButton){
+
+        let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-               
-               let homeScreenVC = storyBoard.instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
-               navigationController?.pushViewController(homeScreenVC, animated: true)
+        navigationController?.pushViewController(homeScreenVC, animated: true)
         
     }
     

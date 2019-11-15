@@ -177,11 +177,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol9-aQ-lgW">
-                                <rect key="frame" x="152" y="800" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Confirm Parking"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMK-bd-AZl">
                                 <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -244,6 +239,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4q-BL-QBB">
+                                <rect key="frame" x="152" y="832" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirm Parking"/>
+                                <connections>
+                                    <action selector="onConfirmParking:" destination="Stq-5I-4ub" eventType="touchUpInside" id="Fci-Bg-Eip"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -276,7 +279,6 @@
                     <connections>
                         <outlet property="buildingCodeTxt" destination="fZL-gh-Fim" id="buJ-hg-kBL"/>
                         <outlet property="carPlateNumberTxt" destination="Twu-aQ-vIy" id="qDm-wZ-9N0"/>
-                        <outlet property="confirmParkingBtn" destination="Ol9-aQ-lgW" id="fDt-5x-p3a"/>
                         <outlet property="numOfHoursTxt" destination="tx9-uU-u7b" id="ORW-L5-f1a"/>
                         <outlet property="suiteNumOfHostTxt" destination="5XZ-XV-Ess" id="O6g-lO-mri"/>
                     </connections>
@@ -288,7 +290,7 @@
         <!--Parking ReceiptVC-->
         <scene sceneID="tHB-PR-eqL">
             <objects>
-                <viewController id="WXI-E5-0C2" customClass="ParkingReceiptVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParkingReceiptScene" id="WXI-E5-0C2" customClass="ParkingReceiptVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Oc-W0-Mbf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,8 +313,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Of Parking: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-bs-Awe">
-                                <rect key="frame" x="20" y="173" width="132" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date-Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-bs-Awe">
+                                <rect key="frame" x="20" y="173" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -410,6 +412,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wau-Ij-isE"/>
                     </view>
+                    <connections>
+                        <outlet property="buildingCodeLabel" destination="FTh-3T-mpa" id="sJq-D1-OH7"/>
+                        <outlet property="carPlateNumberLabel" destination="C1g-vc-VGc" id="MJD-XU-yaU"/>
+                        <outlet property="durationOfParkingLabel" destination="RkX-A8-1o2" id="ciw-E6-FSB"/>
+                        <outlet property="parkingCostLabel" destination="dsh-0h-a95" id="Ti6-6f-DqQ"/>
+                        <outlet property="suiteNumOfHostLabel" destination="hth-Tn-eTu" id="qGX-5J-GwW"/>
+                        <outlet property="timeOfParkingLabel" destination="BsY-FT-Z5b" id="vUD-oh-M72"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8os-My-XVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -492,7 +502,7 @@
         <!--Sign InVC-->
         <scene sceneID="ue0-rQ-xxV">
             <objects>
-                <viewController id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInScene" id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xxX-ef-hxP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -503,10 +513,13 @@
                                 <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNa-JN-8rF">
-                                <rect key="frame" x="186" y="433" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyf-wT-Lnh">
+                                <rect key="frame" x="188" y="433" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log In"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onloginClick:" destination="ZgH-Mh-ZnD" eventType="touchUpInside" id="sfu-9j-ktT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -518,9 +531,6 @@
                         <viewLayoutGuide key="safeArea" id="JTM-f5-yLx"/>
                     </view>
                     <navigationItem key="navigationItem" id="J85-DS-SsI"/>
-                    <connections>
-                        <outlet property="loginBtn" destination="KNa-JN-8rF" id="aaK-cW-j57"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdY-kA-yq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
