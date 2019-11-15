@@ -42,18 +42,19 @@ class AddParkingVC: UIViewController {
         
         //TODO = basic errorchecking with popup error messages, such as empty fields, or incorrect data type
         
-        if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#
-            
+        //if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#UNCOMMENT THIS
+            parkingController.deleteAllParkings()
             let date = Date()
             let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!, parkingCount: loggedInUser.numOfParkingsMade)
             
             let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
          
+            print("updating database with new parking")
             parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
-            userController.updateUser(user: loggedInUser)//updated UserDatabase
+            //userController.updateUser(user: loggedInUser)//updated UserDatabase
             //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
             navigateToReceipt()//go to receipt page
-        }
+        //}UNCOMMENT THIS
         navigateToReceipt()//DELETE THIS LINE LATER, ONLY FOR TESTING PURPOSES
     }
     

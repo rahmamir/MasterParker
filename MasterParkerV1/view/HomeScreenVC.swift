@@ -25,4 +25,12 @@ class HomeScreenVC : UIViewController {
         navigationController?.pushViewController(addParkingVC, animated: true)
     }
     
+    @IBAction func onViewReceiptParkingListClick(_ sender: UIButton){
+        
+        let parkingReceiptListTVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ParkingReceiptListTVCScene") as! ParkingReceiptListTVC
+               
+        navigationController?.pushViewController(parkingReceiptListTVC, animated: true)
+        
+    }
+    
 }

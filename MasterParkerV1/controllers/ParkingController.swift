@@ -12,6 +12,34 @@ import CoreData
 
 public class ParkingController
 {
+    func deleteAllParkings(){
+        
+       guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+       {
+           return
+       }
+       let managedContext = appDelegate.persistentContainer.viewContext
+       let parkingEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "Parking", in: managedContext)
+        if (parkingEntity != nil){
+            let parking = NSManagedObject(entity: parkingEntity!, insertInto: managedContext)
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Parking")
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            do{
+                let results = try managedContext.fetch(fetchRequest)
+                for parking in results {
+                    let managedObjectData:NSManagedObject = parking as! NSManagedObject
+                    managedContext.delete(managedObjectData)
+                }
+                //print("successfully adding parking to database")
+                //try managedContext.save()
+                
+            }catch let error as NSError{
+                print("Insert parking failed...\(error), \(error.userInfo)")
+            }
+        }
+    }
+    
     func insertParking(newParking: ParkingModel)
     {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
@@ -27,8 +55,11 @@ public class ParkingController
             user.setValue(newParking.carPlateNum, forKey: "carPlateNum")
             user.setValue(newParking.numOfHours, forKey: "numOfHours")
             user.setValue(newParking.suiteNumOfHost, forKey: "suiteNumOfHost")
+            user.setValue(newParking.dateOfParking, forKey: "dateOfParking")
+            user.setValue(newParking.parkingCharge, forKey: "parkingCharge")
             do{
                 //to perform insert operation on database table
+                print("successfully adding parking to database")
                 try managedContext.save()
                 
             }catch let error as NSError{
@@ -51,5 +82,29 @@ public class ParkingController
             print("Data fetching Unsuccessful")
         }
         return nil
+    }
+    
+    func getAllParkingsForCarPlateNumber(carPlateNumber: String) -> [ParkingModel]{
+        
+        let allParkings = (self.getAllParkings() ?? nil)!
+        var previousParkings = [ParkingModel]()
+        
+        if(allParkings != nil){
+            for parking in allParkings{
+                //let dbCarPlateNumber = parking.value(forKey: "carPlateNumber") as! String
+                //if(carPlateNumber == dbCarPlateNumber){
+                let tempParking = ParkingModel(
+                    BuildingCode: parking.value(forKey: "buildingCode") as! Int,
+                    NumOfHours: parking.value(forKey: "numOfHours") as! Int,
+                    CarPlateNum: parking.value(forKey: "carPlateNum") as! String,
+                    SuiteNumOfHost: parking.value(forKey: "suiteNumOfHost") as! Int,
+                    DateOfParking: parking.value(forKey: "dateOfParking") as! Date,
+                    parkingCharge: parking.value(forKey: "parkingCharge") as! Int)
+                
+                    previousParkings.append(tempParking)
+                //}
+            }
+        }
+        return previousParkings
     }
 }

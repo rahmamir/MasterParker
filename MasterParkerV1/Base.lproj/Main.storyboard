@@ -442,9 +442,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-S9-xg4">
-                                <rect key="frame" x="184" y="236" width="46" height="30"/>
+                                <rect key="frame" x="121" y="236" width="173" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="VIew Parking Receipt List"/>
+                                <connections>
+                                    <action selector="onViewReceiptParkingListClick:" destination="KGR-r5-DeD" eventType="touchUpInside" id="6G8-K4-3r6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-V2-b9o">
                                 <rect key="frame" x="184" y="296" width="46" height="30"/>
@@ -498,6 +501,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVX-iv-uHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2420" y="33"/>
+        </scene>
+        <!--Parking Receipt ListTVC-->
+        <scene sceneID="paO-Js-dxJ">
+            <objects>
+                <tableViewController storyboardIdentifier="ParkingReceiptListTVCScene" id="c0s-OG-0Rn" customClass="ParkingReceiptListTVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rsv-UE-Epk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="b5U-wB-DGX" customClass="ParkingReceiptTVCell" customModule="MasterParkerV1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b5U-wB-DGX" id="RvF-L5-vyF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-SY-YIk">
+                                            <rect key="frame" x="20" y="20" width="0.0" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2d1-SY-YIk" firstAttribute="leading" secondItem="RvF-L5-vyF" secondAttribute="leading" constant="20" id="E0c-c0-odE"/>
+                                        <constraint firstItem="2d1-SY-YIk" firstAttribute="top" secondItem="RvF-L5-vyF" secondAttribute="top" constant="20" id="wCL-t3-Rad"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="carPlateNumber" destination="2d1-SY-YIk" id="XkD-3t-euK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c0s-OG-0Rn" id="5Vd-sl-LaX"/>
+                            <outlet property="delegate" destination="c0s-OG-0Rn" id="9iZ-l5-ahS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nj5-Xm-OMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="30"/>
+        </scene>
+        <!--Parking Receipt Detail-->
+        <scene sceneID="4T6-fL-udm">
+            <objects>
+                <viewController id="lK0-SX-hLz" customClass="ParkingReceiptDetail" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hQI-lj-ljh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ROf-hw-POu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydB-v4-ieq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3976" y="27"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="ue0-rQ-xxV">
