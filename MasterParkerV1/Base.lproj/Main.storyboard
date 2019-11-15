@@ -16,39 +16,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8PZ-PC-vH2" kind="relationship" relationship="rootViewController" id="PWm-Qj-4dI"/>
+                        <segue destination="ZgH-Mh-ZnD" kind="relationship" relationship="rootViewController" id="sAj-bU-fbR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7c0-Ih-vFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1230" y="35"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yKC-wG-CI9">
-            <objects>
-                <viewController id="8PZ-PC-vH2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gWa-0H-dWy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oSG-sU-8rj">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsO-xr-6QG">
-                                <rect key="frame" x="184" y="651" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="eLQ-KX-XoL"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="dfz-6t-Taq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CXd-iS-4Xb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-458" y="33"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="twu-0V-aRg">
@@ -445,7 +418,7 @@
         <!--Home ScreenVC-->
         <scene sceneID="lgq-Au-qwo">
             <objects>
-                <viewController id="KGR-r5-DeD" customClass="HomeScreenVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeScreenScene" id="KGR-r5-DeD" customClass="HomeScreenVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Wg-Ua-gj4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,8 +489,42 @@
             </objects>
             <point key="canvasLocation" x="2420" y="33"/>
         </scene>
+        <!--Sign InVC-->
+        <scene sceneID="ue0-rQ-xxV">
+            <objects>
+                <viewController id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xxX-ef-hxP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgK-dv-Qw5">
+                                <rect key="frame" x="20" y="108" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNa-JN-8rF">
+                                <rect key="frame" x="186" y="433" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log In"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PgK-dv-Qw5" firstAttribute="leading" secondItem="JTM-f5-yLx" secondAttribute="leading" constant="20" id="2LV-EP-suc"/>
+                            <constraint firstItem="PgK-dv-Qw5" firstAttribute="top" secondItem="JTM-f5-yLx" secondAttribute="top" constant="20" id="J3v-sU-71M"/>
+                            <constraint firstItem="JTM-f5-yLx" firstAttribute="trailing" secondItem="PgK-dv-Qw5" secondAttribute="trailing" constant="20" id="W2o-xG-eVg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JTM-f5-yLx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J85-DS-SsI"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="KNa-JN-8rF" id="aaK-cW-j57"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdY-kA-yq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="35"/>
+        </scene>
     </scenes>
-    <resources>
-        <image name="car.fill" catalog="system" width="64" height="46"/>
-    </resources>
 </document>

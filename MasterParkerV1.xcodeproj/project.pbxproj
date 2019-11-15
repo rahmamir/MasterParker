@@ -10,6 +10,7 @@
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		555281972375336A006DA807 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555281962375336A006DA807 /* SignUpVC.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
+		E71FAFE1237EE78B00E2379F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFE0237EE78B00E2379F /* SignInVC.swift */; };
 		E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344C22375FCDF0073FB49 /* UserModel.swift */; };
 		E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344E92376014F0073FB49 /* PaymentModel.swift */; };
 		E7A8DAC4237E7F580070A30B /* ParkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8DAC3237E7F580070A30B /* ParkingModel.swift */; };
@@ -28,6 +29,7 @@
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		555281962375336A006DA807 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
+		E71FAFE0237EE78B00E2379F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		E73344C22375FCDF0073FB49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E73344E92376014F0073FB49 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
 		E7A8DAC3237E7F580070A30B /* ParkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingModel.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				555281962375336A006DA807 /* SignUpVC.swift */,
 				E7A8DAC7237E97E90070A30B /* ParkingReceiptVC.swift */,
 				E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */,
+				E71FAFE0237EE78B00E2379F /* SignInVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				55477DED237BBB7B006E7808 /* UserController.swift in Sources */,
 				E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */,
 				E7BFDCA2236E356C009FAD77 /* SceneDelegate.swift in Sources */,
+				E71FAFE1237EE78B00E2379F /* SignInVC.swift in Sources */,
 				E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */,
 				E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */,
 				E7A8DAC4237E7F580070A30B /* ParkingModel.swift in Sources */,

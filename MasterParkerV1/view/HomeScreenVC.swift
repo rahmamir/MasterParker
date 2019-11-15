@@ -24,7 +24,7 @@ class HomeScreenVC : UIViewController {
         
     }
     
-    private func navigateTo(){//TODO = dynamically navigate to appropriate page
+    private func navigateTo(){//TODO = dynamically navigate to appropriate page given appropriate parameters
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
