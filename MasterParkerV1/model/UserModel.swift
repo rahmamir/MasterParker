@@ -15,8 +15,8 @@ class UserModel{
     var password : String
     var contactNumber : String
     var carPlateNumber : String
-    var numOfParkingsMade : Int
-    var currentMonth : Date
+    //var numOfParkingsMade : Int
+    //var currentMonth : Date
     
     init(Name: String, Email: String, Password: String, ContactNumber: String, CarPlateNumber: String) {
         self.name = Name
@@ -24,7 +24,7 @@ class UserModel{
         self.password = Password
         self.contactNumber = ContactNumber
         self.carPlateNumber = CarPlateNumber
-        self.numOfParkingsMade = 0
-        self.currentMonth = Date()
+        //self.numOfParkingsMade = 0
+        //self.currentMonth = Date()
     }
 }

@@ -73,9 +73,9 @@ public class UserController
             existingUser.setValue(user.name, forKey: "firstname")
             existingUser.setValue(user.carPlateNumber, forKey: "carPlateNumber")
             existingUser.setValue(user.contactNumber, forKey: "contactNumber")
-            existingUser.setValue(user.currentMonth, forKey: "currentMonth")
+            //existingUser.setValue(user.currentMonth, forKey: "currentMonth")
             existingUser.setValue(user.email, forKey: "email")
-            existingUser.setValue(user.numOfParkingsMade, forKey: "numOfParkingsMade")
+            //existingUser.setValue(user.numOfParkingsMade, forKey: "numOfParkingsMade")
             existingUser.setValue(user.password, forKey: "password")
             
             do{
@@ -98,12 +98,15 @@ public class UserController
                 let dbCarPlateNumber = user.value(forKey: "carPlateNumber") as! String
                 if (dbName == name){
                     if(dbCarPlateNumber == carPlateNumber){
+                        print("carplate==givenplate, TRUE")
                         return true//if corresponding carplate# is same, return true
                     }
+                    print("carplate!=givenplate, FALSE")
                     return false
                 }
             }
         }
+        print("carplate!=givenplate, FALSE")
         return false
     }
 }

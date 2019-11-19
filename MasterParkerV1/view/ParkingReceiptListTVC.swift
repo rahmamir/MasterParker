@@ -34,10 +34,10 @@ class ParkingReceiptListTVC : UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ParkingReceiptTVCell
         
-        print(indexPath.row)
-        print(mParkingList.count)
-        print(mParkingList[0].carPlateNum)
-        print(cell.carPlateNumber)
+        //print(indexPath.row)
+        //print(mParkingList.count)
+        //print(mParkingList[0].carPlateNum)
+        //print(cell.carPlateNumber)
         
         // Configure the cell...
         cell.carPlateNumber!.text = "\(self.mParkingList[indexPath.row].carPlateNum)"
@@ -49,17 +49,19 @@ class ParkingReceiptListTVC : UITableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let mainSB = UIStoryboard(name: "Main", bundle: nil)
-        //let detailVC = mainSB.instantiateViewController(identifier: "ContactDetailScene") as! ContactDetail
+        
+        let parkingReceiptVC = mainSB.instantiateViewController(identifier: "ParkingReceiptScene") as! ParkingReceiptVC
+        
+        UserDefaults.standard.set(mParkingList[indexPath.row].carPlateNum, forKey: "CARPLATENUMBER")
         
         //send the current contact to next scene
-        //detailVC.currentContact = self.mContactList[indexPath.row]
-        //self.navigationController?.pushViewController(detailVC, animated: true)
+        self.navigationController?.pushViewController(parkingReceiptVC, animated: true)
     }
     
     private func fetchParkings(){
         
         //var allUsers = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: loggedInUser.carPlateNumber) ?? nil)!
-        mParkingList = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: "2323") ?? nil)!
+        mParkingList = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: "2323") )
         
         print(mParkingList.count)
         self.tableView.reloadData()

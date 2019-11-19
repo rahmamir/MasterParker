@@ -107,4 +107,56 @@ public class ParkingController
         }
         return previousParkings
     }
+    
+    func getParking(carplateNum: String, dateOfParking: Date) -> ParkingModel{
+        
+        let allParkings = (self.getAllParkings() ?? nil)!
+        var specificParking : ParkingModel
+        
+        if(allParkings != nil){
+            for parking in allParkings{
+                //let dbCarPlateNumber = parking.value(forKey: "carPlateNumber") as! String
+                //if(carPlateNumber == dbCarPlateNumber){
+                if(parking.value(forKey: "carPlateNum") as! String == carplateNum &&
+                    parking.value(forKey: "dateOfParking") as! Date == dateOfParking){
+                    specificParking = ParkingModel(
+                                       BuildingCode: parking.value(forKey: "buildingCode") as! Int,
+                                       NumOfHours: parking.value(forKey: "numOfHours") as! Int,
+                                       CarPlateNum: parking.value(forKey: "carPlateNum") as! String,
+                                       SuiteNumOfHost: parking.value(forKey: "suiteNumOfHost") as! Int,
+                                       DateOfParking: parking.value(forKey: "dateOfParking") as! Date,
+                                       parkingCharge: parking.value(forKey: "parkingCharge") as! Int)
+                    return specificParking
+                }
+            }
+        }
+        return ParkingModel(BuildingCode: -1, NumOfHours: -1, CarPlateNum: "-1", SuiteNumOfHost: -1, DateOfParking: Date(), parkingCharge: -1)
+    }
+    
+    func isFreeParking(DateParked: Date) -> Bool{
+        
+        let allParkings = (self.getAllParkings() ?? nil)!
+        var currentMonthParkCount = 0
+        
+        if(allParkings != nil){
+            for parking in allParkings{
+                let tempDate = parking.value(forKey: "dateOfParking") as! Date
+                let calendar = Calendar.current
+                let tempMonth = calendar.component(.month, from: tempDate)
+                let monthParked = calendar.component(.month, from: DateParked)
+                
+                if(monthParked == tempMonth){
+                    //print("increasing ParkingCount")
+                    currentMonthParkCount += 1
+                }
+            }
+        }
+        //print(currentMonthParkCount)
+        if(currentMonthParkCount < 3){
+            //print("FREE PARKING")
+            return true
+        }
+        //print("EXPENSIVE PARKING")
+        return false
+    }
 }

@@ -14,8 +14,6 @@ class AddParkingVC: UIViewController {
     let parkingController = ParkingController()
     let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: "23", CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     
-
-    
     @IBOutlet var buildingCodeTxt : UITextField!
     
     @IBOutlet var numOfHoursTxt : UITextField!
@@ -30,6 +28,7 @@ class AddParkingVC: UIViewController {
     }
     
     @IBAction func onConfirmParking(_ sender: UIButton) {
+        print("Trying to add new parking")
         self.createParking()
     }
     
@@ -43,54 +42,60 @@ class AddParkingVC: UIViewController {
         //TODO = basic errorchecking with popup error messages, such as empty fields, or incorrect data type
         
         //if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#UNCOMMENT THIS
-            parkingController.deleteAllParkings()
+            //parkingController.deleteAllParkings()
             let date = Date()
-            let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!, parkingCount: loggedInUser.numOfParkingsMade)
+            let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!)
+        
+        if(parkingCharges != -1){
+                print("PARKINGCHARGES")
+                print(parkingCharges)
+                let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
             
-            let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
-         
-            print("updating database with new parking")
-            parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
-            //userController.updateUser(user: loggedInUser)//updated UserDatabase
-            //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
-            navigateToReceipt()//go to receipt page
-        //}UNCOMMENT THIS
-        navigateToReceipt()//DELETE THIS LINE LATER, ONLY FOR TESTING PURPOSES
+               UserDefaults.standard.set(carPlateNum, forKey: "CARPLATENUMBER")
+               UserDefaults.standard.set(date, forKey: "DATEOFPARKING")
+               
+               print("updating database with new parking")
+               parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
+               //userController.updateUser(user: loggedInUser)//updated UserDatabase
+               //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+               navigateToReceipt()//go to receipt page
+        }
+        //}//UNCOMMENT THIS
     }
     
-    private func calculateParkingCharges(numOfHours: Int, parkingCount: Int) -> Int{
+    private func calculateParkingCharges(numOfHours: Int) -> Int{
         
-        let userMonth = Calendar.current.component(.month, from: loggedInUser.currentMonth)
-        let currentMonth = Calendar.current.component(.month, from: Date())
+        //let userMonth = Calendar.current.component(.month, from: loggedInUser.currentMonth)
+        //let currentMonth = Calendar.current.component(.month, from: Date())
         
-        if(currentMonth == userMonth){
-            if(parkingCount <= 3){
-                loggedInUser.numOfParkingsMade = loggedInUser.numOfParkingsMade + 1
-                return 0//free if the first 3 parkings of month
-            }
-            else{
-                return regularCharges(numOfHours: numOfHours)
-            }
+        let totalParkingCharges = parkingController.isFreeParking(DateParked: Date())
+        
+        if(totalParkingCharges){
+            return 0
         }
         else{
-            loggedInUser.numOfParkingsMade = 1//reset free parking count, +1 for current parking
-            loggedInUser.currentMonth = Date()//update the current month of the user
-            return 0//0 if first parking made
+            return regularCharges(numOfHours: numOfHours)
         }
         //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+        return 0
     }
     
     private func regularCharges(numOfHours: Int) -> Int{
-        switch numOfHours {
-        case 1:
+        print("NUM OF HOURS = ")
+        print(numOfHours)
+        if(numOfHours <= 1){
             return 4
-        case 3:
+        }
+        else if(numOfHours <= 3){
             return 8
-        case 10:
+        }
+        else if(numOfHours <= 10){
             return 12
-        case 24:
+        }
+        else if(numOfHours <= 24){
             return 20
-        default:
+        }
+        else{
             return -1
         }
     }
@@ -104,4 +109,5 @@ class AddParkingVC: UIViewController {
     }
 
 }
+
 
