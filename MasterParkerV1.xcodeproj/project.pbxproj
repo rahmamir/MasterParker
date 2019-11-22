@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C628AF238857F900A2CF85 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C628AE238857F900A2CF85 /* RegisterUser.swift */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
-		555281972375336A006DA807 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555281962375336A006DA807 /* SignUpVC.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
 		E71FAFE1237EE78B00E2379F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFE0237EE78B00E2379F /* SignInVC.swift */; };
 		E71FAFE5237F12AC00E2379F /* ParkingReceiptListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */; };
@@ -29,8 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C628AE238857F900A2CF85 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		555281962375336A006DA807 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		E71FAFE0237EE78B00E2379F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingReceiptListTVC.swift; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */,
+				04C628AE238857F900A2CF85 /* RegisterUser.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -75,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				E71FAFE0237EE78B00E2379F /* SignInVC.swift */,
-				555281962375336A006DA807 /* SignUpVC.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71FAFE9237F133F00E2379F /* ParkingReceiptDetail.swift in Sources */,
-				555281972375336A006DA807 /* SignUpVC.swift in Sources */,
+				04C628AF238857F900A2CF85 /* RegisterUser.swift in Sources */,
 				E7BFDCA0236E356C009FAD77 /* AppDelegate.swift in Sources */,
 				55477DED237BBB7B006E7808 /* UserController.swift in Sources */,
 				E7F7E0492374E27700622CB4 /* AddParkingVC.swift in Sources */,
