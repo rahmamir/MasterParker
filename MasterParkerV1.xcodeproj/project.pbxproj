@@ -63,6 +63,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C628AB2387AC3E00A2CF85 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		04C628AC2387AC5500A2CF85 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				E71FAFE0237EE78B00E2379F /* SignInVC.swift */,
+				555281962375336A006DA807 /* SignUpVC.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		04C628AD2387AC6A00A2CF85 /* Parking */ = {
+			isa = PBXGroup;
+			children = (
+				E7F7E0482374E27700622CB4 /* AddParkingVC.swift */,
+				E7A8DAC7237E97E90070A30B /* ParkingReceiptVC.swift */,
+				E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */,
+				E71FAFE6237F132300E2379F /* ParkingReceiptTVCell.swift */,
+				E71FAFE8237F133F00E2379F /* ParkingReceiptDetail.swift */,
+			);
+			path = Parking;
+			sourceTree = "<group>";
+		};
 		55477DEE237BBC49006E7808 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +147,9 @@
 		E7F7E0382374CFAF00622CB4 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				E7F7E0482374E27700622CB4 /* AddParkingVC.swift */,
-				555281962375336A006DA807 /* SignUpVC.swift */,
-				E7A8DAC7237E97E90070A30B /* ParkingReceiptVC.swift */,
-				E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */,
-				E71FAFE0237EE78B00E2379F /* SignInVC.swift */,
-				E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */,
-				E71FAFE6237F132300E2379F /* ParkingReceiptTVCell.swift */,
-				E71FAFE8237F133F00E2379F /* ParkingReceiptDetail.swift */,
+				04C628AD2387AC6A00A2CF85 /* Parking */,
+				04C628AC2387AC5500A2CF85 /* Account */,
+				04C628AB2387AC3E00A2CF85 /* User */,
 			);
 			path = view;
 			sourceTree = "<group>";
