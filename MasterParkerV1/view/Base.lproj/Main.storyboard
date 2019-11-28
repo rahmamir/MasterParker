@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KGR-r5-DeD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r6a-7c-Rtk">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -492,7 +492,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onAddParkingAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="hwq-Rg-8WZ"/>
+                                    <action selector="onAddParkingAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="1Ln-dX-J0N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-S9-xg4">
@@ -515,7 +515,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onViewReceiptParkingListAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="6G8-K4-3r6"/>
+                                    <action selector="onViewReceiptParkingListAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="zpD-7n-pEB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-V2-b9o">
@@ -537,7 +537,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewParkingMapAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="qjG-I7-JUs"/>
+                                    <action selector="viewParkingMapAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="NDB-hh-j2C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-Uu-0Nq">
@@ -559,7 +559,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewUserProfileAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="LZa-qn-l5a"/>
+                                    <action selector="viewUserProfileAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="aKg-Km-9Qf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th1-s3-Hc5">
@@ -581,7 +581,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewCustomerSupportAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="lsZ-UA-Msh"/>
+                                    <action selector="viewCustomerSupportAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="emQ-RM-lE7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-P0-lII">
@@ -604,7 +604,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="viewParkingManualAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="wUF-OW-XCc"/>
+                                    <action selector="viewParkingManualAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="NB3-0O-lo5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Home  User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFO-Af-sJG">
@@ -633,7 +633,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="signOutAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="fyM-47-0fb"/>
+                                    <action selector="signOutAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="uDf-io-gTv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lw-J5-IEE">
@@ -710,9 +710,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPJ-rz-TSo"/>
                     </view>
-                    <connections>
-                        <outlet property="AddParkingBtn" destination="wiW-7g-fuP" id="OE8-02-DDq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVX-iv-uHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -779,7 +776,7 @@
         <!--Sign InVC-->
         <scene sceneID="ue0-rQ-xxV">
             <objects>
-                <viewController storyboardIdentifier="SignInScene" id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="xxX-ef-hxP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -994,6 +991,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LIi-5E-Ovy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="699.77678571428567"/>
+        </scene>
+        <!--App ManualVC-->
+        <scene sceneID="Vgu-Cy-bPx">
+            <objects>
+                <viewController storyboardIdentifier="AppManual" id="r6a-7c-Rtk" customClass="AppManualVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UGy-h1-fa4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s63-i5-iDC">
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s63-i5-iDC" firstAttribute="leading" secondItem="adA-cd-bIh" secondAttribute="leading" id="HEw-wq-3Mx"/>
+                            <constraint firstItem="s63-i5-iDC" firstAttribute="top" secondItem="adA-cd-bIh" secondAttribute="top" constant="20" id="Wm7-cP-zXU"/>
+                            <constraint firstItem="adA-cd-bIh" firstAttribute="trailing" secondItem="s63-i5-iDC" secondAttribute="trailing" id="mF7-ij-Hyc"/>
+                            <constraint firstItem="adA-cd-bIh" firstAttribute="bottom" secondItem="s63-i5-iDC" secondAttribute="bottom" id="xFR-Qj-u16"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="adA-cd-bIh"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="s63-i5-iDC" id="YgR-gD-zWt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yg4-RF-QsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="-733"/>
         </scene>
     </scenes>
     <resources>

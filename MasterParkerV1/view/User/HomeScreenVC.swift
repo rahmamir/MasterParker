@@ -10,7 +10,6 @@ import UIKit
 
 class HomeScreenVC : UIViewController {
     
-    @IBOutlet var AddParkingBtn : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +33,10 @@ class HomeScreenVC : UIViewController {
     }
     
     @IBAction func viewParkingMapAction(_ sender: UIButton) {
+        let map = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ParkingMap") as! ParkingMapVC
+                      
+               navigationController?.pushViewController(map, animated: true)
+               
     }
     
     
@@ -44,9 +47,17 @@ class HomeScreenVC : UIViewController {
     }
     
     @IBAction func viewParkingManualAction(_ sender: Any) {
+        let appManual = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AppManual") as! AppManualVC
+                    
+             navigationController?.pushViewController(appManual, animated: true)
+             
     }
     
     @IBAction func signOutAction(_ sender: UIButton) {
+        let signOut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignIn") as! SignInVC
+                           
+                    navigationController?.pushViewController(signOut, animated: true)
+                 
     }
     
     
