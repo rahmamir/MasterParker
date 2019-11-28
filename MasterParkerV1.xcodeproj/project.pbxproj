@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04989812238FA23100373463 /* ParkingMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989811238FA23100373463 /* ParkingMapVC.swift */; };
 		04C628AF238857F900A2CF85 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C628AE238857F900A2CF85 /* RegisterUser.swift */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04989811238FA23100373463 /* ParkingMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingMapVC.swift; sourceTree = "<group>"; };
 		04C628AE238857F900A2CF85 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */,
 				E71FAFE6237F132300E2379F /* ParkingReceiptTVCell.swift */,
 				E71FAFE8237F133F00E2379F /* ParkingReceiptDetail.swift */,
+				04989811238FA23100373463 /* ParkingMapVC.swift */,
 			);
 			path = Parking;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
 				E7A8DAC8237E97E90070A30B /* ParkingReceiptVC.swift in Sources */,
 				E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */,
+				04989812238FA23100373463 /* ParkingMapVC.swift in Sources */,
 				E71FAFE5237F12AC00E2379F /* ParkingReceiptListTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,4 +26,10 @@ class SignInVC : UIViewController{
         
     }
     
+    @IBAction func onSignUpClick(_ sender: UIButton) {
+        let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpScene") as! RegisterUser
+        
+        navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
 }

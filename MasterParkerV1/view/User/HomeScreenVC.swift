@@ -18,19 +18,35 @@ class HomeScreenVC : UIViewController {
         
     }
     
-    @IBAction func onAddParkingClick(_ sender: UIButton){
+    @IBAction func onAddParkingAction(_ sender: UIButton){
         
         let addParkingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddParkingScene") as! AddParkingVC
         
         navigationController?.pushViewController(addParkingVC, animated: true)
     }
     
-    @IBAction func onViewReceiptParkingListClick(_ sender: UIButton){
+    @IBAction func onViewReceiptParkingListAction(_ sender: UIButton){
         
         let parkingReceiptListTVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ParkingReceiptListTVCScene") as! ParkingReceiptListTVC
                
         navigationController?.pushViewController(parkingReceiptListTVC, animated: true)
         
+    }
+    
+    @IBAction func viewParkingMapAction(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func viewUserProfileAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func viewCustomerSupportAction(_ sender: Any) {
+    }
+    
+    @IBAction func viewParkingManualAction(_ sender: Any) {
+    }
+    
+    @IBAction func signOutAction(_ sender: UIButton) {
     }
     
     

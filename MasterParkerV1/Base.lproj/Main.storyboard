@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lG2-oS-9v9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KGR-r5-DeD">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -492,7 +492,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onAddParkingClick:" destination="KGR-r5-DeD" eventType="touchUpInside" id="hwq-Rg-8WZ"/>
+                                    <action selector="onAddParkingAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="hwq-Rg-8WZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-S9-xg4">
@@ -515,7 +515,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onViewReceiptParkingListClick:" destination="KGR-r5-DeD" eventType="touchUpInside" id="6G8-K4-3r6"/>
+                                    <action selector="onViewReceiptParkingListAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="6G8-K4-3r6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeb-V2-b9o">
@@ -536,6 +536,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewParkingMapAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="qjG-I7-JUs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-Uu-0Nq">
                                 <rect key="frame" x="20" y="356" width="374" height="50"/>
@@ -555,6 +558,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewUserProfileAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="LZa-qn-l5a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="th1-s3-Hc5">
                                 <rect key="frame" x="20" y="516" width="374" height="50"/>
@@ -574,6 +580,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewCustomerSupportAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="lsZ-UA-Msh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-P0-lII">
                                 <rect key="frame" x="20" y="446" width="374" height="50"/>
@@ -594,6 +603,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewParkingManualAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="wUF-OW-XCc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Home  User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFO-Af-sJG">
                                 <rect key="frame" x="20" y="64" width="374" height="42"/>
@@ -620,6 +632,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signOutAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="fyM-47-0fb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lw-J5-IEE">
                                 <rect key="frame" x="20" y="586" width="374" height="50"/>
@@ -870,6 +885,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSignUpClick:" destination="ZgH-Mh-ZnD" eventType="touchUpInside" id="Uwa-2v-KXA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -912,6 +930,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdY-kA-yq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-488.40579710144931" y="34.821428571428569"/>
+        </scene>
+        <!--Parking MapVC-->
+        <scene sceneID="pU8-PL-u3F">
+            <objects>
+                <viewController storyboardIdentifier="ParkingMap" id="1kW-vd-oPl" customClass="ParkingMapVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cG6-Jz-o0V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wwR-Jb-9WH">
+                                <rect key="frame" x="0.0" y="122.33333333333331" width="414" height="669.66666666666674"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Places to Park near you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OP-Pb-H7G">
+                                <rect key="frame" x="20" y="64" width="374" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fh-eG-BSW">
+                                <rect key="frame" x="20" y="802" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="m1t-DR-pDi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Find Parking!" image="car.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doSearchNearby" destination="1kW-vd-oPl" eventType="touchUpInside" id="Rs3-XH-31m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X9m-Rl-I2m" firstAttribute="trailing" secondItem="8OP-Pb-H7G" secondAttribute="trailing" constant="20" id="3Go-fd-nov"/>
+                            <constraint firstItem="wwR-Jb-9WH" firstAttribute="trailing" secondItem="X9m-Rl-I2m" secondAttribute="trailing" id="Afp-aR-Oid"/>
+                            <constraint firstItem="wwR-Jb-9WH" firstAttribute="top" secondItem="8OP-Pb-H7G" secondAttribute="bottom" constant="20" id="E04-E3-pTf"/>
+                            <constraint firstItem="wwR-Jb-9WH" firstAttribute="top" secondItem="8OP-Pb-H7G" secondAttribute="bottom" constant="20" id="LOt-ca-2BJ"/>
+                            <constraint firstItem="8OP-Pb-H7G" firstAttribute="top" secondItem="X9m-Rl-I2m" secondAttribute="top" constant="20" id="Ycb-iW-7aD"/>
+                            <constraint firstItem="9Fh-eG-BSW" firstAttribute="leading" secondItem="X9m-Rl-I2m" secondAttribute="leading" constant="20" id="cKG-xK-fHI"/>
+                            <constraint firstItem="X9m-Rl-I2m" firstAttribute="trailing" secondItem="9Fh-eG-BSW" secondAttribute="trailing" constant="20" id="hY5-ew-tiu"/>
+                            <constraint firstItem="8OP-Pb-H7G" firstAttribute="leading" secondItem="X9m-Rl-I2m" secondAttribute="leading" constant="20" id="s2J-Cq-83C"/>
+                            <constraint firstItem="X9m-Rl-I2m" firstAttribute="bottom" secondItem="9Fh-eG-BSW" secondAttribute="bottom" constant="10" id="x40-yj-NGB"/>
+                            <constraint firstItem="9Fh-eG-BSW" firstAttribute="top" secondItem="wwR-Jb-9WH" secondAttribute="bottom" constant="10" id="yYD-38-3gA"/>
+                            <constraint firstItem="wwR-Jb-9WH" firstAttribute="leading" secondItem="X9m-Rl-I2m" secondAttribute="leading" id="zmi-0q-vt4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X9m-Rl-I2m"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMap" destination="wwR-Jb-9WH" id="VIy-z9-vqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LIi-5E-Ovy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="699.77678571428567"/>
         </scene>
     </scenes>
     <resources>

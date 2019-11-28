@@ -6,7 +6,8 @@
 //  Copyright © 2019 MR. All rights reserved.
 //
 
-import UIKit//MAY NOT BE NECESSARY
+import UIKit
+//MAY NOT BE NECESSARY
 
 class ParkingReceiptDetail : UIViewController{
     
