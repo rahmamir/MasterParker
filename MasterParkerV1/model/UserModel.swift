@@ -15,6 +15,7 @@ class UserModel{
     var password : String
     var contactNumber : String
     var carPlateNumber : String
+    var paymentModel : PaymentModel
     //var numOfParkingsMade : Int
     //var currentMonth : Date
     
@@ -26,5 +27,6 @@ class UserModel{
         self.carPlateNumber = CarPlateNumber
         //self.numOfParkingsMade = 0
         //self.currentMonth = Date()
+        self.paymentModel = nil
     }
 }

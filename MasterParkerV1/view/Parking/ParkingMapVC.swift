@@ -38,7 +38,8 @@ class ParkingMapVC: UIViewController{
         }
     }
     
-    @IBAction func doSearchNearby(){
+    @IBAction func doSearchNearby(){//FINDING PARKING NOT WORKING
+    
     //search for the nearby facilities surrounding the current location
            
            //create a request to be provided to the location manager
