@@ -134,7 +134,7 @@ public class UserController
             
             let existingUser = result[0] as! NSManagedObject
             
-            existingUser.setValue(user.name, forKey: "firstname")
+            existingUser.setValue(user.name, forKey: "name")
             existingUser.setValue(user.carPlateNumber, forKey: "carPlateNumber")
             existingUser.setValue(user.contactNumber, forKey: "contactNumber")
             existingUser.setValue(user.email, forKey: "email")
