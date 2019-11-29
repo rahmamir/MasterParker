@@ -10,21 +10,31 @@ import UIKit
 
 class UpdateProfileVC: UIViewController {
 
+    var userController = UserController()
     
     @IBOutlet weak var txtName: UITextField!
     
-    
     @IBOutlet weak var txtEmail: UITextField!
     
-    
     @IBOutlet weak var txtPassword: UITextField!
-    
     
     @IBOutlet weak var txtContactNumber: UITextField!
     
     @IBOutlet weak var txtCarPlateNumber: UITextField!
     
     @IBAction func onUpdateProfileClick(_ sender: UIButton) {
+        
+        
+        // Check who is logged in
+        let name = txtName.text!
+        let email = txtEmail.text!
+        let password = txtPassword.text!
+        let contactNumber = Int(txtContactNumber.text!)!
+        let carPlateNumber = txtCarPlateNumber.text!
+        
+        userController.updateUser(user: UserModel(Name: name, Email: email, Password: password, ContactNumber: contactNumber, CarPlateNumber: carPlateNumber))
+    
+        
     }
     
     
