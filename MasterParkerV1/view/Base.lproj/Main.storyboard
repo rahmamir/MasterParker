@@ -846,7 +846,6 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-bK-3Ho">
                                 <rect key="frame" x="20" y="410" width="374" height="34"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
@@ -1058,15 +1057,140 @@
             </objects>
             <point key="canvasLocation" x="3190" y="-733"/>
         </scene>
+        <!--Customer SupportVC-->
+        <scene sceneID="J6X-Dw-9FC">
+            <objects>
+                <viewController storyboardIdentifier="CustomerSupport" id="6A7-i9-Adb" customClass="CustomerSupportVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nC2-Tr-Rzo" customClass="Customer">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Support " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-iC-1Po">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're here to help you in your parking needs. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-cH-aeC">
+                                <rect key="frame" x="20" y="126" width="374" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please feel free to reach Master Parker Customer support either through our Customer Service phone line or by Email" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-8c-drU">
+                                <rect key="frame" x="20" y="215" width="374" height="103"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master Parker Customer Service: +1-416-123-4567" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awt-Uo-aYF">
+                                <rect key="frame" x="20" y="358" width="374" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlI-ng-pzb">
+                                <rect key="frame" x="40" y="447" width="334" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="YZ4-kU-edu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Customer Support Agent" image="phone.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callSupportAction:" destination="6A7-i9-Adb" eventType="touchUpInside" id="GTI-Pk-NYE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v2-dl-nye">
+                                <rect key="frame" x="40" y="626" width="334" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="0fU-tX-93r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Email Contact" image="envelope.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="emailSupportAction:" destination="6A7-i9-Adb" eventType="touchUpInside" id="6VX-Kp-aHg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Service Email Contact: support@masterparker.com" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-QV-iM0">
+                                <rect key="frame" x="20" y="537" width="374" height="69"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bUA-8c-drU" firstAttribute="top" secondItem="E6b-cH-aeC" secondAttribute="bottom" constant="20" id="7F0-1r-2d8"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="6v2-dl-nye" secondAttribute="trailing" constant="40" id="7Yq-B4-vRz"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="9PR-QV-iM0" secondAttribute="trailing" constant="20" id="93P-Xl-Q44"/>
+                            <constraint firstItem="DlI-ng-pzb" firstAttribute="top" secondItem="awt-Uo-aYF" secondAttribute="bottom" constant="20" id="EU9-Bu-d0x"/>
+                            <constraint firstItem="9PR-QV-iM0" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="20" id="Nez-Hm-NN6"/>
+                            <constraint firstItem="zbT-iC-1Po" firstAttribute="top" secondItem="mOy-eg-ehc" secondAttribute="top" constant="20" id="PRK-Yc-Ueq"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="awt-Uo-aYF" secondAttribute="trailing" constant="20" id="QfX-oF-jeP"/>
+                            <constraint firstItem="E6b-cH-aeC" firstAttribute="top" secondItem="zbT-iC-1Po" secondAttribute="bottom" constant="20" id="R96-5Y-CzS"/>
+                            <constraint firstItem="DlI-ng-pzb" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="40" id="SDC-or-0RM"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="zbT-iC-1Po" secondAttribute="trailing" constant="20" id="Stk-9m-oub"/>
+                            <constraint firstItem="6v2-dl-nye" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="40" id="W8v-OL-uV2"/>
+                            <constraint firstItem="awt-Uo-aYF" firstAttribute="top" secondItem="bUA-8c-drU" secondAttribute="bottom" constant="40" id="Wpg-wi-hMR"/>
+                            <constraint firstItem="bUA-8c-drU" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="20" id="ZL8-Fx-qs4"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="E6b-cH-aeC" secondAttribute="trailing" constant="20" id="baK-nu-QjB"/>
+                            <constraint firstItem="9PR-QV-iM0" firstAttribute="top" secondItem="DlI-ng-pzb" secondAttribute="bottom" constant="40" id="emS-UK-9Wm"/>
+                            <constraint firstItem="awt-Uo-aYF" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="20" id="fYj-Rt-a11"/>
+                            <constraint firstItem="6v2-dl-nye" firstAttribute="top" secondItem="9PR-QV-iM0" secondAttribute="bottom" constant="20" id="kEi-4H-nLH"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="bUA-8c-drU" secondAttribute="trailing" constant="20" id="kVV-Az-1Zz"/>
+                            <constraint firstItem="E6b-cH-aeC" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="20" id="m1z-TE-p2M"/>
+                            <constraint firstItem="mOy-eg-ehc" firstAttribute="trailing" secondItem="DlI-ng-pzb" secondAttribute="trailing" constant="40" id="spk-eQ-v2E"/>
+                            <constraint firstItem="zbT-iC-1Po" firstAttribute="leading" secondItem="mOy-eg-ehc" secondAttribute="leading" constant="20" id="wHv-M7-W1p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mOy-eg-ehc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wIb-cR-IFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418.840579710145" y="-733.25892857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="car" catalog="system" width="64" height="46"/>
         <image name="car.fill" catalog="system" width="64" height="46"/>
+        <image name="envelope.fill" catalog="system" width="64" height="46"/>
         <image name="icloud.and.arrow.down.fill" catalog="system" width="64" height="56"/>
         <image name="list.number" catalog="system" width="64" height="48"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="person.crop.rectangle" catalog="system" width="64" height="46"/>
+        <image name="phone.fill" catalog="system" width="64" height="56"/>
     </resources>
 </document>
