@@ -12,7 +12,6 @@ class AddParkingVC: UIViewController {
 
     let userController = UserController()
     let parkingController = ParkingController()
-    let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     
     @IBOutlet var buildingCodeTxt : UITextField!
     
@@ -24,12 +23,13 @@ class AddParkingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let automaticCarPlate = UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as? String
+        carPlateNumberTxt.text = automaticCarPlate
         // Do any additional setup after loading the view.
     }
     
     @IBAction func onConfirmParking(_ sender: UIButton) {
         print("Trying to add new parking")
-        carPlateNumberTxt.text = UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as? String
         self.createParking()
     }
     
@@ -41,9 +41,9 @@ class AddParkingVC: UIViewController {
         let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!)
         
         //TODO = basic errorchecking with popup error messages, such as empty fields, or incorrect data type
-        
-        if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#UNCOMMENT THIS
-            //parkingController.deleteAllParkings()
+        let storedEmailLoggedIn = UserDefaults.standard.value(forKey: "LOGGEDINUSEREMAIL") as! String
+           
+        if(userController.verifySameCarPlateNum(email: storedEmailLoggedIn, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate
             let date = Date()
             let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!)
             
@@ -52,13 +52,12 @@ class AddParkingVC: UIViewController {
                     print(parkingCharges)
                     let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
                 
-                   UserDefaults.standard.set(carPlateNum, forKey: "CARPLATENUMBER")
-                   UserDefaults.standard.set(date, forKey: "DATEOFPARKING")
-                   
                    print("updating database with new parking")
                    parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
                    //userController.updateUser(user: loggedInUser)//updated UserDatabase
                    //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+                    UserDefaults.standard.set(carPlateNum, forKey: "LOGGEDINCARPLATENUMBER")
+                    UserDefaults.standard.set(date, forKey: "SELECTEDDATE")
                    navigateToReceipt()//go to receipt page
             }
         }//UNCOMMENT THIS
@@ -69,7 +68,9 @@ class AddParkingVC: UIViewController {
         //let userMonth = Calendar.current.component(.month, from: loggedInUser.currentMonth)
         //let currentMonth = Calendar.current.component(.month, from: Date())
         
-        let totalParkingCharges = parkingController.isFreeParking(DateParked: Date())
+        let currentCarPlateNumber = UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as! String
+        
+        let totalParkingCharges = parkingController.isFreeParking(DateParked: Date(), CarPlateNumber: currentCarPlateNumber)
         
         if(totalParkingCharges){
             return 0

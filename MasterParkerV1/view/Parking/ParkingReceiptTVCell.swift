@@ -11,6 +11,9 @@ import UIKit
 class ParkingReceiptTVCell: UITableViewCell{
     
     @IBOutlet var carPlateNumber: UILabel!
+    @IBOutlet var dateOfParking: UILabel!
+    //$parking charge for x hours
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

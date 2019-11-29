@@ -85,19 +85,20 @@ public class UserController
         do{
             let result = try managedContext.fetch(fetchRequest)
             
-            let existingUser = result[0] as! NSManagedObject
-            
-            let dbEmail = existingUser.value(forKey: "email") as! String
-            let dbPassword = existingUser.value(forKey: "password") as! String
-            
-            if(dbEmail == email && dbPassword == password){
-                return true
+            if(result.count > 0){//found some results
+                let existingUser = result[0] as! NSManagedObject
+                
+                let dbEmail = existingUser.value(forKey: "email") as! String
+                let dbPassword = existingUser.value(forKey: "password") as! String
+                
+                if(dbEmail == email && dbPassword == password){
+                    return true
+                }
             }
-            
-            }catch{
-                print("User checking unsuccessful")
-            
-            }
+        }catch{
+            print("User checking unsuccessful")
+        
+        }
         return false
     }
     
@@ -150,18 +151,22 @@ public class UserController
         }
     }
     
-    func verifySameCarPlateNum(name: String, carPlateNumber: String) -> Bool{//returns true if given carplate number is the same as the carplatenumber of the user
+    func verifySameCarPlateNum(email: String, carPlateNumber: String) -> Bool{//returns true if given carplate number is the same as the carplatenumber of the user
         let allUsers = (self.getAllUsers() ?? nil)!
         
         if (allUsers != nil){
             for user in allUsers{
-                let dbName = user.value(forKey: "name") as! String
+                let dbEmail = user.value(forKey: "email") as! String
                 let dbCarPlateNumber = user.value(forKey: "carPlateNumber") as! String
-                if (dbName == name){
+                //print(user)
+                //print(dbName)
+                if (dbEmail == email){
                     if(dbCarPlateNumber == carPlateNumber){
                         print("carplate==givenplate, TRUE")
                         return true//if corresponding carplate# is same, return true
                     }
+                    print(dbCarPlateNumber)
+                    print(carPlateNumber)
                     print("carplate!=givenplate, FALSE")
                     return false
                 }

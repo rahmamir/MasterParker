@@ -10,6 +10,8 @@ import UIKit
 
 class HomeScreenVC : UIViewController {
     
+    var parkingController = ParkingController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +37,6 @@ class HomeScreenVC : UIViewController {
         let map = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ParkingMap") as! ParkingMapVC
                       
                navigationController?.pushViewController(map, animated: true)
-               
     }
     
     
@@ -53,10 +54,15 @@ class HomeScreenVC : UIViewController {
     }
     
     @IBAction func signOutAction(_ sender: UIButton) {
-        let signOut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignIn") as! SignInVC
+        let signOut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInScene") as! SignInVC
                            
                     navigationController?.pushViewController(signOut, animated: true)
                  
+    }
+    
+    @IBAction func clearParkingHistory(_sender: UIButton){
+        
+        parkingController.deleteAllParkings()
     }
     
     

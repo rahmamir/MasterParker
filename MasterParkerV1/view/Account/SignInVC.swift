@@ -11,6 +11,7 @@ import UIKit
 class SignInVC : UIViewController{
     
     var userController = UserController()
+
     
     @IBOutlet var emailTextField : UITextField!
     
@@ -18,7 +19,6 @@ class SignInVC : UIViewController{
     
     override func viewDidLoad() {
            super.viewDidLoad()
-           // Do any additional setup after loading the view.
        }
     
     @IBAction func onloginClick(_ sender: UIButton){
@@ -27,12 +27,24 @@ class SignInVC : UIViewController{
         let enteredPassword = passwordTextField.text!
         
         if(userController.isValidLogin(email: enteredEmail, password: enteredPassword)){
-                
-            let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
             
-                var loggedInCarplateNumber = userController.returnCarPlateFromEmail(email: enteredEmail)
-                UserDefaults.standard.set(loggedInCarplateNumber, forKey: "LOGGEDINCARPLATENUMBER")
-                navigationController?.pushViewController(homeScreenVC, animated: true)
+            let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
+
+            let loggedInCarplateNumber = userController.returnCarPlateFromEmail(email: enteredEmail)
+            UserDefaults.standard.set(loggedInCarplateNumber, forKey: "LOGGEDINCARPLATENUMBER")
+            UserDefaults.standard.set(enteredEmail, forKey: "LOGGEDINUSEREMAIL")
+            navigationController?.pushViewController(homeScreenVC, animated: true)
+        }
+        else{//invalid credentials//create an alert
+            let alert = UIAlertController(title: "Login Error",
+            message: "Please enter the correct username and password",
+            preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+            
+            alert.addAction(cancel)
+            alert.view.layoutIfNeeded() //avoid Snapshotting error
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

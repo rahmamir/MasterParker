@@ -29,12 +29,11 @@ class ParkingReceiptVC: UIViewController {
     override func viewDidLoad() {
           super.viewDidLoad()
           self.generateReceipt()
-          // Do any additional setup after loading the view.
       }
     
     private func generateReceipt(){
         
-        let newParking = parkingController.getParking(carplateNum: UserDefaults.standard.value(forKey: "CARPLATENUMBER") as! String, dateOfParking: UserDefaults.standard.value(forKey: "DATEOFPARKING") as! Date)
+        let newParking = parkingController.getParking(carplateNum: UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as! String, dateOfParking: UserDefaults.standard.value(forKey: "SELECTEDDATE") as! Date)
         
         carPlateNumberLabel.text = newParking.carPlateNum
         

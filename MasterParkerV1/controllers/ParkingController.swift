@@ -13,7 +13,23 @@ import CoreData
 public class ParkingController
 {
     func deleteAllParkings(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
+        {
+            return
+        }
+        // Create Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Parking")
+
+        // Create Batch Delete Request
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         
+        let managedObjectContext = appDelegate.persistentContainer.viewContext
+        do {
+            try managedObjectContext.execute(batchDeleteRequest)
+        } catch {
+            // Error Handling
+        }
+        /*
        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else
        {
            return
@@ -31,13 +47,12 @@ public class ParkingController
                     let managedObjectData:NSManagedObject = parking as! NSManagedObject
                     managedContext.delete(managedObjectData)
                 }
-                //print("successfully adding parking to database")
-                //try managedContext.save()
                 
             }catch let error as NSError{
                 print("Insert parking failed...\(error), \(error.userInfo)")
             }
         }
+         */
     }
     
     func insertParking(newParking: ParkingModel)
@@ -91,18 +106,18 @@ public class ParkingController
         
         if(allParkings != nil){
             for parking in allParkings{
-                //let dbCarPlateNumber = parking.value(forKey: "carPlateNumber") as! String
-                //if(carPlateNumber == dbCarPlateNumber){
-                let tempParking = ParkingModel(
-                    BuildingCode: parking.value(forKey: "buildingCode") as! Int,
-                    NumOfHours: parking.value(forKey: "numOfHours") as! Int,
-                    CarPlateNum: parking.value(forKey: "carPlateNum") as! String,
-                    SuiteNumOfHost: parking.value(forKey: "suiteNumOfHost") as! Int,
-                    DateOfParking: parking.value(forKey: "dateOfParking") as! Date,
-                    parkingCharge: parking.value(forKey: "parkingCharge") as! Int)
-                
-                    previousParkings.append(tempParking)
-                //}
+                let dbCarPlateNumber = parking.value(forKey: "carPlateNum") as! String
+                if(carPlateNumber == dbCarPlateNumber){
+                    let tempParking = ParkingModel(
+                        BuildingCode: parking.value(forKey: "buildingCode") as! Int,
+                        NumOfHours: parking.value(forKey: "numOfHours") as! Int,
+                        CarPlateNum: parking.value(forKey: "carPlateNum") as! String,
+                        SuiteNumOfHost: parking.value(forKey: "suiteNumOfHost") as! Int,
+                        DateOfParking: parking.value(forKey: "dateOfParking") as! Date,
+                        parkingCharge: parking.value(forKey: "parkingCharge") as! Int)
+                    
+                        previousParkings.append(tempParking)
+                }
             }
         }
         return previousParkings
@@ -133,30 +148,34 @@ public class ParkingController
         return ParkingModel(BuildingCode: -1, NumOfHours: -1, CarPlateNum: "-1", SuiteNumOfHost: -1, DateOfParking: Date(), parkingCharge: -1)
     }
     
-    func isFreeParking(DateParked: Date) -> Bool{
+    func isFreeParking(DateParked: Date, CarPlateNumber: String) -> Bool{
         
         let allParkings = (self.getAllParkings() ?? nil)!
         var currentMonthParkCount = 0
         
         if(allParkings != nil){
             for parking in allParkings{
-                let tempDate = parking.value(forKey: "dateOfParking") as! Date
-                let calendar = Calendar.current
-                let tempMonth = calendar.component(.month, from: tempDate)
-                let monthParked = calendar.component(.month, from: DateParked)
-                
-                if(monthParked == tempMonth){
-                    //print("increasing ParkingCount")
-                    currentMonthParkCount += 1
+                let dbCarPlateNum = parking.value(forKey: "carPlateNum") as! String
+                if(dbCarPlateNum==CarPlateNumber){
+                   let tempDate = parking.value(forKey: "dateOfParking") as! Date
+                   let calendar = Calendar.current
+                   let tempMonth = calendar.component(.month, from: tempDate)
+                   let monthParked = calendar.component(.month, from: DateParked)
+                   
+                   print("monthParked=\(monthParked)")
+                   print("tempMonth=\(tempMonth)")
+                   if(monthParked == tempMonth){
+                       currentMonthParkCount += 1
+                   }
                 }
             }
         }
         //print(currentMonthParkCount)
         if(currentMonthParkCount < 3){
-            //print("FREE PARKING")
+            print("FREE PARKING")
             return true
         }
-        //print("EXPENSIVE PARKING")
+        print("EXPENSIVE PARKING")
         return false
     }
 }

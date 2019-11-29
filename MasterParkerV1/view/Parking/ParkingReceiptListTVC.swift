@@ -15,7 +15,7 @@ class ParkingReceiptListTVC : UITableViewController{
     //date and time - ###
     //suite no - ####
     
-    let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
+    //let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     let parkingController = ParkingController()
     var mParkingList = [ParkingModel]()
    
@@ -39,7 +39,8 @@ class ParkingReceiptListTVC : UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ParkingReceiptTVCell
                 
         // Configure the cell...
-        cell.carPlateNumber!.text = "\(self.mParkingList[indexPath.row].carPlateNum)"
+        cell.carPlateNumber!.text = "CarPlate#: \(self.mParkingList[indexPath.row].carPlateNum)"
+        cell.dateOfParking!.text = "Date of Parking: \(self.mParkingList[indexPath.row].dateOfParking)"
          
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
@@ -51,7 +52,8 @@ class ParkingReceiptListTVC : UITableViewController{
         
         let parkingReceiptVC = mainSB.instantiateViewController(identifier: "ParkingReceiptScene") as! ParkingReceiptVC
         
-        UserDefaults.standard.set(mParkingList[indexPath.row].carPlateNum, forKey: "CARPLATENUMBER")
+        UserDefaults.standard.set(mParkingList[indexPath.row].carPlateNum, forKey: "SELECTEDCARPLATENUMBER")
+        UserDefaults.standard.set(mParkingList[indexPath.row].dateOfParking, forKey: "SELECTEDDATE")
         
         //send the current contact to next scene
         self.navigationController?.pushViewController(parkingReceiptVC, animated: true)
@@ -59,8 +61,19 @@ class ParkingReceiptListTVC : UITableViewController{
     
     private func fetchParkings(){
         
-        //var allUsers = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: loggedInUser.carPlateNumber) ?? nil)!
-        mParkingList = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: "2323"))
+        
+        let currentCarPlateNumber = UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as! String
+        
+        print("currentCarPlateNumber= \(currentCarPlateNumber)")
+        
+        mParkingList = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: currentCarPlateNumber))
+        
+        mParkingList.sort { (parkingModelA: ParkingModel, parkingModelB: ParkingModel) -> Bool in
+            if(parkingModelB.dateOfParking < parkingModelA.dateOfParking ){
+                return true
+            }
+            return false
+        }
         
         print(mParkingList.count)
         self.tableView.reloadData()
