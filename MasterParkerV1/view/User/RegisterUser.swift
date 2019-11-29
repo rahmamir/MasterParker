@@ -116,7 +116,7 @@ class RegisterUser : UIViewController {
         userController.insertUser(newUser: newlyCreatedUser)
         if newlyCreatedUser != nil{
                 userController.insertUser(newUser: newlyCreatedUser)
-                userController.verifySameCarPlateNum(name: newName, carPlateNumber: newCarPlateNumber)
+                userController.verifySameCarPlateNum(email: newEmail, carPlateNumber: newCarPlateNumber)
                 var allUsers = (self.userController.getAllUsers() ?? nil)!
                                    
                 if (allUsers != nil){

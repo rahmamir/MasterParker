@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lG2-oS-9v9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lG2-oS-9v9">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -798,6 +798,142 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydB-v4-ieq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3976" y="27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zx1-Td-EXr">
+            <objects>
+                <viewController id="AJc-hp-S2T" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hLb-Ix-ZSZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update your profle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c46-4g-tM8">
+                                <rect key="frame" x="92.666666666666686" y="64" width="229" height="49"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To do so, please enter the following information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kl-ja-Zuf">
+                                <rect key="frame" x="20" y="133" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3q-Xq-wvO">
+                                <rect key="frame" x="176.33333333333334" y="203" width="61.333333333333343" height="27.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpM-sn-0Lw">
+                                <rect key="frame" x="178.66666666666666" y="306.33333333333331" width="57" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. email@domain.com" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2tI-UZ-qNV">
+                                <rect key="frame" x="20" y="355.33333333333331" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="continue" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH0-v1-Ryp">
+                                <rect key="frame" x="161.33333333333334" y="411.33333333333331" width="91.666666666666657" height="28.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg. *******" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nux-iz-34F">
+                                <rect key="frame" x="20" y="459.66666666666669" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKo-yV-JGB">
+                                <rect key="frame" x="128" y="515.66666666666663" width="158.33333333333337" height="28.333333333333371"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg. 123 456 7890" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mi-Lu-Rxg">
+                                <rect key="frame" x="20" y="564" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Plate Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-f3-IP3">
+                                <rect key="frame" x="122.66666666666669" y="620" width="169" height="27.333333333333371"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg. AZZV 969" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRH-Va-81g">
+                                <rect key="frame" x="20" y="667.33333333333337" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-9g-tht">
+                                <rect key="frame" x="20" y="783.33333333333337" width="374" height="47"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Update Profile!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. John Smith" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-it-mYY">
+                                <rect key="frame" x="20" y="250.33333333333337" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="continue" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c46-4g-tM8" firstAttribute="top" secondItem="efJ-nz-nFl" secondAttribute="top" constant="20" id="33f-O3-Ifi"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="3mi-Lu-Rxg" secondAttribute="trailing" constant="20" id="3PS-Y2-xR1"/>
+                            <constraint firstItem="zH0-v1-Ryp" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="4Nv-yR-fXc"/>
+                            <constraint firstItem="oKo-yV-JGB" firstAttribute="top" secondItem="Nux-iz-34F" secondAttribute="bottom" constant="20" id="BtF-Bt-esv"/>
+                            <constraint firstItem="6kl-ja-Zuf" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="CA5-A3-AIF"/>
+                            <constraint firstItem="e3q-Xq-wvO" firstAttribute="top" secondItem="6kl-ja-Zuf" secondAttribute="bottom" constant="40" id="CJZ-ce-xJD"/>
+                            <constraint firstItem="6kl-ja-Zuf" firstAttribute="top" secondItem="c46-4g-tM8" secondAttribute="bottom" constant="20" id="CQe-ry-FRB"/>
+                            <constraint firstItem="VpM-sn-0Lw" firstAttribute="top" secondItem="6dU-it-mYY" secondAttribute="bottom" constant="20" id="G98-Ue-PZt"/>
+                            <constraint firstItem="Nux-iz-34F" firstAttribute="top" secondItem="zH0-v1-Ryp" secondAttribute="bottom" constant="20" id="Gqh-P3-7Sa"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="gRH-Va-81g" secondAttribute="trailing" constant="20" id="Hid-pR-Mrl"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="2tI-UZ-qNV" secondAttribute="trailing" constant="20" id="INc-yi-vUM"/>
+                            <constraint firstItem="6dU-it-mYY" firstAttribute="top" secondItem="e3q-Xq-wvO" secondAttribute="bottom" constant="20" id="Ju4-aQ-1hs"/>
+                            <constraint firstItem="iq8-9g-tht" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="Lb3-Ux-t7X"/>
+                            <constraint firstItem="ALI-f3-IP3" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="M3l-fl-6gP"/>
+                            <constraint firstItem="gRH-Va-81g" firstAttribute="top" secondItem="ALI-f3-IP3" secondAttribute="bottom" constant="20" id="MVU-FQ-dgr"/>
+                            <constraint firstItem="gRH-Va-81g" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="Msc-f0-Eat"/>
+                            <constraint firstItem="2tI-UZ-qNV" firstAttribute="top" secondItem="VpM-sn-0Lw" secondAttribute="bottom" constant="20" id="NO4-uW-jcY"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="Nux-iz-34F" secondAttribute="trailing" constant="20" id="NkY-Fp-IK7"/>
+                            <constraint firstItem="zH0-v1-Ryp" firstAttribute="top" secondItem="2tI-UZ-qNV" secondAttribute="bottom" constant="20" id="RYz-OJ-GB2"/>
+                            <constraint firstItem="VpM-sn-0Lw" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="W9B-xc-JhK"/>
+                            <constraint firstItem="2tI-UZ-qNV" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="bZi-uC-GSf"/>
+                            <constraint firstItem="6dU-it-mYY" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="chU-pK-P2G"/>
+                            <constraint firstItem="c46-4g-tM8" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="dFe-BX-FDH"/>
+                            <constraint firstItem="Nux-iz-34F" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="ddR-1h-xhL"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="6kl-ja-Zuf" secondAttribute="trailing" constant="20" id="e6X-fG-ySB"/>
+                            <constraint firstItem="3mi-Lu-Rxg" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="ete-oL-XZM"/>
+                            <constraint firstItem="ALI-f3-IP3" firstAttribute="top" secondItem="3mi-Lu-Rxg" secondAttribute="bottom" constant="20" id="gMh-hN-Vp9"/>
+                            <constraint firstItem="e3q-Xq-wvO" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="hBW-tt-bSN"/>
+                            <constraint firstItem="iq8-9g-tht" firstAttribute="top" secondItem="gRH-Va-81g" secondAttribute="bottom" constant="80" id="k5L-Ek-dB7"/>
+                            <constraint firstItem="oKo-yV-JGB" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="oR3-7H-lWA"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="iq8-9g-tht" secondAttribute="trailing" constant="20" id="rYA-Mm-Of1"/>
+                            <constraint firstItem="3mi-Lu-Rxg" firstAttribute="top" secondItem="oKo-yV-JGB" secondAttribute="bottom" constant="20" id="ttF-ZN-T7K"/>
+                            <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="6dU-it-mYY" secondAttribute="trailing" constant="20" id="ykr-n0-mb3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="efJ-nz-nFl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XV7-am-Pno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="34.821428571428569"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="ue0-rQ-xxV">
