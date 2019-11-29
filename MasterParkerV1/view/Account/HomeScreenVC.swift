@@ -43,6 +43,10 @@ class HomeScreenVC : UIViewController {
     }
     
     @IBAction func viewCustomerSupportAction(_ sender: Any) {
+        let customerSupport = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomerSupport") as! CustomerSupportVC
+                           
+                    navigationController?.pushViewController(customerSupport, animated: true)
+                  
     }
     
     @IBAction func viewParkingManualAction(_ sender: Any) {

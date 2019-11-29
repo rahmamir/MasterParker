@@ -10,6 +10,7 @@
 		04989812238FA23100373463 /* ParkingMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989811238FA23100373463 /* ParkingMapVC.swift */; };
 		04989815238FB6F200373463 /* AppManualVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989814238FB6F200373463 /* AppManualVC.swift */; };
 		04989818238FBA1A00373463 /* AppManual.html in Resources */ = {isa = PBXBuildFile; fileRef = 04989817238FBA1A00373463 /* AppManual.html */; };
+		0498981A2391006F00373463 /* CustomerSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049898192391006F00373463 /* CustomerSupportVC.swift */; };
 		04C628AF238857F900A2CF85 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C628AE238857F900A2CF85 /* RegisterUser.swift */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
@@ -35,6 +36,7 @@
 		04989811238FA23100373463 /* ParkingMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingMapVC.swift; sourceTree = "<group>"; };
 		04989814238FB6F200373463 /* AppManualVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManualVC.swift; sourceTree = "<group>"; };
 		04989817238FBA1A00373463 /* AppManual.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AppManual.html; sourceTree = "<group>"; };
+		049898192391006F00373463 /* CustomerSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSupportVC.swift; sourceTree = "<group>"; };
 		04C628AE238857F900A2CF85 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		04989813238FB6D000373463 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				049898192391006F00373463 /* CustomerSupportVC.swift */,
 				04989814238FB6F200373463 /* AppManualVC.swift */,
 				04989816238FB6F700373463 /* html */,
 			);
@@ -267,6 +270,7 @@
 				E7A8DAC8237E97E90070A30B /* ParkingReceiptVC.swift in Sources */,
 				E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */,
 				04989812238FA23100373463 /* ParkingMapVC.swift in Sources */,
+				0498981A2391006F00373463 /* CustomerSupportVC.swift in Sources */,
 				E71FAFE5237F12AC00E2379F /* ParkingReceiptListTVC.swift in Sources */,
 				04989815238FB6F200373463 /* AppManualVC.swift in Sources */,
 			);
