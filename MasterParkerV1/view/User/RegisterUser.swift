@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-
+//MAKE FONT SAME AS IN STORYBOARD//
 
 class RegisterUser : UIViewController {
     
@@ -47,12 +47,14 @@ class RegisterUser : UIViewController {
             let receivedCardNumberInfo = alert.textFields![0]
             let receivedCVVInfo = alert.textFields![1]
             let receivedNameInfo = alert.textFields![2]
+            let receivedDateInfo = alert.textFields![3]
+            //NOTE= TRY TO HNADLE CREDIT CARD NUMBER VALIDATION
              
             //print("USERNAME: \(usernameTxt.text!)\nPASSWORD: \(passwordTxt.text!)\nPHONE NO.: \(phoneTxt.text!)")
-            
             self.newPaymentModel.cvvNumber = Int(String(receivedCVVInfo.text!))!
-            self.newPaymentModel.nameOnCard = receivedNameInfo.text ?? ""
+            self.newPaymentModel.cardName = receivedNameInfo.text ?? ""
             self.newPaymentModel.cardNumber = Int(String(receivedCardNumberInfo.text!))!
+            self.newPaymentModel.expiryDate = receivedDateInfo.text ?? ""
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
@@ -63,7 +65,7 @@ class RegisterUser : UIViewController {
             textField.keyboardType = .default
             textField.autocorrectionType = .default
             textField.placeholder = "Type your Credit Card#"
-            textField.textColor = UIColor.green
+            textField.textColor = UIColor.blue
         }
         
         // Add 2nd textField (for password)
@@ -72,16 +74,23 @@ class RegisterUser : UIViewController {
             textField.keyboardType = .default
             textField.placeholder = "Type your CVV"
             textField.isSecureTextEntry = true
-            textField.textColor = UIColor.red
+            textField.textColor = UIColor.blue
         }
         
         // Add 3rd textField (for phone no.)
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .numberPad
-            textField.placeholder = "Type your Name"
+            textField.placeholder = "Type your Card Name"
             textField.textColor = UIColor.blue
-            textField.font = UIFont(name: "AmericanTypewriter", size: 14)
+        }
+        
+        // Add 3rd textField (for ExpiryDate no.)
+        alert.addTextField { (textField: UITextField) in
+            textField.keyboardAppearance = .dark
+            textField.keyboardType = .default
+            textField.placeholder = "Type your Expiry Date : mm/yy"
+            textField.textColor = UIColor.blue
         }
         
         // Add action buttons and present the Alert
@@ -98,14 +107,10 @@ class RegisterUser : UIViewController {
         let newContactNumber = Int(contactNumberTextField.text!)
         let newCarPlateNumber = carPlateNumberTextField.text!
         
-        let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber)
         
+        //let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber)
+        let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber, PaymentModel: newPaymentModel)
         //print("USERNAME: \(newlyCreatedUser.name)\nPASSWORD: \(newlyCreatedUser.password)\n EMAIL: \(newlyCreatedUser.email)")
-        
-        //print("\(newlyCreatedUser.paymentModel.cardNumber)\n")
-        //print("\(newlyCreatedUser.paymentModel.cvvNumber)\n")
-        //print("\(newlyCreatedUser.paymentModel.expiryDate)\n")
-        //print("\(newlyCreatedUser.paymentModel.nameOnCard)\n")
         
         userController.insertUser(newUser: newlyCreatedUser)
         navigateToSignIn()

@@ -15,7 +15,7 @@ class UserModel{
     var password : String
     var contactNumber : Int
     var carPlateNumber : String
-    //var paymentModel : PaymentModel
+    var paymentModel : PaymentModel
     
     init(Name: String, Email: String, Password: String, ContactNumber: Int, CarPlateNumber: String) {
         self.name = Name
@@ -23,26 +23,16 @@ class UserModel{
         self.password = Password
         self.contactNumber = ContactNumber
         self.carPlateNumber = CarPlateNumber
-        //self.paymentModel = PaymentModel()
+        self.paymentModel = PaymentModel()
     }
-    /*
-    init(Name: String, Email: String, Password: String, ContactNumber: String, CarPlateNumber: String/*, PaymentModel : PaymentModel*/) {
+
+    init(Name: String, Email: String, Password: String, ContactNumber: Int, CarPlateNumber: String, PaymentModel : PaymentModel) {
         self.name = Name
         self.email = Email
         self.password = Password
         self.contactNumber = ContactNumber
         self.carPlateNumber = CarPlateNumber
-        //self.numOfParkingsMade = 0
-        //self.currentMonth = Date()
-        //self.paymentModel = PaymentModel
+        self.paymentModel = PaymentModel
     }
-    */
-    /*
-     user.setValue(newUser.name, forKey: "name")
-     user.setValue(newUser.email, forKey: "email")
-     user.setValue(newUser.password, forKey: "password")
-     user.setValue(newUser.contactNumber, forKey: "contactNumber")
-     user.setValue(newUser.carPlateNumber, forKey: "carPlateNumber")
-     */
-     
+
 }

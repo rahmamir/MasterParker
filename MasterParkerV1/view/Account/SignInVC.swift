@@ -10,7 +10,11 @@ import UIKit
 
 class SignInVC : UIViewController{
     
-
+    var userController = UserController()
+    
+    @IBOutlet var emailTextField : UITextField!
+    
+    @IBOutlet var passwordTextField : UITextField!
     
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -20,10 +24,18 @@ class SignInVC : UIViewController{
     
     @IBAction func onloginClick(_ sender: UIButton){
 
-        let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
+        let enteredEmail = emailTextField.text!
+        let enteredPassword = passwordTextField.text!
         
-        navigationController?.pushViewController(homeScreenVC, animated: true)
-        
+        if(userController.isValidLogin(email: enteredEmail, password: enteredPassword)){
+            let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
+                   
+                navigationController?.pushViewController(homeScreenVC, animated: true)
+        }
+        else{
+            
+        }
+       
     }
     
     @IBAction func onSignUpClick(_ sender: UIButton) {

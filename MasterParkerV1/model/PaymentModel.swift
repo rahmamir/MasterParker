@@ -10,35 +10,24 @@ import Foundation
 
 class PaymentModel{
     
-    enum CardType : String{
-        case CreditCard
-        case DebitCard
-    }
-        
-    var expiryDate: Date
-    var nameOnCard: String
+    var expiryDate: String//easier to handle
+    var cardName: String
     var cardNumber : Int
-    var cvvNumber: Int = 0
-    var cardType: CardType
+    var cvvNumber: Int
         
     init(){
-        self.expiryDate = Date()
+        self.expiryDate = "" 
         self.cvvNumber = -1
         self.cardNumber = -1
-        self.nameOnCard = ""
-        self.cardType = CardType.CreditCard
+        self.cardName = ""
     }
     
-    init(expiryDate: Date, nameOnCard: String, cvvNumber: Int, cardNumber: Int, cardType: CardType) {
-        self.expiryDate = expiryDate
-        self.nameOnCard = nameOnCard
-        self.cvvNumber = cvvNumber
-        self.cardNumber = cardNumber
-        self.cardType = cardType
+    init(ExpiryDate: String, CardName: String, CvvNumber: Int, CardNumber: Int) {
+        self.expiryDate = ExpiryDate
+        self.cardName = CardName
+        self.cvvNumber = CvvNumber
+        self.cardNumber = CardNumber
     }
-    
-    
-        
 }
     
 

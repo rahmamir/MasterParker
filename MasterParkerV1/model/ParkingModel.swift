@@ -25,4 +25,10 @@ class ParkingModel {
         self.dateOfParking = DateOfParking
         self.parkingCharge = parkingCharge
     }
+    /*
+     var expiryDate: Date
+     var nameOnCard: String
+     var cardNumber : Int
+     var cvvNumber: Int = 0
+     */
 }

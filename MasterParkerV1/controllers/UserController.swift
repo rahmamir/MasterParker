@@ -28,6 +28,10 @@ public class UserController
             user.setValue(newUser.password, forKey: "password")
             user.setValue(newUser.contactNumber, forKey: "contactNumber")
             user.setValue(newUser.carPlateNumber, forKey: "carPlateNumber")
+            user.setValue(newUser.paymentModel.cardName, forKey: "cardName")
+            user.setValue(newUser.paymentModel.cardNumber, forKey: "cardNumber")
+            user.setValue(newUser.paymentModel.cvvNumber, forKey: "cvvNumber")
+            user.setValue(newUser.paymentModel.expiryDate, forKey: "expiryDate")
             do{
                 //to perform insert operation on database table
                 try managedContext.save()
@@ -36,6 +40,36 @@ public class UserController
                 print("Insert user failed...\(error), \(error.userInfo)")
             }
         }
+    }
+    
+    func isValidLogin(email: String, password: String) -> Bool{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            return false
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        
+        fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+        
+        do{
+            let result = try managedContext.fetch(fetchRequest)
+            
+            let existingUser = result[0] as! NSManagedObject
+            
+            let dbEmail = existingUser.value(forKey: "email") as! String
+            let dbPassword = existingUser.value(forKey: "password") as! String
+            
+            if(dbEmail == email && dbPassword == password){
+                return true
+            }
+            
+            }catch{
+                print("User checking unsuccessful")
+            
+            }
+        return false
     }
     
     func getAllUsers() -> [NSManagedObject]?{
