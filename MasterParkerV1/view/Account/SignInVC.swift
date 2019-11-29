@@ -55,8 +55,18 @@ class SignInVC : UIViewController{
             saveLoginCredentials(EnteredEmail: enteredEmail, EnteredPassword: enteredPassword)
             
             let loggedInCarplateNumber = userController.returnCarPlateFromEmail(email: enteredEmail)
+            
+            if(rememberCredentialsSwitch.isOn){
+                UserDefaults.standard.set(enteredEmail, forKey: "SAVEDEMAIL")
+                UserDefaults.standard.set(enteredPassword, forKey: "SAVEDPASSWORD")
+            }
+            else{
+                UserDefaults.standard.set("", forKey: "SAVEDPASSWORD")
+                UserDefaults.standard.set("", forKey: "SAVEDEMAIL")
+            }
             UserDefaults.standard.set(loggedInCarplateNumber, forKey: "LOGGEDINCARPLATENUMBER")
             UserDefaults.standard.set(enteredEmail, forKey: "LOGGEDINUSEREMAIL")
+
 
             let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
 
