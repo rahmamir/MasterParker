@@ -15,6 +15,11 @@ import UIKit
 class RegisterUser : UIViewController {
     
     var userController = UserController()
+    var validator = Validator()
+    
+    @IBOutlet var emailLabel : UILabel!
+    @IBOutlet var passwordLabel : UILabel!
+    @IBOutlet var contactNumberLabel : UILabel!
     
     @IBOutlet var nameTextField : UITextField!
     
@@ -105,38 +110,62 @@ class RegisterUser : UIViewController {
     }
     
     @IBAction func addNewUserOnClick(){
-        let newName = nameTextField.text!
-        let newEmail = emailTextField.text!
-        let newPassword = passwordTextField.text!
-        let newContactNumber = Int(contactNumberTextField.text!)
-        let newCarPlateNumber = carPlateNumberTextField.text!
         
-        let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber, PaymentModel: newPaymentModel)
+        if(verifyNewUserData()){
+                let newName = nameTextField.text!
+                let newEmail = emailTextField.text!
+                let newPassword = passwordTextField.text!
+                let newContactNumber = Int(contactNumberTextField.text!)
+                let newCarPlateNumber = carPlateNumberTextField.text!
+            
+                let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber, PaymentModel: newPaymentModel)
+               
+                userController.insertUser(newUser: newlyCreatedUser)
+               
+                navigateToSignIn()
+        }
+    }
+    
+    private func verifyNewUserData() -> Bool{
+        let newEmail = emailTextField.text ?? ""
+        let newPassword = passwordTextField.text ?? ""
+        let newContactNumber = contactNumberTextField.text ?? ""
+ 
+        //try to validate each input
+        let isNewEmailValid = validator.validatorFor(userInput: newEmail, type: Validator.ValidatorType.email)
         
-        userController.insertUser(newUser: newlyCreatedUser)
-        /*
-        if newlyCreatedUser != nil{
-                userController.insertUser(newUser: newlyCreatedUser)
-                            userController.verifySameCarPlateNum(email: newName, carPlateNumber: newCarPlateNumber)
-                var allUsers = (self.userController.getAllUsers() ?? nil)!
-                                   
-                if (allUsers != nil){
-                for user in allUsers{
-                print("Name: ", user.value(forKey: "name") as! String, " ",
-               "Email: ", user.value(forKey: "email") as! String, " ",
-               "Password: ", user.value(forKey: "password") as! String, " ",
-               "Contact Number: ", user.value(forKey: "contactNumber") as! Int, " ",
-               "Car Plate Number: ", user.value(forKey: "carPlateNumber") as! String, " ")
-                 }
-             }
-            _ = navigationController?.popViewController(animated: true)
-          }
-              else
-              {
-              print("User creation unsuccessful");
-              }
-        */
-        navigateToSignIn()
+        let isNewPasswordValid = validator.validatorFor(userInput: newPassword, type: Validator.ValidatorType.password)
+        
+        let isNewContactNumberValid = validator.validatorFor(userInput: newContactNumber, type: Validator.ValidatorType.numberWithCharacterCount, characterCount: 10)
+        
+        //update potential errors in input
+        
+        //emailLabel.text = "Email: \(validator.listOfErrorMessages[0])"
+        //passwordLabel.text = "Password: \(validator.listOfErrorMessages[1])"
+        //contactNumberLabel.text = "Contact Number: \(validator.listOfErrorMessages[2])"
+        
+        //reset error messages
+        
+        if(isNewEmailValid && isNewPasswordValid && isNewContactNumberValid){
+            validator.listOfErrorMessages = []
+            return true
+        }
+        else{
+            errorMessagePopUp(listOfErrors: validator.listOfErrorMessages)
+        }
+        validator.listOfErrorMessages = []
+        return false
+    }
+    
+    private func errorMessagePopUp(listOfErrors : [String]){
+        let alert = UIAlertController(title: "Errors in User Input",
+        message: "Email:\n\(listOfErrors[0])\nPassword:\n\(listOfErrors[1])\nContact Number:\n\(listOfErrors[2])\n",
+        preferredStyle: .alert)
+        
+        let retry = UIAlertAction(title: "Retry", style: .destructive, handler: { (action) -> Void in })
+        
+        alert.addAction(retry)
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func navigateToSignIn(){

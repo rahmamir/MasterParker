@@ -38,15 +38,14 @@ class AddParkingVC: UIViewController {
     }
     
     private func createParking(){
-        
-        let buildingCode:Int? = Int(buildingCodeTxt.text!)
-        let numOfHours:Int? = Int(numOfHoursTxt.text!)
-        let carPlateNum = carPlateNumberTxt.text!
-        let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!)
-        
-        let storedEmailLoggedIn = UserDefaults.standard.value(forKey: "LOGGEDINUSEREMAIL") as! String
-        
         if(isUserInputValid()){
+            let buildingCode:Int? = Int(buildingCodeTxt.text!)
+            let numOfHours:Int? = Int(numOfHoursTxt.text!)
+            let carPlateNum = carPlateNumberTxt.text!
+            let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!)
+            
+            let storedEmailLoggedIn = UserDefaults.standard.value(forKey: "LOGGEDINUSEREMAIL") as! String
+            
             if(userController.verifySameCarPlateNum(email: storedEmailLoggedIn, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate
                 let date = Date()
                 let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!)
@@ -68,9 +67,9 @@ class AddParkingVC: UIViewController {
     }
     
     private func isUserInputValid() -> Bool{
-        let buildingCode = buildingCodeTxt.text!
-        let numOfHours = numOfHoursTxt.text!
-        let suiteNumOfHost = suiteNumOfHostTxt.text!
+        let buildingCode = buildingCodeTxt.text ?? ""
+        let numOfHours = numOfHoursTxt.text ?? ""
+        let suiteNumOfHost = suiteNumOfHostTxt.text ?? ""
         
         let isBuildingCodeValid = validator.validatorFor(userInput: buildingCode, type: Validator.ValidatorType.genericNumber)
         

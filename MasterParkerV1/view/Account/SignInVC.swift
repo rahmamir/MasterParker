@@ -12,6 +12,7 @@ class SignInVC : UIViewController{
     
     var userController = UserController()
 
+
     @IBOutlet var rememberCredentialsSwitch : UISwitch!
     
     @IBOutlet var emailTextField : UITextField!
