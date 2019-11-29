@@ -19,7 +19,6 @@ class SignInVC : UIViewController{
     override func viewDidLoad() {
            super.viewDidLoad()
            // Do any additional setup after loading the view.
-           
        }
     
     @IBAction func onloginClick(_ sender: UIButton){
@@ -28,14 +27,13 @@ class SignInVC : UIViewController{
         let enteredPassword = passwordTextField.text!
         
         if(userController.isValidLogin(email: enteredEmail, password: enteredPassword)){
+                
             let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
-                   
+            
+                var loggedInCarplateNumber = userController.returnCarPlateFromEmail(email: enteredEmail)
+                UserDefaults.standard.set(loggedInCarplateNumber, forKey: "LOGGEDINCARPLATENUMBER")
                 navigationController?.pushViewController(homeScreenVC, animated: true)
         }
-        else{
-            
-        }
-       
     }
     
     @IBAction func onSignUpClick(_ sender: UIButton) {

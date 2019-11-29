@@ -11,6 +11,10 @@ import UIKit
 
 class ParkingReceiptListTVC : UITableViewController{
     
+    //carplate - ###
+    //date and time - ###
+    //suite no - ####
+    
     let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     let parkingController = ParkingController()
     var mParkingList = [ParkingModel]()
@@ -33,12 +37,7 @@ class ParkingReceiptListTVC : UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ParkingReceiptTVCell
-        
-        //print(indexPath.row)
-        //print(mParkingList.count)
-        //print(mParkingList[0].carPlateNum)
-        //print(cell.carPlateNumber)
-        
+                
         // Configure the cell...
         cell.carPlateNumber!.text = "\(self.mParkingList[indexPath.row].carPlateNum)"
          
@@ -61,7 +60,7 @@ class ParkingReceiptListTVC : UITableViewController{
     private func fetchParkings(){
         
         //var allUsers = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: loggedInUser.carPlateNumber) ?? nil)!
-        mParkingList = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: "2323") )
+        mParkingList = (parkingController.getAllParkingsForCarPlateNumber(carPlateNumber: "2323"))
         
         print(mParkingList.count)
         self.tableView.reloadData()

@@ -29,6 +29,7 @@ class AddParkingVC: UIViewController {
     
     @IBAction func onConfirmParking(_ sender: UIButton) {
         print("Trying to add new parking")
+        carPlateNumberTxt.text = UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as? String
         self.createParking()
     }
     
@@ -41,26 +42,26 @@ class AddParkingVC: UIViewController {
         
         //TODO = basic errorchecking with popup error messages, such as empty fields, or incorrect data type
         
-        //if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#UNCOMMENT THIS
+        if(userController.verifySameCarPlateNum(name: loggedInUser.name, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate#UNCOMMENT THIS
             //parkingController.deleteAllParkings()
             let date = Date()
             let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!)
-        
-        if(parkingCharges != -1){
-                print("PARKINGCHARGES")
-                print(parkingCharges)
-                let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
             
-               UserDefaults.standard.set(carPlateNum, forKey: "CARPLATENUMBER")
-               UserDefaults.standard.set(date, forKey: "DATEOFPARKING")
-               
-               print("updating database with new parking")
-               parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
-               //userController.updateUser(user: loggedInUser)//updated UserDatabase
-               //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
-               navigateToReceipt()//go to receipt page
-        }
-        //}//UNCOMMENT THIS
+            if(parkingCharges != -1){
+                    print("PARKINGCHARGES")
+                    print(parkingCharges)
+                    let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
+                
+                   UserDefaults.standard.set(carPlateNum, forKey: "CARPLATENUMBER")
+                   UserDefaults.standard.set(date, forKey: "DATEOFPARKING")
+                   
+                   print("updating database with new parking")
+                   parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
+                   //userController.updateUser(user: loggedInUser)//updated UserDatabase
+                   //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
+                   navigateToReceipt()//go to receipt page
+            }
+        }//UNCOMMENT THIS
     }
     
     private func calculateParkingCharges(numOfHours: Int) -> Int{
@@ -77,7 +78,6 @@ class AddParkingVC: UIViewController {
             return regularCharges(numOfHours: numOfHours)
         }
         //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
-        return 0
     }
     
     private func regularCharges(numOfHours: Int) -> Int{

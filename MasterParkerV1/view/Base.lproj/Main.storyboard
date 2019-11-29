@@ -131,7 +131,7 @@
                                     <action selector="addNewUserOnClick" destination="po3-Aa-MlH" eventType="touchUpInside" id="cHf-kS-g91"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Credit Card Provided" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3t-d9-cWu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Credit Card Provided" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3t-d9-cWu">
                                 <rect key="frame" x="20.000000000000014" y="722.33333333333337" width="225.33333333333337" height="40"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -214,6 +214,7 @@
                         <outlet property="carPlateNumberTextField" destination="u2Y-Jc-scg" id="zM7-MA-6RN"/>
                         <outlet property="contactNumberTextField" destination="YOp-Xk-GSa" id="m1A-fb-cBd"/>
                         <outlet property="emailTextField" destination="dCe-hU-yDc" id="4CP-md-10X"/>
+                        <outlet property="isCreditCardAdded" destination="L3t-d9-cWu" id="Tf6-hy-bAJ"/>
                         <outlet property="nameTextField" destination="jz9-ee-38Y" id="6sy-tr-ZiN"/>
                         <outlet property="passwordTextField" destination="vGK-zq-vvI" id="vAe-e8-eI6"/>
                     </connections>

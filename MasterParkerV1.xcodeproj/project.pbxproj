@@ -89,7 +89,6 @@
 		04C628AB2387AC3E00A2CF85 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */,
 				04C628AE238857F900A2CF85 /* RegisterUser.swift */,
 			);
 			path = User;
@@ -98,6 +97,7 @@
 		04C628AC2387AC5500A2CF85 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */,
 				E71FAFE0237EE78B00E2379F /* SignInVC.swift */,
 			);
 			path = Account;

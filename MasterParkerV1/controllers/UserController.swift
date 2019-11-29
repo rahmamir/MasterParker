@@ -42,6 +42,35 @@ public class UserController
         }
     }
     
+    func returnCarPlateFromEmail(email: String) -> String {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            return ""
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        
+        fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+        
+        do{
+            let result = try managedContext.fetch(fetchRequest)
+            
+            let existingUser = result[0] as! NSManagedObject
+            
+            let dbEmail = existingUser.value(forKey: "email") as! String
+            
+            if(dbEmail == email){
+                return existingUser.value(forKey: "carPlateNumber") as! String
+            }
+            
+            }catch{
+                print("User checking unsuccessful")
+            
+            }
+        return ""
+    }
+    
     func isValidLogin(email: String, password: String) -> Bool{
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
             return false

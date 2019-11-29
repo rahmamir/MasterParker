@@ -26,35 +26,39 @@ class RegisterUser : UIViewController {
     
     @IBOutlet var carPlateNumberTextField : UITextField!
     
+    @IBOutlet var isCreditCardAdded : UILabel!
+    
     var newPaymentModel = PaymentModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
     
-    @IBAction func addCreditCardOnClick(){ /*https:/code.tutsplus.com/tutorials/create-a-custom-alert-controller-in-ios-10-swift-3--cms-27589
-            */
+    @IBAction func addCreditCardOnClick(){
         
-        let alert = UIAlertController(title: "Add New Credit Car",
+        let alert = UIAlertController(title: "Add New Credit Card",
         message: "Insert Credit Card Number, CVV and Name",
         preferredStyle: .alert)
         
         // Login button
-        let addCreditCardAction = UIAlertAction(title: "Add New Credit Car", style: .default, handler: { (action) -> Void in
+        let addCreditCardAction = UIAlertAction(title: "Add New Credit Card", style: .default, handler: { (action) -> Void in
             // Get TextFields text
             let receivedCardNumberInfo = alert.textFields![0]
             let receivedCVVInfo = alert.textFields![1]
             let receivedNameInfo = alert.textFields![2]
             let receivedDateInfo = alert.textFields![3]
             //NOTE= TRY TO HNADLE CREDIT CARD NUMBER VALIDATION
-             
-            //print("USERNAME: \(usernameTxt.text!)\nPASSWORD: \(passwordTxt.text!)\nPHONE NO.: \(phoneTxt.text!)")
+
+            //let cardNumberEntered = receivedCardNumberInfo.text
+            
             self.newPaymentModel.cvvNumber = Int(String(receivedCVVInfo.text!))!
             self.newPaymentModel.cardName = receivedNameInfo.text ?? ""
             self.newPaymentModel.cardNumber = Int(String(receivedCardNumberInfo.text!))!
             self.newPaymentModel.expiryDate = receivedDateInfo.text ?? ""
+            
+            self.isCreditCardAdded.text = "\(receivedNameInfo)-\(receivedCardNumberInfo)-\(receivedDateInfo)"
+            
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
@@ -72,7 +76,7 @@ class RegisterUser : UIViewController {
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
-            textField.placeholder = "Type your CVV"
+            textField.placeholder = "Type your CVV: XXX"
             textField.isSecureTextEntry = true
             textField.textColor = UIColor.blue
         }
@@ -107,10 +111,7 @@ class RegisterUser : UIViewController {
         let newContactNumber = Int(contactNumberTextField.text!)
         let newCarPlateNumber = carPlateNumberTextField.text!
         
-        
-        //let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber)
         let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber, PaymentModel: newPaymentModel)
-        //print("USERNAME: \(newlyCreatedUser.name)\nPASSWORD: \(newlyCreatedUser.password)\n EMAIL: \(newlyCreatedUser.email)")
         
         userController.insertUser(newUser: newlyCreatedUser)
         navigateToSignIn()
@@ -119,7 +120,6 @@ class RegisterUser : UIViewController {
     private func navigateToSignIn(){
         
         let SignInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignInScene") as! SignInVC
-               
         navigationController?.pushViewController(SignInVC, animated: true)
     }
 }
