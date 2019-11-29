@@ -427,6 +427,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Return To Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-ZX-Wqi">
+                                <rect key="frame" x="20" y="839" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -441,6 +447,7 @@
                             <constraint firstItem="RkX-A8-1o2" firstAttribute="top" secondItem="BsY-FT-Z5b" secondAttribute="bottom" constant="20" id="EA8-4a-siu"/>
                             <constraint firstItem="hyk-bs-Awe" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="Ewj-PL-jmx"/>
                             <constraint firstItem="Gau-83-2xe" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="GiS-7e-8UO"/>
+                            <constraint firstAttribute="trailing" secondItem="6KS-ZX-Wqi" secondAttribute="trailing" constant="20" id="JCk-Dl-gnC"/>
                             <constraint firstItem="1T5-bO-5nv" firstAttribute="leading" secondItem="Wau-Ij-isE" secondAttribute="leading" constant="20" id="KTH-46-65S"/>
                             <constraint firstItem="BAz-zb-rR9" firstAttribute="top" secondItem="Gau-83-2xe" secondAttribute="bottom" constant="20" id="LYs-d6-n0w"/>
                             <constraint firstItem="C1g-vc-VGc" firstAttribute="centerY" secondItem="BAz-zb-rR9" secondAttribute="centerY" id="MP6-PC-LBm"/>
@@ -453,8 +460,10 @@
                             <constraint firstItem="dsh-0h-a95" firstAttribute="centerY" secondItem="e89-0l-VWA" secondAttribute="centerY" id="Xzx-1c-0pb"/>
                             <constraint firstItem="BsY-FT-Z5b" firstAttribute="top" secondItem="C1g-vc-VGc" secondAttribute="bottom" constant="20" id="YWU-zW-cMG"/>
                             <constraint firstItem="hyk-bs-Awe" firstAttribute="top" secondItem="BAz-zb-rR9" secondAttribute="bottom" constant="20" id="YlR-IM-zFY"/>
+                            <constraint firstItem="6KS-ZX-Wqi" firstAttribute="leading" secondItem="6Oc-W0-Mbf" secondAttribute="leading" constant="20" id="aJ0-1o-8Zs"/>
                             <constraint firstItem="C1g-vc-VGc" firstAttribute="top" secondItem="Gau-83-2xe" secondAttribute="bottom" constant="20" id="bAc-T8-soD"/>
                             <constraint firstItem="FTh-3T-mpa" firstAttribute="top" secondItem="RkX-A8-1o2" secondAttribute="bottom" constant="20" id="bd5-CI-6JF"/>
+                            <constraint firstItem="6KS-ZX-Wqi" firstAttribute="bottom" secondItem="Wau-Ij-isE" secondAttribute="bottom" constant="20" id="bqG-na-fZ7"/>
                             <constraint firstItem="BsY-FT-Z5b" firstAttribute="centerY" secondItem="hyk-bs-Awe" secondAttribute="centerY" id="c2y-rN-eiR"/>
                             <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="hth-Tn-eTu" secondAttribute="trailing" constant="20" id="cRs-6L-SlF"/>
                             <constraint firstItem="Wau-Ij-isE" firstAttribute="trailing" secondItem="FTh-3T-mpa" secondAttribute="trailing" constant="20" id="htU-Im-lqT"/>
@@ -471,6 +480,7 @@
                         <outlet property="carPlateNumberLabel" destination="C1g-vc-VGc" id="MJD-XU-yaU"/>
                         <outlet property="durationOfParkingLabel" destination="RkX-A8-1o2" id="ciw-E6-FSB"/>
                         <outlet property="parkingCostLabel" destination="dsh-0h-a95" id="Ti6-6f-DqQ"/>
+                        <outlet property="returnToHomeScreen" destination="6KS-ZX-Wqi" id="nM1-V0-DoT"/>
                         <outlet property="suiteNumOfHostLabel" destination="hth-Tn-eTu" id="qGX-5J-GwW"/>
                         <outlet property="timeOfParkingLabel" destination="BsY-FT-Z5b" id="vUD-oh-M72"/>
                     </connections>

@@ -13,6 +13,8 @@ class ParkingReceiptVC: UIViewController {
     //let newParking = ParkingModel(BuildingCode: 23, NumOfHours: 2, CarPlateNum: "sdsd", SuiteNumOfHost: 45, DateOfParking: Date(), parkingCharge: 900)//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     let parkingController = ParkingController()
     
+    @IBOutlet var returnToHomeScreen : UILabel!
+    
     @IBOutlet var carPlateNumberLabel : UILabel!
     
     @IBOutlet var timeOfParkingLabel : UILabel!
