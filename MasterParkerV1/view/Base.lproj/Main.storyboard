@@ -953,6 +953,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="jE3-oD-ofB" id="Thm-yH-Mi4"/>
                         <outlet property="passwordTextField" destination="ytg-bK-3Ho" id="FZL-Iu-ehE"/>
+                        <outlet property="rememberCredentialsSwitch" destination="Ime-pm-4gR" id="kdW-aJ-NOM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdY-kA-yq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ class SignInVC : UIViewController{
     
     var userController = UserController()
 
+    @IBOutlet var rememberCredentialsSwitch : UISwitch!
     
     @IBOutlet var emailTextField : UITextField!
     
@@ -19,7 +20,29 @@ class SignInVC : UIViewController{
     
     override func viewDidLoad() {
            super.viewDidLoad()
+           grabSavedLoginCredentials()
        }
+    
+    func saveLoginCredentials(EnteredEmail: String, EnteredPassword: String){
+        if(rememberCredentialsSwitch.isEnabled){//save login cred.
+            UserDefaults.standard.set(EnteredEmail, forKey: "SAVEDEMAIL")
+            UserDefaults.standard.set(EnteredPassword, forKey: "SAVEDPASSWORD")
+        }
+        else{
+           UserDefaults.standard.set("", forKey: "SAVEDEMAIL")
+           UserDefaults.standard.set("", forKey: "SAVEDPASSWORD")
+        }
+    }
+    
+    func grabSavedLoginCredentials(){
+        let savedEmail = UserDefaults.standard.value(forKey: "SAVEDEMAIL") as? String
+        let savedPassword = UserDefaults.standard.value(forKey: "SAVEDPASSWORD") as? String
+        if(!(savedEmail==nil || savedPassword==nil)){
+            emailTextField.text = savedEmail
+            passwordTextField.text = savedPassword
+        }
+        
+    }
     
     @IBAction func onloginClick(_ sender: UIButton){
 
@@ -28,11 +51,14 @@ class SignInVC : UIViewController{
         
         if(userController.isValidLogin(email: enteredEmail, password: enteredPassword)){
             
-            let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
-
+            saveLoginCredentials(EnteredEmail: enteredEmail, EnteredPassword: enteredPassword)
+            
             let loggedInCarplateNumber = userController.returnCarPlateFromEmail(email: enteredEmail)
             UserDefaults.standard.set(loggedInCarplateNumber, forKey: "LOGGEDINCARPLATENUMBER")
             UserDefaults.standard.set(enteredEmail, forKey: "LOGGEDINUSEREMAIL")
+
+            let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
+
             navigationController?.pushViewController(homeScreenVC, animated: true)
         }
         else{//invalid credentials//create an alert
