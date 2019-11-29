@@ -114,9 +114,10 @@ class RegisterUser : UIViewController {
         let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber, PaymentModel: newPaymentModel)
         
         userController.insertUser(newUser: newlyCreatedUser)
+        /*
         if newlyCreatedUser != nil{
                 userController.insertUser(newUser: newlyCreatedUser)
-                userController.verifySameCarPlateNum(name: newName, carPlateNumber: newCarPlateNumber)
+                            userController.verifySameCarPlateNum(email: newName, carPlateNumber: newCarPlateNumber)
                 var allUsers = (self.userController.getAllUsers() ?? nil)!
                                    
                 if (allUsers != nil){
@@ -134,7 +135,7 @@ class RegisterUser : UIViewController {
               {
               print("User creation unsuccessful");
               }
-
+        */
         navigateToSignIn()
     }
     

@@ -20,6 +20,7 @@
 		E71FAFE9237F133F00E2379F /* ParkingReceiptDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFE8237F133F00E2379F /* ParkingReceiptDetail.swift */; };
 		E73344C32375FCDF0073FB49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344C22375FCDF0073FB49 /* UserModel.swift */; };
 		E73344EA2376014F0073FB49 /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73344E92376014F0073FB49 /* PaymentModel.swift */; };
+		E7782D20239171BB00A132DA /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7782D1F239171BB00A132DA /* Validator.swift */; };
 		E7A8DAC4237E7F580070A30B /* ParkingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8DAC3237E7F580070A30B /* ParkingModel.swift */; };
 		E7A8DAC6237E87AD0070A30B /* ParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8DAC5237E87AD0070A30B /* ParkingController.swift */; };
 		E7A8DAC8237E97E90070A30B /* ParkingReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8DAC7237E97E90070A30B /* ParkingReceiptVC.swift */; };
@@ -46,6 +47,7 @@
 		E71FAFE8237F133F00E2379F /* ParkingReceiptDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingReceiptDetail.swift; sourceTree = "<group>"; };
 		E73344C22375FCDF0073FB49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E73344E92376014F0073FB49 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		E7782D1F239171BB00A132DA /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		E7A8DAC3237E7F580070A30B /* ParkingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingModel.swift; sourceTree = "<group>"; };
 		E7A8DAC5237E87AD0070A30B /* ParkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingController.swift; sourceTree = "<group>"; };
 		E7A8DAC7237E97E90070A30B /* ParkingReceiptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingReceiptVC.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				E73344C22375FCDF0073FB49 /* UserModel.swift */,
 				E73344E92376014F0073FB49 /* PaymentModel.swift */,
 				E7A8DAC3237E7F580070A30B /* ParkingModel.swift */,
+				E7782D1F239171BB00A132DA /* Validator.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				E7A8DAC4237E7F580070A30B /* ParkingModel.swift in Sources */,
 				E71FAFE7237F132300E2379F /* ParkingReceiptTVCell.swift in Sources */,
 				E7A8DAC6237E87AD0070A30B /* ParkingController.swift in Sources */,
+				E7782D20239171BB00A132DA /* Validator.swift in Sources */,
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
 				E7A8DAC8237E97E90070A30B /* ParkingReceiptVC.swift in Sources */,
 				E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */,

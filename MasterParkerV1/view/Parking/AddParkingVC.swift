@@ -12,14 +12,18 @@ class AddParkingVC: UIViewController {
 
     let userController = UserController()
     let parkingController = ParkingController()
+    let validator = Validator()
     
     @IBOutlet var buildingCodeTxt : UITextField!
+    @IBOutlet var buildingCodeValidationLabel : UILabel!
     
     @IBOutlet var numOfHoursTxt : UITextField!
+    @IBOutlet var numOfHoursValidationLabel : UILabel!
     
     @IBOutlet var carPlateNumberTxt : UITextField!
     
     @IBOutlet var suiteNumOfHostTxt : UITextField!
+    @IBOutlet var suiteNumOfHostValidationLabel : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,33 +44,53 @@ class AddParkingVC: UIViewController {
         let carPlateNum = carPlateNumberTxt.text!
         let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!)
         
-        //TODO = basic errorchecking with popup error messages, such as empty fields, or incorrect data type
         let storedEmailLoggedIn = UserDefaults.standard.value(forKey: "LOGGEDINUSEREMAIL") as! String
-           
-        if(userController.verifySameCarPlateNum(email: storedEmailLoggedIn, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate
-            let date = Date()
-            let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!)
-            
-            if(parkingCharges != -1){
-                    print("PARKINGCHARGES")
-                    print(parkingCharges)
-                    let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
+        
+        if(isUserInputValid()){
+            if(userController.verifySameCarPlateNum(email: storedEmailLoggedIn, carPlateNumber: carPlateNum)){//if carplate of user == inputted carplate
+                let date = Date()
+                let parkingCharges = calculateParkingCharges(numOfHours: numOfHours!)
                 
-                   print("updating database with new parking")
-                   parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
-                   //userController.updateUser(user: loggedInUser)//updated UserDatabase
-                   //UPDATE THE USER DEFAULTS USER OBJECT, UNLESS THAT OCCURS AUTOMATICALLY
-                    UserDefaults.standard.set(carPlateNum, forKey: "LOGGEDINCARPLATENUMBER")
-                    UserDefaults.standard.set(date, forKey: "SELECTEDDATE")
-                   navigateToReceipt()//go to receipt page
+                if(parkingCharges != -1){
+                        print("PARKINGCHARGES")
+                        print(parkingCharges)
+                        let newParking = ParkingModel(BuildingCode: buildingCode!, NumOfHours: numOfHours!, CarPlateNum: carPlateNum, SuiteNumOfHost: suiteNumOfHost!, DateOfParking: date, parkingCharge: parkingCharges)
+                    
+                       print("updating database with new parking")
+                       parkingController.insertParking(newParking: newParking)//updated ParkingDatabase
+                       //userController.updateUser(user: loggedInUser)//updated UserDatabase
+                        UserDefaults.standard.set(carPlateNum, forKey: "LOGGEDINCARPLATENUMBER")
+                        UserDefaults.standard.set(date, forKey: "SELECTEDDATE")
+                       navigateToReceipt()//go to receipt page
+                }
             }
-        }//UNCOMMENT THIS
+        }
+    }
+    
+    private func isUserInputValid() -> Bool{
+        let buildingCode = buildingCodeTxt.text!
+        let numOfHours = numOfHoursTxt.text!
+        let suiteNumOfHost = suiteNumOfHostTxt.text!
+        
+        let isBuildingCodeValid = validator.validatorFor(userInput: buildingCode, type: Validator.ValidatorType.genericNumber)
+        
+        let isNumOfHoursValid = validator.validatorFor(userInput: numOfHours, type: Validator.ValidatorType.numberWithinBounds, bounds: 25)
+        
+        let isSuiteNumOfHostValid = validator.validatorFor(userInput: suiteNumOfHost, type: Validator.ValidatorType.genericNumber)
+        
+        buildingCodeValidationLabel.text = validator.listOfErrorMessages[0]
+        numOfHoursValidationLabel.text = validator.listOfErrorMessages[1]
+        suiteNumOfHostValidationLabel.text = validator.listOfErrorMessages[2]
+        
+        validator.listOfErrorMessages = []
+        
+        if(isBuildingCodeValid && isNumOfHoursValid && isSuiteNumOfHostValid){
+            return true
+        }
+        return false
     }
     
     private func calculateParkingCharges(numOfHours: Int) -> Int{
-        
-        //let userMonth = Calendar.current.component(.month, from: loggedInUser.currentMonth)
-        //let currentMonth = Calendar.current.component(.month, from: Date())
         
         let currentCarPlateNumber = UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as! String
         
