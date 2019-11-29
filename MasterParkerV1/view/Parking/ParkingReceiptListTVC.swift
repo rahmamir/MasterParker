@@ -11,7 +11,7 @@ import UIKit
 
 class ParkingReceiptListTVC : UITableViewController{
     
-    let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: "23", CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
+    let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     let parkingController = ParkingController()
     var mParkingList = [ParkingModel]()
    

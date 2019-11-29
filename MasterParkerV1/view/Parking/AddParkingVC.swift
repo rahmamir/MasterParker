@@ -12,7 +12,7 @@ class AddParkingVC: UIViewController {
 
     let userController = UserController()
     let parkingController = ParkingController()
-    let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: "23", CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
+    let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
     
     @IBOutlet var buildingCodeTxt : UITextField!
     

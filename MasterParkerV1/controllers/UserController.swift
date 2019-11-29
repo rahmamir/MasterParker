@@ -73,9 +73,7 @@ public class UserController
             existingUser.setValue(user.name, forKey: "firstname")
             existingUser.setValue(user.carPlateNumber, forKey: "carPlateNumber")
             existingUser.setValue(user.contactNumber, forKey: "contactNumber")
-            //existingUser.setValue(user.currentMonth, forKey: "currentMonth")
             existingUser.setValue(user.email, forKey: "email")
-            //existingUser.setValue(user.numOfParkingsMade, forKey: "numOfParkingsMade")
             existingUser.setValue(user.password, forKey: "password")
             
             do{

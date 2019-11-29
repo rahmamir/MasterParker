@@ -17,15 +17,27 @@ class PaymentModel{
         
     var expiryDate: Date
     var nameOnCard: String
+    var cardNumber : Int
     var cvvNumber: Int = 0
     var cardType: CardType
         
-    init(expiryDate: Date, nameOnCard: String, cvvNumber: Int, cardType: CardType) {
+    init(){
+        self.expiryDate = Date()
+        self.cvvNumber = -1
+        self.cardNumber = -1
+        self.nameOnCard = ""
+        self.cardType = CardType.CreditCard
+    }
+    
+    init(expiryDate: Date, nameOnCard: String, cvvNumber: Int, cardNumber: Int, cardType: CardType) {
         self.expiryDate = expiryDate
         self.nameOnCard = nameOnCard
         self.cvvNumber = cvvNumber
+        self.cardNumber = cardNumber
         self.cardType = cardType
     }
+    
+    
         
 }
     

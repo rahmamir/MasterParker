@@ -127,6 +127,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewUserOnClick" destination="po3-Aa-MlH" eventType="touchUpInside" id="cHf-kS-g91"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Credit Card Provided" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3t-d9-cWu">
                                 <rect key="frame" x="20.000000000000014" y="722.33333333333337" width="225.33333333333337" height="40"/>
@@ -207,6 +210,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2hN-1s-RlW"/>
                     </view>
+                    <connections>
+                        <outlet property="carPlateNumberTextField" destination="u2Y-Jc-scg" id="zM7-MA-6RN"/>
+                        <outlet property="contactNumberTextField" destination="YOp-Xk-GSa" id="m1A-fb-cBd"/>
+                        <outlet property="emailTextField" destination="dCe-hU-yDc" id="4CP-md-10X"/>
+                        <outlet property="nameTextField" destination="jz9-ee-38Y" id="6sy-tr-ZiN"/>
+                        <outlet property="passwordTextField" destination="vGK-zq-vvI" id="vAe-e8-eI6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87A-06-nDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -779,7 +789,7 @@
         <!--Sign InVC-->
         <scene sceneID="ue0-rQ-xxV">
             <objects>
-                <viewController storyboardIdentifier="SignIn" id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInScene" id="ZgH-Mh-ZnD" customClass="SignInVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="xxX-ef-hxP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
