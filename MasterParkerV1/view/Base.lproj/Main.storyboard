@@ -799,10 +799,10 @@
             </objects>
             <point key="canvasLocation" x="3976" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Update ProfileVC-->
         <scene sceneID="Zx1-Td-EXr">
             <objects>
-                <viewController id="AJc-hp-S2T" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateProfileScene" id="AJc-hp-S2T" customClass="UpdateProfileVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hLb-Ix-ZSZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -885,6 +885,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="onUpdateProfileClick:" destination="AJc-hp-S2T" eventType="touchUpInside" id="Lxo-Gz-ZIg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. John Smith" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-it-mYY">
                                 <rect key="frame" x="20" y="250.33333333333337" width="374" height="36"/>
@@ -906,7 +909,7 @@
                             <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="gRH-Va-81g" secondAttribute="trailing" constant="20" id="Hid-pR-Mrl"/>
                             <constraint firstItem="efJ-nz-nFl" firstAttribute="trailing" secondItem="2tI-UZ-qNV" secondAttribute="trailing" constant="20" id="INc-yi-vUM"/>
                             <constraint firstItem="6dU-it-mYY" firstAttribute="top" secondItem="e3q-Xq-wvO" secondAttribute="bottom" constant="20" id="Ju4-aQ-1hs"/>
-                            <constraint firstItem="iq8-9g-tht" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="Lb3-Ux-t7X"/>
+                            <constraint firstItem="iq8-9g-tht" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="LKE-6o-6hW"/>
                             <constraint firstItem="ALI-f3-IP3" firstAttribute="centerX" secondItem="hLb-Ix-ZSZ" secondAttribute="centerX" id="M3l-fl-6gP"/>
                             <constraint firstItem="gRH-Va-81g" firstAttribute="top" secondItem="ALI-f3-IP3" secondAttribute="bottom" constant="20" id="MVU-FQ-dgr"/>
                             <constraint firstItem="gRH-Va-81g" firstAttribute="leading" secondItem="efJ-nz-nFl" secondAttribute="leading" constant="20" id="Msc-f0-Eat"/>
@@ -930,10 +933,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="efJ-nz-nFl"/>
                     </view>
+                    <connections>
+                        <outlet property="txtCarPlateNumber" destination="gRH-Va-81g" id="w83-wE-34h"/>
+                        <outlet property="txtContactNumber" destination="3mi-Lu-Rxg" id="Z7o-kb-Gji"/>
+                        <outlet property="txtEmail" destination="2tI-UZ-qNV" id="YLl-WK-uhd"/>
+                        <outlet property="txtName" destination="6dU-it-mYY" id="oi1-bR-QwI"/>
+                        <outlet property="txtPassword" destination="Nux-iz-34F" id="IJA-g5-uOV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XV7-am-Pno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889.85507246376824" y="34.821428571428569"/>
+            <point key="canvasLocation" x="823" y="-634"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="ue0-rQ-xxV">

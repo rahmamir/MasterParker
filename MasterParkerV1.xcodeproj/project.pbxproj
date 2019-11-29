@@ -13,6 +13,7 @@
 		0498981A2391006F00373463 /* CustomerSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049898192391006F00373463 /* CustomerSupportVC.swift */; };
 		04C628AF238857F900A2CF85 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C628AE238857F900A2CF85 /* RegisterUser.swift */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
+		556FCF0A23919AAD00E46984 /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
 		E71FAFE1237EE78B00E2379F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFE0237EE78B00E2379F /* SignInVC.swift */; };
 		E71FAFE5237F12AC00E2379F /* ParkingReceiptListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */; };
@@ -39,6 +40,7 @@
 		049898192391006F00373463 /* CustomerSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSupportVC.swift; sourceTree = "<group>"; };
 		04C628AE238857F900A2CF85 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
 		E71FAFE0237EE78B00E2379F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		E71FAFE4237F12AC00E2379F /* ParkingReceiptListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingReceiptListTVC.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				04C628AE238857F900A2CF85 /* RegisterUser.swift */,
+				556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */,
 				04989812238FA23100373463 /* ParkingMapVC.swift in Sources */,
 				0498981A2391006F00373463 /* CustomerSupportVC.swift in Sources */,
+				556FCF0A23919AAD00E46984 /* UpdateProfileVC.swift in Sources */,
 				E71FAFE5237F12AC00E2379F /* ParkingReceiptListTVC.swift in Sources */,
 				04989815238FB6F200373463 /* AppManualVC.swift in Sources */,
 			);
