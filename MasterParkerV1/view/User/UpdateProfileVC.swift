@@ -33,8 +33,18 @@ class UpdateProfileVC: UIViewController {
         let carPlateNumber = txtCarPlateNumber.text!
         
         userController.updateUser(user: UserModel(Name: name, Email: email, Password: password, ContactNumber: contactNumber, CarPlateNumber: carPlateNumber))
-    
         
+        var allUsers = (self.userController.getAllUsers() ?? nil)!
+                                   
+                if (allUsers != nil){
+                for user in allUsers{
+                print("Name Updated: ", user.value(forKey: "name") as! String, " ",
+               "Email Updated: ", user.value(forKey: "email") as! String, " ",
+               "Password Updated: ", user.value(forKey: "password") as! String, " ",
+               "Contact Number Updated: ", user.value(forKey: "contactNumber") as! Int, " ",
+               "Car Plate Number Updated: ", user.value(forKey: "carPlateNumber") as! String, " ")
+            }
+        }
     }
     
     
