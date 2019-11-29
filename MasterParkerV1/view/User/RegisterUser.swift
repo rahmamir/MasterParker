@@ -107,6 +107,8 @@ class RegisterUser : UIViewController {
         alert.addAction(cancel)
         alert.view.layoutIfNeeded() //avoid Snapshotting error
         self.present(alert, animated: true, completion: nil)
+        
+        isCreditCardAdded.text = "Credit Card Added"
     }
     
     @IBAction func addNewUserOnClick(){

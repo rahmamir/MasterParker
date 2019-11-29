@@ -131,21 +131,23 @@ public class UserController
         
         do{
             let result = try managedContext.fetch(fetchRequest)
-            
-            let existingUser = result[0] as! NSManagedObject
-            
-            existingUser.setValue(user.name, forKey: "name")
-            existingUser.setValue(user.carPlateNumber, forKey: "carPlateNumber")
-            existingUser.setValue(user.contactNumber, forKey: "contactNumber")
-            existingUser.setValue(user.email, forKey: "email")
-            existingUser.setValue(user.password, forKey: "password")
-            
-            do{
-                try managedContext.save()
-                print("User update Successful")
-            }catch{
-                print("User update unsuccessful")
+            if(result.count>0){
+                let existingUser = result[0] as! NSManagedObject
+                
+                existingUser.setValue(user.name, forKey: "name")
+                existingUser.setValue(user.carPlateNumber, forKey: "carPlateNumber")
+                existingUser.setValue(user.contactNumber, forKey: "contactNumber")
+                existingUser.setValue(user.email, forKey: "email")
+                existingUser.setValue(user.password, forKey: "password")
+                
+                do{
+                    try managedContext.save()
+                    print("User update Successful")
+                }catch{
+                    print("User update unsuccessful")
+                }
             }
+            
         }catch{
             print("User update unsuccessful")
         }
@@ -175,5 +177,41 @@ public class UserController
         print("carplate!=givenplate, FALSE")
         return false
     }
+    
+    func grabUser(email : String) -> UserModel{
+        let allUsers = (self.getAllUsers() ?? nil)!
+        let tempPaymentModel = PaymentModel()
+        let userModel = UserModel(Name: "", Email: "", Password: "", ContactNumber: 0, CarPlateNumber: "", PaymentModel: tempPaymentModel)
+        
+        if (allUsers != nil){
+            for user in allUsers{
+                let dbEmail = user.value(forKey: "email") as! String
+                let dbCarPlateNumber = user.value(forKey: "carPlateNumber") as! String
+                let dbPassword = user.value(forKey: "password") as! String
+                let dbContactNumber = user.value(forKey: "contactNumber")
+                let dbName = user.value(forKey: "name") as! String
+                let dbCvvNumber = user.value(forKey: "cvvNumber")
+                let dbCardNumber = user.value(forKey: "cardNumber")
+                let dbCardName = user.value(forKey: "cardName")
+                //let dbExpiryDate = user.value(forKey: "expiryDate") as! String
+                
+                if (dbEmail == email){
+                    userModel.name = dbName
+                    userModel.carPlateNumber = dbCarPlateNumber
+                    userModel.email = dbEmail
+                    userModel.password = dbPassword
+                    userModel.contactNumber = dbContactNumber as! Int
+                    userModel.paymentModel.cardName = dbCardName as! String
+                    userModel.paymentModel.cvvNumber = dbCvvNumber as! Int
+                    //userModel.paymentModel.expiryDate = dbExpiryDate
+                    userModel.paymentModel.cvvNumber = dbCardNumber as! Int
+                    return userModel
+                }
+            }
+        }
+        //print("carplate!=givenplate, FALSE")
+        return userModel
+    }
+    
 }
 

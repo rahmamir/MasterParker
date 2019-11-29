@@ -64,6 +64,13 @@ class HomeScreenVC : UIViewController {
                  
     }
     
+    @IBAction func updateUserProfileAction(_sender: UIButton){
+        
+        let updateUser = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileScene") as! UpdateProfileVC
+               
+        navigationController?.pushViewController(updateUser, animated: true)
+    }
+    
     @IBAction func clearParkingHistory(_sender: UIButton){
         
         parkingController.deleteAllParkings()

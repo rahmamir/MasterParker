@@ -52,7 +52,7 @@ class ParkingMapVC: UIViewController{
            
            //set the center of the map to be searched
            let centerCoordinate = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
-           
+            
            //set the region for the request
            request.region = MKCoordinateRegion(center: centerCoordinate, span: span)
            
