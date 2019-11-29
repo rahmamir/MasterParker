@@ -114,6 +114,27 @@ class RegisterUser : UIViewController {
         let newlyCreatedUser = UserModel(Name: newName, Email: newEmail, Password: newPassword, ContactNumber: newContactNumber!, CarPlateNumber: newCarPlateNumber, PaymentModel: newPaymentModel)
         
         userController.insertUser(newUser: newlyCreatedUser)
+        if newlyCreatedUser != nil{
+                userController.insertUser(newUser: newlyCreatedUser)
+                userController.verifySameCarPlateNum(name: newName, carPlateNumber: newCarPlateNumber)
+                var allUsers = (self.userController.getAllUsers() ?? nil)!
+                                   
+                if (allUsers != nil){
+                for user in allUsers{
+                print("Name: ", user.value(forKey: "name") as! String, " ",
+               "Email: ", user.value(forKey: "email") as! String, " ",
+               "Password: ", user.value(forKey: "password") as! String, " ",
+               "Contact Number: ", user.value(forKey: "contactNumber") as! Int, " ",
+               "Car Plate Number: ", user.value(forKey: "carPlateNumber") as! String, " ")
+                 }
+             }
+            _ = navigationController?.popViewController(animated: true)
+          }
+              else
+              {
+              print("User creation unsuccessful");
+              }
+
         navigateToSignIn()
     }
     
