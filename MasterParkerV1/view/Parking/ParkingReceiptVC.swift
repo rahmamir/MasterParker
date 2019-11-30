@@ -34,10 +34,17 @@ class ParkingReceiptVC: UIViewController {
     private func generateReceipt(){
         
         let newParking = parkingController.getParking(carplateNum: UserDefaults.standard.value(forKey: "LOGGEDINCARPLATENUMBER") as! String, dateOfParking: UserDefaults.standard.value(forKey: "SELECTEDDATE") as! Date)
+    
+        
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateStyle = .full
+
+        let dateString = dateFormatter.string(from: newParking.dateOfParking)
         
         carPlateNumberLabel.text = newParking.carPlateNum
         
-        timeOfParkingLabel.text = newParking.dateOfParking.description
+        timeOfParkingLabel.text = dateString
         
         durationOfParkingLabel.text = String(newParking.numOfHours)
         

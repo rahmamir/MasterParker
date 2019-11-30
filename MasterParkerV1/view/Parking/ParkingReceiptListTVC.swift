@@ -39,8 +39,17 @@ class ParkingReceiptListTVC : UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ParkingReceiptTVCell
                 
         // Configure the cell...
-        cell.carPlateNumber!.text = "CarPlate#: \(self.mParkingList[indexPath.row].carPlateNum)"
-        cell.dateOfParking!.text = "Date of Parking: \(self.mParkingList[indexPath.row].dateOfParking)"
+        let currentDate = self.mParkingList[indexPath.row].dateOfParking
+        
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateFormat = "MMMM-dd-yyyy HH:mm"
+
+        let dateString = dateFormatter.string(from: currentDate)
+        
+        //
+        cell.carPlateNumber!.text = "CarPlate: \(self.mParkingList[indexPath.row].carPlateNum)"
+        cell.dateOfParking!.text = "Date: \(dateString)"
          
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
