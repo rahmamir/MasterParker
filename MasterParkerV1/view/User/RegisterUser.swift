@@ -19,6 +19,7 @@ class RegisterUser : UIViewController {
     
     var creditCardErrorMessage : String = ""
     
+    @IBOutlet var addProfileButton : UIButton!
     @IBOutlet var cardInfoButton : UIButton!
     @IBOutlet var emailLabel : UILabel!
     @IBOutlet var passwordLabel : UILabel!
@@ -56,12 +57,6 @@ class RegisterUser : UIViewController {
         let addCreditCardAction = UIAlertAction(title: "Add New Credit Card", style: .default, handler: { (action) -> Void in
             // Get TextFields text
             
-            //get previous card info
-            //alert.textFields![0].text = String(self.newPaymentModel.cardNumber)
-            //alert.textFields![1].text = String(self.newPaymentModel.cvvNumber)
-            //alert.textFields![2].text = self.newPaymentModel.cardName
-            //alert.textFields![3].text = self.newPaymentModel.expiryDate
-            
             //update object payment
             let receivedCardNumberInfo = alert.textFields![0].text ?? ""
             let receivedCVVInfo = alert.textFields![1].text ?? ""
@@ -78,6 +73,7 @@ class RegisterUser : UIViewController {
                 
                 self.cardInfoButton.setTitle("Card Added!", for: .normal)
                 self.cardInfoButton.setTitleShadowColor(.green, for: .normal)
+                self.addProfileButton.isEnabled = true
             }
             else{
                 self.cardInfoButton.setTitle("Incorrect Card Info! Retry", for: .normal)

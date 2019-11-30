@@ -113,7 +113,7 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-h2-20a">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-h2-20a">
                                 <rect key="frame" x="20" y="810" width="374" height="47"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
@@ -198,6 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="2hN-1s-RlW"/>
                     </view>
                     <connections>
+                        <outlet property="addProfileButton" destination="3QS-h2-20a" id="f5N-Pe-2SD"/>
                         <outlet property="carPlateNumberTextField" destination="u2Y-Jc-scg" id="zM7-MA-6RN"/>
                         <outlet property="cardInfoButton" destination="xYC-jd-Brv" id="VPz-9i-Ru7"/>
                         <outlet property="contactNumberLabel" destination="Dah-0d-L2A" id="EaL-eT-dBb"/>
