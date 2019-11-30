@@ -17,21 +17,20 @@ class RegisterUser : UIViewController {
     var userController = UserController()
     var validator = Validator()
     
+    var creditCardErrorMessage : String = ""
+    
+    @IBOutlet var cardInfoButton : UIButton!
     @IBOutlet var emailLabel : UILabel!
     @IBOutlet var passwordLabel : UILabel!
     @IBOutlet var contactNumberLabel : UILabel!
     
     @IBOutlet var nameTextField : UITextField!
-    
     @IBOutlet var emailTextField : UITextField!
-    
     @IBOutlet var passwordTextField : UITextField!
-    
     @IBOutlet var contactNumberTextField : UITextField!
-    
     @IBOutlet var carPlateNumberTextField : UITextField!
     
-    @IBOutlet var isCreditCardAdded : UILabel!
+    
     
     var newPaymentModel = PaymentModel()
     
@@ -42,33 +41,53 @@ class RegisterUser : UIViewController {
     
     @IBAction func addCreditCardOnClick(){
         
-        let alert = UIAlertController(title: "Add New Credit Card",
-        message: "Insert Credit Card Number, CVV and Name",
-        preferredStyle: .alert)
         
+        
+        var alertMessage : String = ""
+        
+        if(creditCardErrorMessage == ""){
+            alertMessage = "Enter Card Information"
+        }
+        
+        let alert = UIAlertController(title: "Add New Credit Card",
+        message: alertMessage,
+        preferredStyle: .alert)
         // Login button
         let addCreditCardAction = UIAlertAction(title: "Add New Credit Card", style: .default, handler: { (action) -> Void in
             // Get TextFields text
-            let receivedCardNumberInfo = alert.textFields![0]
-            let receivedCVVInfo = alert.textFields![1]
-            let receivedNameInfo = alert.textFields![2]
-            let receivedDateInfo = alert.textFields![3]
-            //NOTE= TRY TO HNADLE CREDIT CARD NUMBER VALIDATION
-
-            //let cardNumberEntered = receivedCardNumberInfo.text
             
-            self.newPaymentModel.cvvNumber = Int(String(receivedCVVInfo.text!))!
-            self.newPaymentModel.cardName = receivedNameInfo.text ?? ""
-            self.newPaymentModel.cardNumber = Int(String(receivedCardNumberInfo.text!))!
-            self.newPaymentModel.expiryDate = receivedDateInfo.text ?? ""
+            //get previous card info
+            //alert.textFields![0].text = String(self.newPaymentModel.cardNumber)
+            //alert.textFields![1].text = String(self.newPaymentModel.cvvNumber)
+            //alert.textFields![2].text = self.newPaymentModel.cardName
+            //alert.textFields![3].text = self.newPaymentModel.expiryDate
             
-            self.isCreditCardAdded.text = "\(receivedNameInfo)-\(receivedCardNumberInfo)-\(receivedDateInfo)"
+            //update object payment
+            let receivedCardNumberInfo = alert.textFields![0].text ?? ""
+            let receivedCVVInfo = alert.textFields![1].text ?? ""
+            let receivedNameInfo = alert.textFields![2].text ?? ""
+            let receivedDateInfo = alert.textFields![3].text ?? ""
             
+            if(self.verifyCreditCardInfo(cardNumber: receivedCardNumberInfo, cvv: receivedCVVInfo, date: receivedDateInfo)){
+                
+                //update cardInfo
+                self.newPaymentModel.cvvNumber = Int(receivedCVVInfo)!
+                self.newPaymentModel.cardName = receivedNameInfo
+                self.newPaymentModel.cardNumber = Int(receivedCardNumberInfo)!
+                self.newPaymentModel.expiryDate = receivedDateInfo
+                
+                self.cardInfoButton.setTitle("Card Added!", for: .normal)
+                self.cardInfoButton.setTitleShadowColor(.green, for: .normal)
+            }
+            else{
+                self.cardInfoButton.setTitle("Incorrect Card Info! Retry", for: .normal)
+                self.cardInfoButton.setTitleShadowColor(.red, for: .normal)
+            }
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
 
-        // Add 1 textField (for username)
+        // Add 1 textField (for credit car number)
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
@@ -77,7 +96,7 @@ class RegisterUser : UIViewController {
             textField.textColor = UIColor.blue
         }
         
-        // Add 2nd textField (for password)
+        // Add 2nd textField (for cvv)
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
@@ -86,7 +105,7 @@ class RegisterUser : UIViewController {
             textField.textColor = UIColor.blue
         }
         
-        // Add 3rd textField (for phone no.)
+        // Add 3rd textField (for card no.)
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .numberPad
@@ -98,17 +117,15 @@ class RegisterUser : UIViewController {
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
-            textField.placeholder = "Type your Expiry Date : mm/yy"
+            textField.placeholder = "Type your Expiry Date : mm/yyyy"
             textField.textColor = UIColor.blue
         }
         
         // Add action buttons and present the Alert
         alert.addAction(addCreditCardAction)
         alert.addAction(cancel)
-        alert.view.layoutIfNeeded() //avoid Snapshotting error
+        //alert.view.layoutIfNeeded() //avoid Snapshotting error
         self.present(alert, animated: true, completion: nil)
-        
-        isCreditCardAdded.text = "Credit Card Added"
     }
     
     @IBAction func addNewUserOnClick(){
@@ -127,6 +144,40 @@ class RegisterUser : UIViewController {
                 navigateToSignIn()
         }
     }
+
+    private func verifyCreditCardInfo(cardNumber: String, cvv: String, date: String) -> Bool{
+        
+        print(cardNumber)
+        print(cardNumber.count)
+        print(cvv)
+        print(cvv.count)
+        print(date)
+        
+        let isCardNumberValid = validator.validatorFor(userInput: cardNumber, type: Validator.ValidatorType.numberWithCharacterCount, characterCount: 16)
+        
+        let isCvvValid = validator.validatorFor(userInput: cvv, type: Validator.ValidatorType.numberWithCharacterCount, characterCount: 3)
+        
+        let isDateValid = validator.validatorFor(userInput: date, type: Validator.ValidatorType.dateMonthAndYear)
+        
+        if(!isCardNumberValid){
+            print("Card number invalid")
+        }
+        if(!isCvvValid){
+            print("Cvv invalid")
+        }
+        if(!isDateValid){
+            print("date invalid")
+        }
+         //reset error messages
+        creditCardErrorMessage = "1.\(validator.listOfErrorMessages[0])\n2.\(validator.listOfErrorMessages[1])\n3.\(validator.listOfErrorMessages[2])\n"
+        
+        print(creditCardErrorMessage)
+        
+        if(isCardNumberValid && isCvvValid && isDateValid){
+            return true
+        }
+        return false
+    }
     
     private func verifyNewUserData() -> Bool{
         let newEmail = emailTextField.text ?? ""
@@ -140,14 +191,7 @@ class RegisterUser : UIViewController {
         
         let isNewContactNumberValid = validator.validatorFor(userInput: newContactNumber, type: Validator.ValidatorType.numberWithCharacterCount, characterCount: 10)
         
-        //update potential errors in input
-        
-        //emailLabel.text = "Email: \(validator.listOfErrorMessages[0])"
-        //passwordLabel.text = "Password: \(validator.listOfErrorMessages[1])"
-        //contactNumberLabel.text = "Contact Number: \(validator.listOfErrorMessages[2])"
-        
-        //reset error messages
-        
+ 
         if(isNewEmailValid && isNewPasswordValid && isNewContactNumberValid){
             validator.listOfErrorMessages = []
             return true

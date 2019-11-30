@@ -24,6 +24,7 @@ class Validator {
         case numberWithinBounds
         case numberWithCharacterCount
         case password
+        case dateMonthAndYear
     }
 
     func validatorFor(userInput: String, type: ValidatorType, bounds : Int = -1, characterCount : Int = -1) -> Bool {
@@ -38,6 +39,8 @@ class Validator {
             case .password: return self.genericValidator(regEx: "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}", errorMessage: " Must have 1 character\nMust have 1 special character\nPassword length > 8")
             
             case .numberWithCharacterCount : return self.genericValidator(regEx: "^[0-9]{\(characterCount)}$", errorMessage: "Number must be a \(characterCount) digit number", CharacterCount : characterCount)
+            
+            case .dateMonthAndYear : return self.genericValidator(regEx: "^((1[0-2])|[1-9])2((019)|([1-9][0-9][0-9])|(0[2-9][0-9]))$", errorMessage: "Date Format : MMYYYY")
         }
     }
     
@@ -57,7 +60,7 @@ class Validator {
                 }
             }
             if(CharacterCount != -1){
-                if(userInput.count==10){
+                if(userInput.count == CharacterCount){
                     listOfErrorMessages.append("")//no errors
                     return true
                 }

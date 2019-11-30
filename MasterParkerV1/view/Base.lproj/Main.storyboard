@@ -114,7 +114,7 @@
                                 <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-h2-20a">
-                                <rect key="frame" x="20" y="782.33333333333337" width="374" height="47"/>
+                                <rect key="frame" x="20" y="810" width="374" height="47"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,20 +131,9 @@
                                     <action selector="addNewUserOnClick" destination="po3-Aa-MlH" eventType="touchUpInside" id="cHf-kS-g91"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Credit Card Provided" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3t-d9-cWu">
-                                <rect key="frame" x="20.000000000000014" y="722.33333333333337" width="225.33333333333337" height="40"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYC-jd-Brv">
-                                <rect key="frame" x="274" y="722.33333333333337" width="120" height="40"/>
+                                <rect key="frame" x="20" y="722.33333333333337" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.33866056360000002" blue="0.72783759719999996" alpha="0.32380611799999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="3pJ-6b-tgc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                 <size key="titleShadowOffset" width="0.29999999999999999" height="0.29999999999999999"/>
                                 <state key="normal" title="Add Credit Card">
@@ -157,7 +146,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addCreditCardOnClick" destination="po3-Aa-MlH" eventType="touchUpInside" id="NId-1Z-crN"/>
+                                    <action selector="addCreditCardOnClick" destination="po3-Aa-MlH" eventType="touchUpInside" id="1ez-g0-VxN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,8 +155,6 @@
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="YOp-Xk-GSa" secondAttribute="trailing" constant="20" id="01f-4d-zmT"/>
                             <constraint firstItem="nU5-Vx-lfS" firstAttribute="top" secondItem="YOp-Xk-GSa" secondAttribute="bottom" constant="20" id="3m6-gB-JUF"/>
                             <constraint firstItem="Phr-2d-zrg" firstAttribute="top" secondItem="6ob-GA-Nhp" secondAttribute="bottom" constant="20" id="5Av-aO-3Ax"/>
-                            <constraint firstItem="L3t-d9-cWu" firstAttribute="top" secondItem="u2Y-Jc-scg" secondAttribute="bottom" constant="20" id="65y-Ga-aUH"/>
-                            <constraint firstItem="xYC-jd-Brv" firstAttribute="centerY" secondItem="L3t-d9-cWu" secondAttribute="centerY" id="6kV-JL-fw8"/>
                             <constraint firstItem="Phr-2d-zrg" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="7nC-Km-x2I"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="3QS-h2-20a" secondAttribute="trailing" constant="20" id="84e-im-Jb5"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="A1b-G7-fEX" secondAttribute="trailing" constant="20" id="Cgn-9C-dxu"/>
@@ -180,11 +167,12 @@
                             <constraint firstItem="A1b-G7-fEX" firstAttribute="top" secondItem="jz9-ee-38Y" secondAttribute="bottom" constant="20" id="OhH-t9-p3r"/>
                             <constraint firstItem="eCM-GI-MBK" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="PtE-Kk-m5h"/>
                             <constraint firstItem="dCe-hU-yDc" firstAttribute="top" secondItem="A1b-G7-fEX" secondAttribute="bottom" constant="20" id="RDe-BZ-gzk"/>
+                            <constraint firstItem="2hN-1s-RlW" firstAttribute="bottom" secondItem="3QS-h2-20a" secondAttribute="bottom" constant="5" id="S6E-NU-9uo"/>
                             <constraint firstItem="jz9-ee-38Y" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="Sl1-e0-Hw7"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="eCM-GI-MBK" secondAttribute="trailing" constant="20" id="VBA-lk-MBj"/>
+                            <constraint firstItem="xYC-jd-Brv" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="X8u-Ca-IVx"/>
                             <constraint firstItem="vGK-zq-vvI" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="Y2O-hJ-sWO"/>
-                            <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="xYC-jd-Brv" secondAttribute="trailing" constant="20" id="gib-9L-yeb"/>
-                            <constraint firstItem="3QS-h2-20a" firstAttribute="top" secondItem="L3t-d9-cWu" secondAttribute="bottom" constant="20" id="gmo-xj-hV1"/>
+                            <constraint firstItem="xYC-jd-Brv" firstAttribute="top" secondItem="u2Y-Jc-scg" secondAttribute="bottom" constant="20" id="ZuI-Ij-sSC"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="Phr-2d-zrg" secondAttribute="trailing" constant="20" id="gto-Mf-wUv"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="nU5-Vx-lfS" secondAttribute="trailing" constant="20" id="hzM-Rf-GQo"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="6ob-GA-Nhp" secondAttribute="trailing" constant="20" id="inR-uD-NCX"/>
@@ -196,11 +184,10 @@
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="dCe-hU-yDc" secondAttribute="trailing" constant="20" id="kjG-nJ-dEk"/>
                             <constraint firstItem="Dah-0d-L2A" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="mpG-Aa-2el"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="vGK-zq-vvI" secondAttribute="trailing" constant="20" id="oRS-tv-yx2"/>
-                            <constraint firstItem="L3t-d9-cWu" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="oce-cW-jxG"/>
-                            <constraint firstItem="xYC-jd-Brv" firstAttribute="top" secondItem="u2Y-Jc-scg" secondAttribute="bottom" constant="20" id="opY-Ya-5Xq"/>
                             <constraint firstItem="Hj6-a5-Wp1" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="ovA-Nw-94S"/>
                             <constraint firstItem="Dah-0d-L2A" firstAttribute="top" secondItem="vGK-zq-vvI" secondAttribute="bottom" constant="20" id="r7R-v4-ymO"/>
                             <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="Dah-0d-L2A" secondAttribute="trailing" constant="20" id="tY9-pW-Crc"/>
+                            <constraint firstItem="2hN-1s-RlW" firstAttribute="trailing" secondItem="xYC-jd-Brv" secondAttribute="trailing" constant="20" id="uey-Vr-1Zs"/>
                             <constraint firstItem="nU5-Vx-lfS" firstAttribute="leading" secondItem="2hN-1s-RlW" secondAttribute="leading" constant="20" id="ujz-YH-CXD"/>
                             <constraint firstItem="Hj6-a5-Wp1" firstAttribute="top" secondItem="Phr-2d-zrg" secondAttribute="bottom" constant="40" id="vlR-oS-lZ0"/>
                             <constraint firstItem="jz9-ee-38Y" firstAttribute="top" secondItem="Hj6-a5-Wp1" secondAttribute="bottom" constant="20" id="wMs-0z-pFU"/>
@@ -212,11 +199,11 @@
                     </view>
                     <connections>
                         <outlet property="carPlateNumberTextField" destination="u2Y-Jc-scg" id="zM7-MA-6RN"/>
+                        <outlet property="cardInfoButton" destination="xYC-jd-Brv" id="VPz-9i-Ru7"/>
                         <outlet property="contactNumberLabel" destination="Dah-0d-L2A" id="EaL-eT-dBb"/>
                         <outlet property="contactNumberTextField" destination="YOp-Xk-GSa" id="m1A-fb-cBd"/>
                         <outlet property="emailLabel" destination="A1b-G7-fEX" id="fCv-do-fUG"/>
                         <outlet property="emailTextField" destination="dCe-hU-yDc" id="4CP-md-10X"/>
-                        <outlet property="isCreditCardAdded" destination="L3t-d9-cWu" id="Tf6-hy-bAJ"/>
                         <outlet property="nameTextField" destination="jz9-ee-38Y" id="6sy-tr-ZiN"/>
                         <outlet property="passwordLabel" destination="eCM-GI-MBK" id="NqT-2R-Wms"/>
                         <outlet property="passwordTextField" destination="vGK-zq-vvI" id="vAe-e8-eI6"/>
