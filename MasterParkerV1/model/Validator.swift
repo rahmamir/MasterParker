@@ -39,7 +39,7 @@ class Validator {
             
             case .password: return self.genericValidator(regEx: "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}", errorMessage: " Must have 1 character\nMust have 1 special character\nPassword length > 8")
             
-            case .buildingWithinRange: return self.genericValidator(regEx: "[0-9][0-9][0-9][0-9]+", errorMessage: " Building Number must be 4 digits only!")
+            case .buildingWithinRange: return self.genericValidator(regEx: "[0-9]{4}$", errorMessage: " Building Number must be 4 digits only!")
             
             case .numberWithCharacterCount : return self.genericValidator(regEx: "^[0-9]{\(characterCount)}$", errorMessage: "Number must be a \(characterCount) digit number", CharacterCount : characterCount)
             
