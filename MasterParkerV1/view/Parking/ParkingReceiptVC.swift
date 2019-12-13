@@ -30,6 +30,11 @@ class ParkingReceiptVC: UIViewController {
           super.viewDidLoad()
           self.generateReceipt()
       }
+    @IBAction func goBackHomeAction(_ sender: UIButton) {
+        let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
+               
+        navigationController?.pushViewController(homeScreenVC, animated: true)
+    }
     
     private func generateReceipt(){
         
