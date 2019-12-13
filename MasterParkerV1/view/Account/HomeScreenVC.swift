@@ -22,8 +22,7 @@ class HomeScreenVC : UIViewController {
         super.viewDidLoad()
         
         self.currentCustomer = self.userController.grabUser(email: currentCustomerEmail)
-        
-        self.lbl_welcomeMessage.text = "Hey there, " + self.currentCustomer.name
+       
         // Do any additional setup after loading the view.
     }
     

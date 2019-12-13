@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1kW-vd-oPl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lG2-oS-9v9">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -319,14 +319,6 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To do so, please provide the following information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEe-oE-tcd">
-                                <rect key="frame" x="20" y="139" width="374" height="29.333333333333343"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add A Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMK-bd-AZl">
                                 <rect key="frame" x="20" y="64" width="374" height="55"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
@@ -340,8 +332,6 @@
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="fZL-gh-Fim" secondAttribute="trailing" constant="20" id="3fJ-k5-S1c"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="m4q-BL-QBB" secondAttribute="trailing" constant="60" id="3qR-1b-joJ"/>
                             <constraint firstItem="XfA-zj-rrL" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="45E-z1-ylA"/>
-                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="FEe-oE-tcd" secondAttribute="trailing" constant="20" id="4cD-p2-Ja9"/>
-                            <constraint firstItem="FEe-oE-tcd" firstAttribute="top" secondItem="nMK-bd-AZl" secondAttribute="bottom" constant="20" id="4jU-Pv-9ez"/>
                             <constraint firstItem="3an-Zs-1JM" firstAttribute="top" secondItem="Twu-aQ-vIy" secondAttribute="bottom" constant="20" id="4pi-hf-5c0"/>
                             <constraint firstItem="VTY-eW-lto" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="7Ca-dI-SmM"/>
                             <constraint firstItem="Kwu-gi-tzf" firstAttribute="top" secondItem="nMK-bd-AZl" secondAttribute="bottom" constant="20" id="9Q3-0p-C8O"/>
@@ -350,7 +340,6 @@
                             <constraint firstItem="Twu-aQ-vIy" firstAttribute="centerY" secondItem="VTY-eW-lto" secondAttribute="centerY" id="Fpf-98-Vz9"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="bottom" secondItem="m4q-BL-QBB" secondAttribute="bottom" constant="120" id="JfL-FY-kC2"/>
                             <constraint firstItem="m4q-BL-QBB" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="60" id="Me0-Qe-cPO"/>
-                            <constraint firstItem="FEe-oE-tcd" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="MoO-UW-RpJ"/>
                             <constraint firstItem="HqJ-1U-cfr" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="N62-wi-agb"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="HqJ-1U-cfr" secondAttribute="trailing" constant="20" id="NlJ-7c-UKs"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="nMK-bd-AZl" secondAttribute="trailing" constant="20" id="NwQ-5p-50W"/>
@@ -694,7 +683,7 @@
                                     <action selector="viewParkingManualAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="NB3-0O-lo5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Home  User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFO-Af-sJG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFO-Af-sJG">
                                 <rect key="frame" x="20" y="64" width="374" height="42"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -723,28 +712,6 @@
                                     <action selector="signOutAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="uDf-io-gTv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaI-Xj-SEM">
-                                <rect key="frame" x="20" y="702" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dCA-ar-Dvj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="    Clear Parking History" image="delete.left" catalog="system">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="clearParkingHistoryWith_sender:" destination="KGR-r5-DeD" eventType="touchUpInside" id="hos-sZ-OOT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -755,8 +722,6 @@
                             <constraint firstItem="h2P-P0-lII" firstAttribute="top" secondItem="HLS-Uu-0Nq" secondAttribute="bottom" constant="20" id="EBY-89-tBS"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="h2P-P0-lII" secondAttribute="trailing" constant="20" id="FsV-yh-yGY"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="th1-s3-Hc5" secondAttribute="trailing" constant="20" id="ILp-Nb-zfc"/>
-                            <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="LaI-Xj-SEM" secondAttribute="trailing" constant="20" id="MqJ-D5-C1m"/>
-                            <constraint firstItem="LaI-Xj-SEM" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="NTn-8G-RC8"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="hFO-Af-sJG" secondAttribute="trailing" constant="20" id="Nub-nR-FfH"/>
                             <constraint firstItem="mhb-S9-xg4" firstAttribute="top" secondItem="wiW-7g-fuP" secondAttribute="bottom" constant="20" id="OAh-K1-ZBo"/>
                             <constraint firstItem="th1-s3-Hc5" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="QsL-tb-DJa"/>
@@ -767,7 +732,6 @@
                             <constraint firstItem="aeb-V2-b9o" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="eYp-pD-fu0"/>
                             <constraint firstItem="hFO-Af-sJG" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="fGO-kN-eh3"/>
                             <constraint firstItem="HLS-Uu-0Nq" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="iGM-RG-3UG"/>
-                            <constraint firstItem="b0t-vP-uuD" firstAttribute="top" secondItem="LaI-Xj-SEM" secondAttribute="bottom" constant="20" id="jI9-MN-6Jz"/>
                             <constraint firstItem="b0t-vP-uuD" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="lRz-h3-3sJ"/>
                             <constraint firstItem="wiW-7g-fuP" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="ngk-zr-nxy"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="aeb-V2-b9o" secondAttribute="trailing" constant="20" id="o5l-sp-s7e"/>
@@ -856,7 +820,7 @@
         <!--Forgot PasswordVC-->
         <scene sceneID="qGG-sb-Xdo">
             <objects>
-                <viewController id="SnF-4D-UhK" customClass="ForgotPasswordVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordScene" id="SnF-4D-UhK" customClass="ForgotPasswordVC" customModule="MasterParkerV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8GG-Mx-kvp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1035,6 +999,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onUpdateProfileClick:" destination="AJc-hp-S2T" eventType="touchUpInside" id="Lxo-Gz-ZIg"/>
                                 </connections>
@@ -1128,7 +1097,7 @@
                                 <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember my Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHr-hA-6Uw">
-                                <rect key="frame" x="20" y="464" width="305" height="31"/>
+                                <rect key="frame" x="20" y="473" width="305" height="31"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1140,13 +1109,13 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="continue" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-bK-3Ho">
-                                <rect key="frame" x="20" y="410" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-bK-3Ho">
+                                <rect key="frame" x="20" y="410" width="374" height="43"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyf-wT-Lnh">
-                                <rect key="frame" x="60" y="535" width="294" height="40"/>
+                                <rect key="frame" x="60" y="544" width="294" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ABn-Eu-ofw"/>
@@ -1167,7 +1136,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4q3-zr-giw">
-                                <rect key="frame" x="60" y="595" width="294" height="40"/>
+                                <rect key="frame" x="60" y="604" width="294" height="40"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dFo-3g-Wf7"/>
@@ -1183,12 +1152,15 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onForgotPassword:" destination="ZgH-Mh-ZnD" eventType="touchUpInside" id="A3M-Uy-SiM"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ime-pm-4gR">
-                                <rect key="frame" x="345" y="464" width="51" height="31"/>
+                                <rect key="frame" x="345" y="473" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-wp-bgd">
-                                <rect key="frame" x="60" y="655" width="294" height="40"/>
+                                <rect key="frame" x="60" y="664" width="294" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EpF-Mb-JHA"/>
@@ -1481,7 +1453,6 @@
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="car" catalog="system" width="64" height="46"/>
         <image name="car.fill" catalog="system" width="64" height="46"/>
-        <image name="delete.left" catalog="system" width="64" height="52"/>
         <image name="envelope.fill" catalog="system" width="64" height="46"/>
         <image name="icloud.and.arrow.down.fill" catalog="system" width="64" height="56"/>
         <image name="list.number" catalog="system" width="64" height="48"/>

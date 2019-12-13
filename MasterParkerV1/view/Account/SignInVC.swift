@@ -23,6 +23,7 @@ class SignInVC : UIViewController{
     override func viewDidLoad() {
            super.viewDidLoad()
            grabSavedLoginCredentials()
+        
        }
     
     func saveLoginCredentials(EnteredEmail: String, EnteredPassword: String){
@@ -46,6 +47,13 @@ class SignInVC : UIViewController{
         
     }
     
+    @IBAction func onForgotPassword(_ sender: UIButton) {
+        let forgotPassword = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordScene") as! ForgotPasswordVC
+        
+        
+        navigationController?.pushViewController(forgotPassword, animated: true)
+        
+    }
     @IBAction func onloginClick(_ sender: UIButton){
 
         let enteredEmail = emailTextField.text!

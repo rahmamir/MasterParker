@@ -44,6 +44,8 @@ class Validator {
             case .numberWithCharacterCount : return self.genericValidator(regEx: "^[0-9]{\(characterCount)}$", errorMessage: "Number must be a \(characterCount) digit number", CharacterCount : characterCount)
             
             case .dateMonthAndYear : return self.genericValidator(regEx: "^((1[0-2])|[1-9])2((019)|([1-9][0-9][0-9])|(0[2-9][0-9]))$", errorMessage: "Date Format : MMYYYY")
+            
+        
         }
     }
     

@@ -63,9 +63,7 @@ class RegisterUser : UIViewController {
             let receivedNameInfo = alert.textFields![2].text ?? ""
             let receivedDateInfo = alert.textFields![3].text ?? ""
             
-            if(self.verifyCreditCardInfo(cardNumber: receivedCardNumberInfo, cvv: receivedCVVInfo, date: receivedDateInfo)){
-                
-                //update cardInfo
+              //update cardInfo
                 self.newPaymentModel.cvvNumber = Int(receivedCVVInfo)!
                 self.newPaymentModel.cardName = receivedNameInfo
                 self.newPaymentModel.cardNumber = Int(receivedCardNumberInfo)!
@@ -74,11 +72,8 @@ class RegisterUser : UIViewController {
                 self.cardInfoButton.setTitle("Card Added!", for: .normal)
                 self.cardInfoButton.setTitleShadowColor(.green, for: .normal)
                 self.addProfileButton.isEnabled = true
-            }
-            else{
-                self.cardInfoButton.setTitle("Incorrect Card Info! Retry", for: .normal)
-                self.cardInfoButton.setTitleShadowColor(.red, for: .normal)
-            }
+            
+            
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
@@ -87,9 +82,7 @@ class RegisterUser : UIViewController {
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
-            textField.autocorrectionType = .default
             textField.placeholder = "Type your Credit Card#"
-            textField.textColor = UIColor.blue
         }
         
         // Add 2nd textField (for cvv)
@@ -97,8 +90,6 @@ class RegisterUser : UIViewController {
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
             textField.placeholder = "Type your CVV: XXX"
-            textField.isSecureTextEntry = true
-            textField.textColor = UIColor.blue
         }
         
         // Add 3rd textField (for card no.)
@@ -106,15 +97,13 @@ class RegisterUser : UIViewController {
             textField.keyboardAppearance = .dark
             textField.keyboardType = .numberPad
             textField.placeholder = "Type your Card Name"
-            textField.textColor = UIColor.blue
         }
         
         // Add 3rd textField (for ExpiryDate no.)
         alert.addTextField { (textField: UITextField) in
             textField.keyboardAppearance = .dark
             textField.keyboardType = .default
-            textField.placeholder = "Type your Expiry Date : mm/yyyy"
-            textField.textColor = UIColor.blue
+            textField.placeholder = "Type your Expiry Date : MMYYYY"
         }
         
         // Add action buttons and present the Alert
@@ -169,10 +158,13 @@ class RegisterUser : UIViewController {
         
         print(creditCardErrorMessage)
         
-        if(isCardNumberValid && isCvvValid && isDateValid){
+        
+        
+        if(isCardNumberValid && isCvvValid){
             return true
-        }
+        }else{
         return false
+        }
     }
     
     private func verifyNewUserData() -> Bool{

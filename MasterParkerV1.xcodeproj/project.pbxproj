@@ -17,6 +17,7 @@
 		04EC11CD23A416EB00BECAB5 /* Services.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C723A416EA00BECAB5 /* Services.html */; };
 		04EC11CE23A416EB00BECAB5 /* Parking.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C823A416EA00BECAB5 /* Parking.html */; };
 		04EC11CF23A416EB00BECAB5 /* Index.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C923A416EB00BECAB5 /* Index.html */; };
+		04EC11D123A41C6800BECAB5 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC11D023A41C6800BECAB5 /* ForgotPasswordVC.swift */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		556FCF0A23919AAD00E46984 /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
@@ -50,6 +51,7 @@
 		04EC11C723A416EA00BECAB5 /* Services.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Services.html; sourceTree = "<group>"; };
 		04EC11C823A416EA00BECAB5 /* Parking.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Parking.html; sourceTree = "<group>"; };
 		04EC11C923A416EB00BECAB5 /* Index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Index.html; sourceTree = "<group>"; };
+		04EC11D023A41C6800BECAB5 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				04C628AE238857F900A2CF85 /* RegisterUser.swift */,
 				556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */,
+				04EC11D023A41C6800BECAB5 /* ForgotPasswordVC.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				E7A8DAC6237E87AD0070A30B /* ParkingController.swift in Sources */,
 				E7782D20239171BB00A132DA /* Validator.swift in Sources */,
 				E7BFDCAA236E356C009FAD77 /* MasterParkerV1.xcdatamodeld in Sources */,
+				04EC11D123A41C6800BECAB5 /* ForgotPasswordVC.swift in Sources */,
 				E7A8DAC8237E97E90070A30B /* ParkingReceiptVC.swift in Sources */,
 				E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */,
 				04989812238FA23100373463 /* ParkingMapVC.swift in Sources */,
