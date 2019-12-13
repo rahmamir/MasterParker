@@ -20,7 +20,7 @@ class AppManualVC: UIViewController, WKUIDelegate{
             super.viewDidLoad()
             // Do any additional setup after loading the view.
             
-            let url = Bundle.main.url(forResource: "AppManual", withExtension: "html")
+            let url = Bundle.main.url(forResource: "Index", withExtension: "html")
             let requestObj = URLRequest(url: url!);
             webView.load(requestObj);
         }

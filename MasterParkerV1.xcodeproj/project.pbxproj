@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		04989812238FA23100373463 /* ParkingMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989811238FA23100373463 /* ParkingMapVC.swift */; };
 		04989815238FB6F200373463 /* AppManualVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04989814238FB6F200373463 /* AppManualVC.swift */; };
-		04989818238FBA1A00373463 /* AppManual.html in Resources */ = {isa = PBXBuildFile; fileRef = 04989817238FBA1A00373463 /* AppManual.html */; };
 		0498981A2391006F00373463 /* CustomerSupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049898192391006F00373463 /* CustomerSupportVC.swift */; };
 		04C628AF238857F900A2CF85 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C628AE238857F900A2CF85 /* RegisterUser.swift */; };
+		04EC11CA23A416EB00BECAB5 /* Support.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C423A416EA00BECAB5 /* Support.html */; };
+		04EC11CB23A416EB00BECAB5 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C523A416EA00BECAB5 /* About.html */; };
+		04EC11CC23A416EB00BECAB5 /* Account.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C623A416EA00BECAB5 /* Account.html */; };
+		04EC11CD23A416EB00BECAB5 /* Services.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C723A416EA00BECAB5 /* Services.html */; };
+		04EC11CE23A416EB00BECAB5 /* Parking.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C823A416EA00BECAB5 /* Parking.html */; };
+		04EC11CF23A416EB00BECAB5 /* Index.html in Resources */ = {isa = PBXBuildFile; fileRef = 04EC11C923A416EB00BECAB5 /* Index.html */; };
 		55477DED237BBB7B006E7808 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55477DEC237BBB7B006E7808 /* UserController.swift */; };
 		556FCF0A23919AAD00E46984 /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */; };
 		E71FAFDF237EE36A00E2379F /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */; };
@@ -37,9 +42,14 @@
 /* Begin PBXFileReference section */
 		04989811238FA23100373463 /* ParkingMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingMapVC.swift; sourceTree = "<group>"; };
 		04989814238FB6F200373463 /* AppManualVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManualVC.swift; sourceTree = "<group>"; };
-		04989817238FBA1A00373463 /* AppManual.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = AppManual.html; sourceTree = "<group>"; };
 		049898192391006F00373463 /* CustomerSupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSupportVC.swift; sourceTree = "<group>"; };
 		04C628AE238857F900A2CF85 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		04EC11C423A416EA00BECAB5 /* Support.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Support.html; sourceTree = "<group>"; };
+		04EC11C523A416EA00BECAB5 /* About.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = About.html; sourceTree = "<group>"; };
+		04EC11C623A416EA00BECAB5 /* Account.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Account.html; sourceTree = "<group>"; };
+		04EC11C723A416EA00BECAB5 /* Services.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Services.html; sourceTree = "<group>"; };
+		04EC11C823A416EA00BECAB5 /* Parking.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Parking.html; sourceTree = "<group>"; };
+		04EC11C923A416EB00BECAB5 /* Index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Index.html; sourceTree = "<group>"; };
 		55477DEC237BBB7B006E7808 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		556FCF0923919AAD00E46984 /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		E71FAFDE237EE36A00E2379F /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -88,7 +98,12 @@
 		04989816238FB6F700373463 /* html */ = {
 			isa = PBXGroup;
 			children = (
-				04989817238FBA1A00373463 /* AppManual.html */,
+				04EC11C523A416EA00BECAB5 /* About.html */,
+				04EC11C623A416EA00BECAB5 /* Account.html */,
+				04EC11C923A416EB00BECAB5 /* Index.html */,
+				04EC11C823A416EA00BECAB5 /* Parking.html */,
+				04EC11C723A416EA00BECAB5 /* Services.html */,
+				04EC11C423A416EA00BECAB5 /* Support.html */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -246,7 +261,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04989818238FBA1A00373463 /* AppManual.html in Resources */,
+				04EC11CC23A416EB00BECAB5 /* Account.html in Resources */,
+				04EC11CD23A416EB00BECAB5 /* Services.html in Resources */,
+				04EC11CA23A416EB00BECAB5 /* Support.html in Resources */,
+				04EC11CF23A416EB00BECAB5 /* Index.html in Resources */,
+				04EC11CE23A416EB00BECAB5 /* Parking.html in Resources */,
+				04EC11CB23A416EB00BECAB5 /* About.html in Resources */,
 				E7BFDCAF236E356D009FAD77 /* LaunchScreen.storyboard in Resources */,
 				E7BFDCAC236E356D009FAD77 /* Assets.xcassets in Resources */,
 				E7BFDCA7236E356C009FAD77 /* Main.storyboard in Resources */,
