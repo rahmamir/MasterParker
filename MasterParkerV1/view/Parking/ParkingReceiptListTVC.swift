@@ -36,7 +36,7 @@ class ParkingReceiptListTVC : UITableViewController{
         
         let dateFormatter = DateFormatter()
 
-        dateFormatter.dateStyle = .short
+        dateFormatter.dateFormat = "MMM d, h:mm a"
 
         let dateString = dateFormatter.string(from: currentDate)
         
