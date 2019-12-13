@@ -11,10 +11,19 @@ import UIKit
 class HomeScreenVC : UIViewController {
     
     var parkingController = ParkingController()
+    private var userController = UserController()
+    var currentCustomerEmail: String = ""
+    private var currentCustomer: UserModel = UserModel()
+    
+    @IBOutlet weak var lbl_welcomeMessage: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.currentCustomer = self.userController.grabUser(email: currentCustomerEmail)
+        
+        self.lbl_welcomeMessage.text = "Hey there, " + self.currentCustomer.name
         // Do any additional setup after loading the view.
     }
     

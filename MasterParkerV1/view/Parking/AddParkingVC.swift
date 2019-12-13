@@ -73,17 +73,20 @@ class AddParkingVC: UIViewController {
         
         let isBuildingCodeValid = validator.validatorFor(userInput: buildingCode, type: Validator.ValidatorType.genericNumber)
         
+        let buildingCodeinRange = validator.validatorFor(userInput: buildingCode, type: Validator.ValidatorType.buildingWithinRange)
+        
         let isNumOfHoursValid = validator.validatorFor(userInput: numOfHours, type: Validator.ValidatorType.numberWithinBounds, bounds: 25)
         
         let isSuiteNumOfHostValid = validator.validatorFor(userInput: suiteNumOfHost, type: Validator.ValidatorType.genericNumber)
         
-        buildingCodeValidationLabel.text = validator.listOfErrorMessages[0]
-        numOfHoursValidationLabel.text = validator.listOfErrorMessages[1]
-        suiteNumOfHostValidationLabel.text = validator.listOfErrorMessages[2]
+        buildingCodeValidationLabel.text = validator.listOfErrorMessages[0] +  "\n" + validator.listOfErrorMessages[0]
+
+        numOfHoursValidationLabel.text = validator.listOfErrorMessages[2]
+        suiteNumOfHostValidationLabel.text = validator.listOfErrorMessages[3]
         
         validator.listOfErrorMessages = []
         
-        if(isBuildingCodeValid && isNumOfHoursValid && isSuiteNumOfHostValid){
+        if(isBuildingCodeValid && isNumOfHoursValid && isSuiteNumOfHostValid && buildingCodeinRange){
             return true
         }
         return false

@@ -11,39 +11,32 @@ import UIKit
 
 class ParkingReceiptListTVC : UITableViewController{
     
-    //carplate - ###
-    //date and time - ###
-    //suite no - ####
-    
-    //let loggedInUser = UserModel(Name: "test", Email: "test", Password: "pass", ContactNumber: 123, CarPlateNumber: "2323")//TO DO LATER = access this through USER DEFAULTS!!!!!!!!!!!
+   
     let parkingController = ParkingController()
     var mParkingList = [ParkingModel]()
    
     override func viewDidLoad() {
            super.viewDidLoad()
-            //self.tableView.register(ParkingReceiptTVCell.self, forCellReuseIdentifier: "cell")
+           
             self.fetchParkings()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return mParkingList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ParkingReceiptTVCell
                 
-        // Configure the cell...
         let currentDate = self.mParkingList[indexPath.row].dateOfParking
         
         let dateFormatter = DateFormatter()
 
-        dateFormatter.dateFormat = "MMMM-dd-yyyy HH:mm"
+        dateFormatter.dateStyle = .short
 
         let dateString = dateFormatter.string(from: currentDate)
         
@@ -64,7 +57,6 @@ class ParkingReceiptListTVC : UITableViewController{
         UserDefaults.standard.set(mParkingList[indexPath.row].carPlateNum, forKey: "SELECTEDCARPLATENUMBER")
         UserDefaults.standard.set(mParkingList[indexPath.row].dateOfParking, forKey: "SELECTEDDATE")
         
-        //send the current contact to next scene
         self.navigationController?.pushViewController(parkingReceiptVC, animated: true)
     }
     

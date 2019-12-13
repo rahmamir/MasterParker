@@ -34,5 +34,14 @@ class UserModel{
         self.carPlateNumber = CarPlateNumber
         self.paymentModel = PaymentModel
     }
+    
+    init(){
+        self.name = ""
+        self.email = ""
+        self.password = ""
+        self.contactNumber = 0
+        self.carPlateNumber = ""
+        self.paymentModel = PaymentModel()
+    }
 
 }

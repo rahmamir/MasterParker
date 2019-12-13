@@ -38,7 +38,7 @@ class ParkingReceiptVC: UIViewController {
         
         let dateFormatter = DateFormatter()
 
-        dateFormatter.dateStyle = .full
+        dateFormatter.dateStyle = .short
 
         let dateString = dateFormatter.string(from: newParking.dateOfParking)
         

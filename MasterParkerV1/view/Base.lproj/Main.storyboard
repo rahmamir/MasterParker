@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lG2-oS-9v9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lG2-oS-9v9">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -222,62 +222,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMK-bd-AZl">
-                                <rect key="frame" x="20" y="64" width="374" height="54.666666666666657"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
-                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Code : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-gi-tzf">
-                                <rect key="frame" x="20" y="138.66666666666666" width="148" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Building Code : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwu-gi-tzf">
+                                <rect key="frame" x="20" y="178" width="148" height="36"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-gh-Fim">
-                                <rect key="frame" x="194" y="138.66666666666666" width="200" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-gh-Fim">
+                                <rect key="frame" x="194" y="178" width="200" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Lul-7R-w6L"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Hours: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-NJ-L30">
-                                <rect key="frame" x="20" y="214.66666666666666" width="174.66666666666666" height="27.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number Of Hours: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-NJ-L30">
+                                <rect key="frame" x="20" y="254" width="174.66666666666666" height="27.333333333333343"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1-24" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tx9-uU-u7b">
-                                <rect key="frame" x="194" y="210.33333333333334" width="200" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1-24" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tx9-uU-u7b">
+                                <rect key="frame" x="194" y="249" width="200" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="pdM-To-nvY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Plate Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-eW-lto">
-                                <rect key="frame" x="20" y="286.33333333333331" width="174" height="27.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Car Plate Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-eW-lto">
+                                <rect key="frame" x="20" y="325" width="174" height="27.333333333333314"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="######" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Twu-aQ-vIy">
-                                <rect key="frame" x="194" y="282" width="200" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="######" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Twu-aQ-vIy">
+                                <rect key="frame" x="194" y="321" width="200" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="fzB-7g-LEh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="postal-code"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suite No Of Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-RY-PrP">
-                                <rect key="frame" x="20" y="358" width="159.66666666666666" height="27.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Suite No Of Host:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-RY-PrP">
+                                <rect key="frame" x="20" y="397" width="159.66666666666666" height="27.333333333333314"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5XZ-XV-Ess">
-                                <rect key="frame" x="194" y="353.66666666666669" width="200" height="36"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5XZ-XV-Ess">
+                                <rect key="frame" x="194" y="393" width="200" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="wwM-QS-zGl"/>
                                 </constraints>
@@ -292,32 +286,51 @@
                                 <state key="normal" title="Confirm Parking">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onConfirmParking:" destination="Stq-5I-4ub" eventType="touchUpInside" id="Fci-Bg-Eip"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqJ-1U-cfr">
-                                <rect key="frame" x="20" y="194.66666666666666" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="195" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-zj-rrL">
-                                <rect key="frame" x="20" y="266.33333333333331" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="266.66666666666669" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-bM-xni">
-                                <rect key="frame" x="20" y="409.66666666666669" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="410" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3an-Zs-1JM">
-                                <rect key="frame" x="20" y="338" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="338.33333333333331" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To do so, please provide the following information" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEe-oE-tcd">
+                                <rect key="frame" x="20" y="139" width="374" height="29.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.29999999999999999" height="-0.5"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add A Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMK-bd-AZl">
+                                <rect key="frame" x="20" y="64" width="374" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -326,6 +339,8 @@
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="5XZ-XV-Ess" secondAttribute="trailing" constant="20" id="0wS-F4-jkY"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="fZL-gh-Fim" secondAttribute="trailing" constant="20" id="3fJ-k5-S1c"/>
                             <constraint firstItem="XfA-zj-rrL" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="45E-z1-ylA"/>
+                            <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="FEe-oE-tcd" secondAttribute="trailing" constant="20" id="4cD-p2-Ja9"/>
+                            <constraint firstItem="FEe-oE-tcd" firstAttribute="top" secondItem="nMK-bd-AZl" secondAttribute="bottom" constant="20" id="4jU-Pv-9ez"/>
                             <constraint firstItem="3an-Zs-1JM" firstAttribute="top" secondItem="Twu-aQ-vIy" secondAttribute="bottom" constant="20" id="4pi-hf-5c0"/>
                             <constraint firstItem="VTY-eW-lto" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="7Ca-dI-SmM"/>
                             <constraint firstItem="Kwu-gi-tzf" firstAttribute="top" secondItem="nMK-bd-AZl" secondAttribute="bottom" constant="20" id="9Q3-0p-C8O"/>
@@ -333,6 +348,7 @@
                             <constraint firstItem="gBu-bM-xni" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="FPO-Ng-4AN"/>
                             <constraint firstItem="3an-Zs-1JM" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="FUA-Ks-mpT"/>
                             <constraint firstItem="Twu-aQ-vIy" firstAttribute="centerY" secondItem="VTY-eW-lto" secondAttribute="centerY" id="Fpf-98-Vz9"/>
+                            <constraint firstItem="FEe-oE-tcd" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="MoO-UW-RpJ"/>
                             <constraint firstItem="HqJ-1U-cfr" firstAttribute="leading" secondItem="Qxh-wM-o88" secondAttribute="leading" constant="20" id="N62-wi-agb"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="HqJ-1U-cfr" secondAttribute="trailing" constant="20" id="NlJ-7c-UKs"/>
                             <constraint firstItem="Qxh-wM-o88" firstAttribute="trailing" secondItem="nMK-bd-AZl" secondAttribute="trailing" constant="20" id="NwQ-5p-50W"/>
@@ -387,7 +403,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Receipt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gau-83-2xe">
                                 <rect key="frame" x="20" y="64" width="374" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Plate Number: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAz-zb-rR9">
@@ -531,7 +547,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="    Add Parking" image="car.fill" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                 </state>
@@ -553,7 +569,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="    View Parking Receipt List" image="list.number" catalog="system">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
@@ -576,7 +592,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="    Search Nearby Parking Facilities" image="magnifyingglass" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
@@ -590,15 +606,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-Uu-0Nq">
-                                <rect key="frame" x="20" y="356" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="376" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ieH-CD-gUY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="    Update User Profile" image="person.crop.rectangle" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                 </state>
@@ -671,9 +687,9 @@
                                     <constraint firstAttribute="height" constant="50" id="rVE-iY-Bub"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="    Sign Out" image="icloud.and.arrow.down.fill" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                 </state>
@@ -686,35 +702,16 @@
                                     <action selector="signOutAction:" destination="KGR-r5-DeD" eventType="touchUpInside" id="uDf-io-gTv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lw-J5-IEE">
-                                <rect key="frame" x="20" y="586" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="EDR-sr-LSM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Test" image="person.3.fill" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaI-Xj-SEM">
-                                <rect key="frame" x="20" y="656" width="374" height="50"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="702" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dCA-ar-Dvj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Clear Parking History" image="icloud.and.arrow.down.fill" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="    Clear Parking History" image="delete.left" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
                                 </state>
@@ -732,11 +729,9 @@
                         <constraints>
                             <constraint firstItem="hFO-Af-sJG" firstAttribute="top" secondItem="iPJ-rz-TSo" secondAttribute="top" constant="20" id="2Rl-BB-shU"/>
                             <constraint firstItem="wiW-7g-fuP" firstAttribute="top" secondItem="hFO-Af-sJG" secondAttribute="bottom" constant="20" id="2aS-DA-Z2f"/>
-                            <constraint firstItem="2lw-J5-IEE" firstAttribute="top" secondItem="th1-s3-Hc5" secondAttribute="bottom" constant="20" id="2uK-BD-0OX"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="HLS-Uu-0Nq" secondAttribute="trailing" constant="20" id="8iV-05-ory"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="b0t-vP-uuD" secondAttribute="trailing" constant="20" id="AEO-Nm-Lnu"/>
-                            <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="2lw-J5-IEE" secondAttribute="trailing" constant="20" id="Cu6-sL-RVa"/>
-                            <constraint firstItem="h2P-P0-lII" firstAttribute="top" secondItem="HLS-Uu-0Nq" secondAttribute="bottom" constant="40" id="EBY-89-tBS"/>
+                            <constraint firstItem="h2P-P0-lII" firstAttribute="top" secondItem="HLS-Uu-0Nq" secondAttribute="bottom" constant="20" id="EBY-89-tBS"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="h2P-P0-lII" secondAttribute="trailing" constant="20" id="FsV-yh-yGY"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="th1-s3-Hc5" secondAttribute="trailing" constant="20" id="ILp-Nb-zfc"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="LaI-Xj-SEM" secondAttribute="trailing" constant="20" id="MqJ-D5-C1m"/>
@@ -747,15 +742,14 @@
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="wiW-7g-fuP" secondAttribute="trailing" constant="20" id="Ski-oW-6KI"/>
                             <constraint firstItem="h2P-P0-lII" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="TjG-Ub-GNi"/>
                             <constraint firstItem="aeb-V2-b9o" firstAttribute="top" secondItem="mhb-S9-xg4" secondAttribute="bottom" constant="20" id="anT-Bg-V5F"/>
-                            <constraint firstItem="HLS-Uu-0Nq" firstAttribute="top" secondItem="aeb-V2-b9o" secondAttribute="bottom" constant="40" id="b21-bg-6Vo"/>
+                            <constraint firstItem="HLS-Uu-0Nq" firstAttribute="top" secondItem="aeb-V2-b9o" secondAttribute="bottom" constant="60" id="b21-bg-6Vo"/>
                             <constraint firstItem="aeb-V2-b9o" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="eYp-pD-fu0"/>
                             <constraint firstItem="hFO-Af-sJG" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="fGO-kN-eh3"/>
                             <constraint firstItem="HLS-Uu-0Nq" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="iGM-RG-3UG"/>
-                            <constraint firstItem="2lw-J5-IEE" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="j4T-Ox-vv2"/>
+                            <constraint firstItem="b0t-vP-uuD" firstAttribute="top" secondItem="LaI-Xj-SEM" secondAttribute="bottom" constant="20" id="jI9-MN-6Jz"/>
                             <constraint firstItem="b0t-vP-uuD" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="lRz-h3-3sJ"/>
                             <constraint firstItem="wiW-7g-fuP" firstAttribute="leading" secondItem="iPJ-rz-TSo" secondAttribute="leading" constant="20" id="ngk-zr-nxy"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="aeb-V2-b9o" secondAttribute="trailing" constant="20" id="o5l-sp-s7e"/>
-                            <constraint firstItem="LaI-Xj-SEM" firstAttribute="top" secondItem="2lw-J5-IEE" secondAttribute="bottom" constant="20" id="p0l-EK-ZNe"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="trailing" secondItem="mhb-S9-xg4" secondAttribute="trailing" constant="20" id="pfE-HC-4BI"/>
                             <constraint firstItem="iPJ-rz-TSo" firstAttribute="bottom" secondItem="b0t-vP-uuD" secondAttribute="bottom" constant="40" id="qEI-IY-aK6"/>
                             <constraint firstItem="th1-s3-Hc5" firstAttribute="top" secondItem="h2P-P0-lII" secondAttribute="bottom" constant="20" id="tpb-gm-eXc"/>
@@ -763,6 +757,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPJ-rz-TSo"/>
                     </view>
+                    <connections>
+                        <outlet property="lbl_welcomeMessage" destination="hFO-Af-sJG" id="APv-ec-osm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVX-iv-uHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1367,6 +1364,7 @@
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <image name="car" catalog="system" width="64" height="46"/>
         <image name="car.fill" catalog="system" width="64" height="46"/>
+        <image name="delete.left" catalog="system" width="64" height="52"/>
         <image name="envelope.fill" catalog="system" width="64" height="46"/>
         <image name="icloud.and.arrow.down.fill" catalog="system" width="64" height="56"/>
         <image name="list.number" catalog="system" width="64" height="48"/>

@@ -23,6 +23,7 @@ class Validator {
         case genericNumber
         case numberWithinBounds
         case numberWithCharacterCount
+        case buildingWithinRange
         case password
         case dateMonthAndYear
     }
@@ -37,6 +38,8 @@ class Validator {
             case .numberWithinBounds : return self.genericValidator(regEx: "[0-9]+", errorMessage: "Number outside bounds, must be a number < \(bounds)", Bounds: bounds)
             
             case .password: return self.genericValidator(regEx: "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}", errorMessage: " Must have 1 character\nMust have 1 special character\nPassword length > 8")
+            
+            case .buildingWithinRange: return self.genericValidator(regEx: "[0-9][0-9][0-9][0-9]+", errorMessage: " Building Number must be 4 digits only!")
             
             case .numberWithCharacterCount : return self.genericValidator(regEx: "^[0-9]{\(characterCount)}$", errorMessage: "Number must be a \(characterCount) digit number", CharacterCount : characterCount)
             
@@ -70,17 +73,5 @@ class Validator {
         return false
     }
 
-    /*
-     let newName = nameTextField.text! any string no validation
-     let newEmail = emailTextField.text! email
-     let newPassword = passwordTextField.text! passwordvalidation
-     let newContactNumber = Int(contactNumberTextField.text!) genericNumber
-     let newCarPlateNumber = carPlateNumberTextField.text! //random string < 10 length
-     */
-    /*
-     let buildingCode:Int? = Int(buildingCodeTxt.text!) generic number
-     let numOfHours:Int? = Int(numOfHoursTxt.text!) generic number within bounds
-     let carPlateNum = carPlateNumberTxt.text! //random string < 10 length
-     let suiteNumOfHost:Int? = Int(suiteNumOfHostTxt.text!) generic number
-     */
+    
 }

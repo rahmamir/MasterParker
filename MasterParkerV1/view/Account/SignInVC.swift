@@ -11,6 +11,7 @@ import UIKit
 class SignInVC : UIViewController{
     
     var userController = UserController()
+    var homeScreenVC = HomeScreenVC()
 
 
     @IBOutlet var rememberCredentialsSwitch : UISwitch!
@@ -69,7 +70,9 @@ class SignInVC : UIViewController{
 
 
             let homeScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenScene") as! HomeScreenVC
-
+            
+            homeScreenVC.currentCustomerEmail = enteredEmail
+            
             navigationController?.pushViewController(homeScreenVC, animated: true)
         }
         else{//invalid credentials//create an alert
